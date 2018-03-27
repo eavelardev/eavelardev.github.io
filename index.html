@@ -153,8 +153,8 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                1
-                <span>post</span>
+                2
+                <span>posts</span>
             </div>
             <div class="article-info-block">
                 0
@@ -206,12 +206,154 @@
 
             
             <section id="main">
+    <article id="post-como-cree-mi-blog" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/03/27/como-cree-mi-blog/">Como cree mi blog</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/03/27/como-cree-mi-blog/">
+            <time datetime="2018-03-27T19:26:50.000Z" itemprop="datePublished">2018-03-27</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>En este post hablare de como cree mi blog utilizando github, utilizando la<br>distribución linux Ubuntu. Se contempla que el usuario tiene conocimientos<br>básicos del sistema operativo linux.</p>
+<h2 id="Que-es-Github"><a href="#Que-es-Github" class="headerlink" title="Que es Github?"></a>Que es Github?</h2><p>Github es un sitio web que te permite:</p>
+<p><strong>Almacenar el código fuente de un proyecto</strong><br>Los archivos de tu proyecto se almacenan en un lugar al que se le llama<br>repositorio, el cual se tiene que crear antes de querer subir archivos.</p>
+<p><strong>Llevar el registro de los cambios realizados</strong><br>En el repositorio se va creando un historial de las actualizaciones realizadas a<br>los archivos del repositorio.</p>
+<p><strong>Trabajar colaborativamente con otras personas</strong><br>Te permite aceptar modificaciones de usuarios externos que quieran contribuir a<br>tu proyecto.</p>
+<h2 id="Crear-una-cuenta-en-github"><a href="#Crear-una-cuenta-en-github" class="headerlink" title="Crear una cuenta en github"></a>Crear una cuenta en github</h2><p>Si no se tiene una cuenta, crear una en el sitio <a href="https://github.com/" target="_blank" rel="noopener">Github</a></p>
+<h2 id="Que-es-GitHub-Pages"><a href="#Que-es-GitHub-Pages" class="headerlink" title="Que es GitHub Pages"></a>Que es GitHub Pages</h2><p>GitHub Pages es una funcionalidad de Github donde al crear un repositorio de<br>nombre <code>mi_nombre_de_usuario.github.io</code>, te lo trata como un host de una pagina<br>web, por lo que si en este se encuentra un archivo <code>index.html</code>, este lo podrás<br>visualizar desde la dirección web que lleva el mismo nombre que el del<br>repositorio creado.</p>
+<h2 id="Instalar-git"><a href="#Instalar-git" class="headerlink" title="Instalar git"></a>Instalar git</h2><p>sudo apt install git</p>
+<h2 id="Configurar-git"><a href="#Configurar-git" class="headerlink" title="Configurar git"></a>Configurar git</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;mi_nombre&quot;</span><br><span class="line">git config --global user.email &quot;mi_correo_electronico&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="Instalar-Node-js"><a href="#Instalar-Node-js" class="headerlink" title="Instalar Node.js"></a>Instalar Node.js</h2><p><em>Ir a <a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a> y descargar la versión LTS. 
+</em>Copiar el archivo en Home o a un lugar de preferencia y descomprimir.<br>*Modificar el archivo <code>~/.bashrc</code> añadiéndole al final la linea</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PATH=$PATH:/home/..../node-v..../bin</span><br></pre></td></tr></table></figure>
+<p>donde la linea de puntos cambia según el directorio donde se descomprimió y la<br>versión de node.</p>
+<h2 id="Instalar-Hexo"><a href="#Instalar-Hexo" class="headerlink" title="Instalar Hexo"></a>Instalar Hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h2 id="Hacer-un-Fork-del-templeate-Icarus"><a href="#Hacer-un-Fork-del-templeate-Icarus" class="headerlink" title="Hacer un Fork del templeate Icarus"></a>Hacer un Fork del templeate Icarus</h2><p>Para ello se tiene que ir al repositorio<br><a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">hexo-theme-icarus</a> y hacer el<br>fork.</p>
+<h2 id="Crear-dos-repositorios-en-github"><a href="#Crear-dos-repositorios-en-github" class="headerlink" title="Crear dos repositorios en github"></a>Crear dos repositorios en github</h2><p>Uno que contendrá nuestro proyecto, puede ser de nombre <code>mi hexo blog</code> y el otro<br>que contendrá nuestro sitio de nombre <code>mi_nombre_de_usuario.github.io</code>, ejemplo,<br>mi nombre de usuario en github es <code>eavelardev</code>, por lo que cree un repositorio<br>de nombre <code>eavelardev.github.io</code>.</p>
+<h2 id="Clonar-tu-hexo-blog"><a href="#Clonar-tu-hexo-blog" class="headerlink" title="Clonar tu hexo blog"></a>Clonar tu hexo blog</h2><p>Clonaremos el repositorio en nuestra maquina.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone repositorio_de_mi_hexo_blog</span><br></pre></td></tr></table></figure></p>
+<h2 id="Inicializar-un-proyecto-con-hexo"><a href="#Inicializar-un-proyecto-con-hexo" class="headerlink" title="Inicializar un proyecto con hexo"></a>Inicializar un proyecto con hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+<p>después copiar los archivos dentro de la carpeta <code>blog</code> a la carpeta del<br>repositorio creado, incluido los ocultos.</p>
+<h2 id="Probar-nuestro-blog"><a href="#Probar-nuestro-blog" class="headerlink" title="Probar nuestro blog"></a>Probar nuestro blog</h2><p>dentro de nuestro repositorio<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
+<p>y podemos guardar estos cambios en nuestro repo con</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit -a -m &quot;new hexo blog&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p>Los cambios se verán reflejados en nuestro repo en github.</p>
+<h2 id="Mas-adelante-hablare-de-como-integrar-tu-templeate-en-tu-blog"><a href="#Mas-adelante-hablare-de-como-integrar-tu-templeate-en-tu-blog" class="headerlink" title="Mas adelante hablare de como integrar tu templeate en tu blog"></a>Mas adelante hablare de como integrar tu templeate en tu blog</h2><h2 id="Tambien-de-como-subir-los-cambios-a-tu-sitio"><a href="#Tambien-de-como-subir-los-cambios-a-tu-sitio" class="headerlink" title="Tambien de como subir los cambios a tu sitio"></a>Tambien de como subir los cambios a tu sitio</h2>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://eavelardev.github.io/2018/03/27/como-cree-mi-blog/" data-id="cjfa24la70002lc6ou342k4vt" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-about-me-and-blog" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             
 	
-		<a href="/2018/03/26/about-me-and-blog/" itemprop="url">
+		<a href="/2018/03/25/about-me-and-blog/" itemprop="url">
             <img src="/gallery/robot-teacher.jpg" class="article-banner" />
         </a>
 	
@@ -224,7 +366,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/03/26/about-me-and-blog/">About me and Blog</a>
+            <a class="article-title" href="/2018/03/25/about-me-and-blog/">About me and Blog</a>
         </h1>
     
 
@@ -233,8 +375,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/03/26/about-me-and-blog/">
-            <time datetime="2018-03-26T23:40:56.664Z" itemprop="datePublished">2018-03-26</time>
+        <a href="/2018/03/25/about-me-and-blog/">
+            <time datetime="2018-03-25T19:26:50.000Z" itemprop="datePublished">2018-03-25</time>
         </a>
     </div>
 
@@ -267,7 +409,7 @@
 
 </div>
 
-    <a data-url="https://eavelardev.github.io/2018/03/26/about-me-and-blog/" data-id="cjf8vmtk50000cq6onmyp5iqw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://eavelardev.github.io/2018/03/25/about-me-and-blog/" data-id="cjfa24la30000lc6o9zx1i0bk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -356,7 +498,26 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/03/26/about-me-and-blog/" class="thumbnail">
+                            <a href="/2018/03/27/como-cree-mi-blog/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/03/27/como-cree-mi-blog/" class="title">Como cree mi blog</a></p>
+                            <p class="item-date"><time datetime="2018-03-27T19:26:50.000Z" itemprop="datePublished">2018-03-27</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/03/25/about-me-and-blog/" class="thumbnail">
     
     
         <span style="background-image:url(/gallery/robot-teacher.jpg)" alt="About me and Blog" class="thumbnail-image"></span>
@@ -367,8 +528,8 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/03/26/about-me-and-blog/" class="title">About me and Blog</a></p>
-                            <p class="item-date"><time datetime="2018-03-26T23:40:56.664Z" itemprop="datePublished">2018-03-26</time></p>
+                            <p class="item-title"><a href="/2018/03/25/about-me-and-blog/" class="title">About me and Blog</a></p>
+                            <p class="item-date"><time datetime="2018-03-25T19:26:50.000Z" itemprop="datePublished">2018-03-25</time></p>
                         </div>
                     </li>
                 
@@ -383,7 +544,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
