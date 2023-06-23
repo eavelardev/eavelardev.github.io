@@ -1,0 +1,248 @@
+format: jb-book
+root: index
+chapters:
+- file: elearning_ml_data/index
+  sections:
+  - glob: elearning_ml_data/*
+- file: mldev_tools/index
+  sections:
+  - glob: mldev_tools/*
+- file: dev_notes/index
+  sections:
+  - glob: dev_notes/*
+- file: ml_notes/index
+  sections:
+  - glob: ml_notes/*
+- file: gcp_courses/index
+  sections:
+  - file: gcp_courses/gcp_big_data_and_ml_fundamentals/index
+  - file: gcp_courses/how_google_does_ml/index
+  - file: gcp_courses/launching_into_ml/index
+  - file: gcp_courses/tf_on_gcp/index
+  - file: gcp_courses/feature_engineering/index
+  - file: gcp_courses/ml_in_the_enterprise/index
+    sections:
+    - file: gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/index
+      sections:
+      - file: gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/intro
+      - file: gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/vertex_ai_vizier_hyperparameter_tuning
+      - file: gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/lab_intro_vertex_vizier_hyperparameter_tuning
+    - file: gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/index
+      sections:
+      - file: gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/intro
+      - file: gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/predictions_using_vertex_ai
+      - file: gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/model_management_using_vertex_ai
+      - file: gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/lab_intro_vertex_ai_model_monitoring
+    - file: gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/index
+      sections:
+      - file: gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/intro
+      - file: gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/prediction_using_vertex_ai_pipelines
+      - file: gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/lab_intro_vertex_ai_pipelines
+    - file: gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/index
+      sections:
+      - file: gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/intro
+      - file: gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/best_practices_for_model_deployment_and_serving
+      - file: gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/best_practices_for_model_monitoring
+      - file: gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/vertex_ai_pipeline_best_practices
+      - file: gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/best_practices_for_artifact_organization
+    - file: gcp_courses/ml_in_the_enterprise/series_summary/index
+      sections:
+      - file: gcp_courses/ml_in_the_enterprise/series_summary/series_summary
+    - file: gcp_courses/ml_in_the_enterprise/working_dir/index
+      sections:
+      - glob: gcp_courses/ml_in_the_enterprise/working_dir/*
+  - file: gcp_courses/production_ml_systems/index
+    sections:
+    - file: gcp_courses/production_ml_systems/intro_to_advanced_ml_on_gcp/index
+      sections:
+      - file: gcp_courses/production_ml_systems/intro_to_advanced_ml_on_gcp/advanced_ml_on_gcp
+      - file: gcp_courses/production_ml_systems/intro_to_advanced_ml_on_gcp/welcome
+    - file: gcp_courses/production_ml_systems/architecting_production_ml_s/index
+      sections:
+      - file: gcp_courses/production_ml_systems/architecting_production_ml_s/architecting_ml_systems
+      - file: gcp_courses/production_ml_systems/architecting_production_ml_s/data_extraction_analysis_and_preparation
+      - file: gcp_courses/production_ml_systems/architecting_production_ml_s/model_training_evaluation_and_validation
+      - file: gcp_courses/production_ml_systems/architecting_production_ml_s/trained_model_prediction_service_and_performance_mo
+      - file: gcp_courses/production_ml_systems/architecting_production_ml_s/training_design_decisions
+      - file: gcp_courses/production_ml_systems/architecting_production_ml_s/serving_design_decisions
+      - file: gcp_courses/production_ml_systems/architecting_production_ml_s/using_vertex_ai
+      - file: gcp_courses/production_ml_systems/architecting_production_ml_s/lab_intro_structured_data_prediction
+    - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/index
+      sections:
+      - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/intro
+      - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/adapting_to_data
+      - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/changing_distributions
+      - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_adapting_to_data
+      - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/right_and_wrong_decisions
+      - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/system_failure
+      - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/concept_drift
+      - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/actions_to_mitigate_concept_drift
+      - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/tf_data_validation
+      - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/components_of_tf_data_validation
+      - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_intro_intro_to_tf_data_validation
+      - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_intro_advanced_visualizations_with_tf_data_vali
+      - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/mitigating_training_serving_skew_through_design
+      - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_intro_serving_ml_predictions_in_batch_and_real
+      - file: gcp_courses/production_ml_systems/designing_adaptable_ml_syste/diagnosing_a_production_model
+    - file: gcp_courses/production_ml_systems/designing_high_performance_m/index
+      sections:
+      - file: gcp_courses/production_ml_systems/designing_high_performance_m/training
+      - file: gcp_courses/production_ml_systems/designing_high_performance_m/why_distributed_training_is_needed
+      - file: gcp_courses/production_ml_systems/designing_high_performance_m/distributed_training_architectures
+      - file: gcp_courses/production_ml_systems/designing_high_performance_m/tf_distributed_training_strategies
+      - file: gcp_courses/production_ml_systems/designing_high_performance_m/mirrored_strategy
+      - file: gcp_courses/production_ml_systems/designing_high_performance_m/multi_worker_mirrored_strategy
+      - file: gcp_courses/production_ml_systems/designing_high_performance_m/tpu_strategy
+      - file: gcp_courses/production_ml_systems/designing_high_performance_m/parameter_server_strategy
+      - file: gcp_courses/production_ml_systems/designing_high_performance_m/lab_intro_distributed_training_with_keras
+      - file: gcp_courses/production_ml_systems/designing_high_performance_m/lab_intro_distributed_training_using_gpus_on_cloud
+      - file: gcp_courses/production_ml_systems/designing_high_performance_m/training_on_large_datasets_with_tf_data_api
+      - file: gcp_courses/production_ml_systems/designing_high_performance_m/lab_intro_tpu_speed_data_pipelines
+    - file: gcp_courses/production_ml_systems/building_hybrid_ml_systems/index
+      sections:
+      - file: gcp_courses/production_ml_systems/building_hybrid_ml_systems/kubeflow
+      - file: gcp_courses/production_ml_systems/building_hybrid_ml_systems/optimizing_tf_for_mobile
+    - file: gcp_courses/production_ml_systems/summary/index
+      sections:
+      - file: gcp_courses/production_ml_systems/summary/course_summary
+    - file: gcp_courses/production_ml_systems/working_dir/index
+      sections:
+      - glob: gcp_courses/production_ml_systems/working_dir/*
+  - file: gcp_courses/cv_fundamentals_with_gcp/index
+    sections:
+    - file: gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/index
+      sections:
+      - file: gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/what_is_cv
+      - file: gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/different_type_of_cv_problems
+      - file: gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/cv_use_cases
+      - file: gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/vision_api_pre_built_ml_models
+    - file: gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/index
+      sections:
+      - file: gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/what_is_vertex_ai_and_why_does_a_unified_platform_m
+      - file: gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/intro_to_automl_vision_on_vertex_ai
+      - file: gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/how_does_vertex_ai_help_with_the_ml_workflow_part_1
+      - file: gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/how_does_vertex_ai_help_with_the_ml_workflow_part_2
+      - file: gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/which_vision_product_is_right_for_you
+      - file: gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/lab_intro_identifying_damaged_car_parts_with_vertex
+    - file: gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/index
+      sections:
+      - file: gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/intro
+      - file: gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/intro_to_linear_models
+      - file: gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/reading_the_data
+      - file: gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/implementing_linear_models_for_image_classification
+      - file: gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/nns_and_dnns_for_image_classification
+      - file: gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/dnns_with_dropout_and_batch_normalization
+    - file: gcp_courses/cv_fundamentals_with_gcp/cnns/index
+      sections:
+      - file: gcp_courses/cv_fundamentals_with_gcp/cnns/intro
+      - file: gcp_courses/cv_fundamentals_with_gcp/cnns/cnns
+      - file: gcp_courses/cv_fundamentals_with_gcp/cnns/understanding_convolutions
+      - file: gcp_courses/cv_fundamentals_with_gcp/cnns/cnn_model_parameters
+      - file: gcp_courses/cv_fundamentals_with_gcp/cnns/working_with_pooling_layers
+      - file: gcp_courses/cv_fundamentals_with_gcp/cnns/implementing_cnns_on_vertex_ai_with_pre_built_tf_co
+    - file: gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/index
+      sections:
+      - file: gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/intro
+      - file: gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/preprocessing_the_image_data
+      - file: gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/model_parameters_and_the_data_scarcity_problem
+      - file: gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/data_augmentation
+      - file: gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/transfer_learning
+    - file: gcp_courses/cv_fundamentals_with_gcp/summary/index
+      sections:
+      - file: gcp_courses/cv_fundamentals_with_gcp/summary/summary
+  - file: gcp_courses/nlp_on_gcp/index
+    sections:
+    - file: gcp_courses/nlp_on_gcp/course_intro/index
+      sections:
+      - file: gcp_courses/nlp_on_gcp/course_intro/course_intro
+    - file: gcp_courses/nlp_on_gcp/nlp_on_gcp/index
+      sections:
+      - file: gcp_courses/nlp_on_gcp/nlp_on_gcp/intro
+      - file: gcp_courses/nlp_on_gcp/nlp_on_gcp/what_is_nlp
+      - file: gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_history
+      - file: gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_architecture
+      - file: gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_apis
+      - file: gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_solutions
+      - file: gcp_courses/nlp_on_gcp/nlp_on_gcp/summary
+    - file: gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/index
+      sections:
+      - file: gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/intro
+      - file: gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_options
+      - file: gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/vertex_ai
+      - file: gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_with_automl
+      - file: gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_with_custom_training
+      - file: gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_end_to_end_workflow
+      - file: gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/summary
+    - file: gcp_courses/nlp_on_gcp/text_representation/index
+      sections:
+      - file: gcp_courses/nlp_on_gcp/text_representation/intro
+      - file: gcp_courses/nlp_on_gcp/text_representation/tokenization
+      - file: gcp_courses/nlp_on_gcp/text_representation/one_hot_encoding_and_bag_of_words
+      - file: gcp_courses/nlp_on_gcp/text_representation/word_embeddings
+      - file: gcp_courses/nlp_on_gcp/text_representation/word2vec
+      - file: gcp_courses/nlp_on_gcp/text_representation/transfer_learning_and_reusable_embeddings
+      - file: gcp_courses/nlp_on_gcp/text_representation/summary
+    - file: gcp_courses/nlp_on_gcp/advanced_nlp_models/index
+      sections:
+      - file: gcp_courses/nlp_on_gcp/advanced_nlp_models/intro
+      - file: gcp_courses/nlp_on_gcp/advanced_nlp_models/encoder_decoder_architecture
+      - file: gcp_courses/nlp_on_gcp/advanced_nlp_models/attention_mechanism
+      - file: gcp_courses/nlp_on_gcp/advanced_nlp_models/transformer
+      - file: gcp_courses/nlp_on_gcp/advanced_nlp_models/bert
+      - file: gcp_courses/nlp_on_gcp/advanced_nlp_models/large_language_models
+      - file: gcp_courses/nlp_on_gcp/advanced_nlp_models/lab_intro_text_translation_using_encoder_decoder_ar
+      - file: gcp_courses/nlp_on_gcp/advanced_nlp_models/summary
+  - file: gcp_courses/recommendation_systems_on_gcp/index
+    sections:
+    - file: gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/index
+      sections:
+      - file: gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/types_of_recommendation_systems
+      - file: gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/content_based_or_collaborative
+      - file: gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/recommendation_system_pitfalls
+    - file: gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/index
+      sections:
+      - file: gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/content_based_recommendation_systems
+      - file: gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/similarity_measures
+      - file: gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/building_a_user_vector
+      - file: gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/making_recommendations_using_a_user_vector
+      - file: gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/making_recommendations_for_many_users
+      - file: gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/using_nns_for_content_based_recommendation_systems
+  - file: gcp_courses/ml_operations_mlops_getting_started/index
+    sections:
+    - file: gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/index
+      sections:
+      - file: gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/ml_ml_practitioners_pain_points
+      - file: gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/the_concept_of_devops_in_ml
+      - file: gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/ml_lifecycle
+      - file: gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/automating_the_ml_process
+    - file: gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/index
+      sections:
+      - file: gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/what_is_vertex_ai_and_why_does_a_unified_platform_m
+      - file: gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/intro_to_mlops_on_vertex_ai
+      - file: gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/how_does_vertex_ai_help_with_the_mlops_workflow_par
+- file: gcp_official/index
+  sections:
+  - glob: gcp_official/*
+- file: gcp_resources/index
+  sections:
+  - glob: gcp_resources/*
+- file: tf_official/index
+  sections:
+  - file: tf_official/structured_data/index
+    sections:
+    - glob: tf_official/structured_data/*
+  - file: tf_official/distribute/index
+    sections:
+    - glob: tf_official/distribute/*
+- file: tf_resources/index
+  sections:
+  - glob: tf_resources/*
+- file: feature_eng/index
+- file: deeplearningai/index
+  sections:
+  - file: deeplearningai/tf_dev_course_original/index
+    sections:
+    - glob: deeplearningai/tf_dev_course_original/*
+  - file: deeplearningai/tf_dev_course_updated/index
+    sections:
+    - glob: deeplearningai/tf_dev_course_updated/*

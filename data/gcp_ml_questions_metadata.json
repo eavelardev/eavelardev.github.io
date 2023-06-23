@@ -1,0 +1,69 @@
+[
+    {
+        "source_name":  "Professional Machine Learning Engineer Sample Questions",
+        "source_tag": "pro_ml_sample",
+        "num_questions": 20,
+        "sources": [
+            "https://docs.google.com/forms/d/e/1FAIpQLSeYmkCANE81qSBqLW0g2X7RoskBX9yGYQu-m1TtsjMvHabGqg/viewform"
+        ]
+    },
+    {
+        "source_name": "Certification Study Group - Professional Machine Learning Engineer",
+        "source_tag": "pro_ml_stockholm",
+        "num_questions": 11,
+        "sources": [
+            "https://drive.google.com/drive/folders/1TWAYh4cBrYYwBZgCO2_u33aPM3bF74Q5"
+        ]
+    },
+    {
+        "source_name": "Road to Google Developer Certification: Pro Machine Learning Engineer",
+        "source_tag": "pro_ml_boston",
+        "num_questions": 2,
+        "sources": [
+            "https://docs.google.com/presentation/d/1_ok7eCEPKor7uMsTTsO4l6vPy7zOmFR87O-IDTXVkhY",
+            "https://docs.google.com/presentation/d/1MMZsgWNeovUh9uWa0QzeCT91mtcLNmJv9959TCjF2nE"
+        ]
+    },
+    {
+        "source_name": "Udemy - Google Cloud Machine Learning Engineer Certification Prep",
+        "source_tag": "udemy_ml_cert_prep",
+        "num_questions": 50,
+        "sources": [
+            "https://www.udemy.com/course/google-cloud-machine-learning-engineer-certification-prep/"
+        ]
+
+    },
+    {
+        "source_name": "Packt - Journey to Become a Google Cloud Machine Learning Engineer",
+        "source_tag": "packt_ml_journey",
+        "num_questions": 29,
+        "sources": [
+            "https://www.packtpub.com/product/journey-to-become-a-google-cloud-machine-learning-engineer/9781803233727"
+        ]
+    },
+    {
+        "source_name": "whizlabs - Google Cloud Certified Professional Machine Learning Engineer - Practice Test 1",
+        "source_tag": "whizlabs1",
+        "num_questions": 55,
+        "sources": [
+            "https://www.whizlabs.com/learn/course/professional-machine-learning-engineer/394/quiz/25152"
+        ]
+    },
+    {
+        "source_name": "whizlabs - Google Cloud Certified Professional Machine Learning Engineer - Practice Test 2",
+        "source_tag": "whizlabs2",
+        "num_questions": 55,
+        "sources": [
+            "https://www.whizlabs.com/learn/course/professional-machine-learning-engineer/394/quiz/25153"
+        ]
+    },
+    {
+        "source_name": "Machine Learning Crash Course",
+        "source_tag": "google_ml_crash",
+        "num_questions": 24,
+        "sources": [
+            "https://developers.google.com/machine-learning/crash-course"
+        ]
+    }
+
+]

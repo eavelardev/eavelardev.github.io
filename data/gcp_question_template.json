@@ -1,0 +1,32 @@
+{
+  "id": "",
+  "domain": [],
+  "intro": [],
+  "body": [""],
+  "open": false,
+  "options": [
+    {
+      "option": [""],
+      "answer": false,
+      "explanation": []
+    },
+    {
+      "option": [""],
+      "answer": false,
+      "explanation": []
+    },
+    {
+      "option": [""],
+      "answer": false,
+      "explanation": []
+    },
+    {
+      "option": [""],
+      "answer": false,
+      "explanation": []
+    }
+  ],
+  "feedback": [],
+  "references": [],
+  "date": ""
+}

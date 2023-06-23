@@ -1,0 +1,727 @@
+[
+    {
+        "title": "Machine Learning for Time Series",
+        "sub_title": "Use Python to forecast, predict, and detect anomalies with state-of-the-art machine learning methods",
+        "ed.": 2,
+        "series": "Expert Insight",
+        "authors": [
+            "Ben Auffarth"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2023,
+        "pub_date": "22 August 2023",
+        "site": "https://www.packtpub.com/product/machine-learning-for-time-series-second-edition/9781837631339",
+        "amazon": "https://www.amazon.com/dp/1837631336",
+        "repo": ""
+    },
+    {
+        "title": "The Self-Taught Computer Scientist",
+        "sub_title": "The Beginner's Guide to Data Structures & Algorithms",
+        "ed.": 1,
+        "series": "",
+        "authors": [
+            "Cory Althoff"
+        ],
+        "foreword": "",
+        "publisher": "Wiley",
+        "copyright": 2022,
+        "pub_date": "December 2021",
+        "site": "https://www.wiley.com/en-be/The+Self+Taught+Computer+Scientist%3A+The+Beginner%27s+Guide+to+Data+Structures+%26amp%3B+Algorithms-p-9781119724414",
+        "amazon": "https://www.amazon.com/dp/1119724414",
+        "repo": ""
+    },
+    {
+        "title": "Algorithms For Dummies",
+        "sub_title": "",
+        "ed.": 2,
+        "series": "",
+        "authors": [
+            "John Paul Mueller",
+            "Luca Massaron"
+        ],
+        "foreword": "",
+        "publisher": "Wiley",
+        "copyright": null,
+        "pub_date": "March 2022",
+        "site": "https://www.wiley.com/en-us/Algorithms+For+Dummies%2C+2nd+Edition-p-9781119870005",
+        "amazon": "https://www.amazon.com/dp/1119869986",
+        "repo": ""
+    },    
+    {
+        "title": "Python for Data Science For Dummies",
+        "sub_title": "",
+        "ed.": 3,
+        "series": "",
+        "authors": [
+            "John Paul Mueller",
+            "Luca Massaron"
+        ],
+        "foreword": "",
+        "publisher": "Wiley",
+        "copyright": null,
+        "pub_date": "November 2023",
+        "site": "https://www.wiley.com/en-us/Python+for+Data+Science+For+Dummies%2C+3rd+Edition-p-9781394213146",
+        "amazon": "https://www.amazon.com/dp/139421314X",
+        "repo": ""
+    },
+    {
+        "title": "Python in a Nutshell",
+        "sub_title": "A Desktop Quick Reference",
+        "ed.": 4,
+        "series": "",
+        "authors": [
+            "Alex Martelli",
+            "Anna Martelli Ravenscroft",
+            "Steve Holden",
+            "Paul McGuire"
+        ],
+        "foreword": "",
+        "publisher": "O'Reilly",
+        "copyright": 2023,
+        "pub_date": "January 2023",
+        "site": "https://www.oreilly.com/library/view/python-in-a/9781098113544/",
+        "amazon": "https://www.amazon.com/dp/1098113551",
+        "repo": ""
+    },
+    {
+        "title": "Python Distilled",
+        "sub_title": "",
+        "ed.": 1,
+        "series": "",
+        "authors": [
+            "David M. Beazley"
+        ],
+        "foreword": "",
+        "publisher": "Addison-Wesley",
+        "copyright": 2022,
+        "pub_date": "Sep 22, 2021",
+        "site": "https://www.informit.com/store/python-distilled-9780134173276",
+        "amazon": "https://www.amazon.com/dp/0134173279",
+        "repo": ""
+    },
+    {
+        "title": "Job Ready Python",
+        "sub_title": "",
+        "ed.": 1,
+        "series": "Mthree Tech Skills",
+        "authors": [
+            "Haythem Balti",
+            "Kimberly A. Weiss"
+        ],
+        "foreword": "",
+        "publisher": "Wiley",
+        "copyright": 2022,
+        "pub_date": "November 2021",
+        "site": "https://www.wiley.com/en-us/Job+Ready+Python-p-9781119817383",
+        "amazon": "https://www.amazon.com/dp/1119817382",
+        "repo": ""
+    },
+    {
+        "title": "Python for Geeks",
+        "sub_title": "Build production-ready applications using advanced Python concepts and industry best practices",
+        "ed.": 1,
+        "series": "",
+        "authors": [
+            "Muhammad Asif"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2021,
+        "pub_date": "August 2021",
+        "site": "https://www.packtpub.com/product/python-for-geeks/9781801070119",
+        "amazon": "https://www.amazon.com/dp/1801070113",
+        "repo": "https://github.com/PacktPublishing/Python-for-Geeks"
+    },
+    {
+        "title": "Creating Software with Modern Diagramming Techniques",
+        "sub_title": "Build Better Software with Mermaid",
+        "ed.": 1,
+        "series": "",
+        "authors": [
+            "Ashley Peacock"
+        ],
+        "foreword": "Michael Swaine",
+        "publisher": "Pragmatic Bookshelf",
+        "copyright": 2023,
+        "pub_date": "February 2023",
+        "site": "https://pragprog.com/titles/apdiag/creating-software-with-modern-diagramming-techniques/",
+        "amazon": "https://www.amazon.com/dp/1680509837",
+        "repo": ""
+    },
+    {
+        "title": "The Official Guide to Mermaid.js",
+        "sub_title": "Create complex diagrams and beautiful flowcharts easily using text and code",
+        "ed.": 1,
+        "series": "",
+        "authors": [
+            "Knut Sveidqvist",
+            "Ashish Jain"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2021,
+        "pub_date": "August 2021",
+        "site": "https://mermaid.js.org/landing/",
+        "amazon": "https://www.amazon.com/dp/1801078025",
+        "repo": "https://github.com/PacktPublishing/The-Official-Guide-to-Mermaid.js"
+    },
+    {
+        "title": "Modern Software Engineering",
+        "sub_title": "Doing What Works to Build Better Software Faster",
+        "ed.": 1,
+        "series": "",
+        "authors": [
+            "David Farley"
+        ],
+        "foreword": "Trisha Gee",
+        "publisher": "Addison-Wesley",
+        "copyright": 2022,
+        "pub_date": "Dec 10, 2021",
+        "site": "https://www.informit.com/store/modern-software-engineering-doing-what-works-to-build-9780137314911",
+        "amazon": "https://www.amazon.com/dp/0137314914",
+        "repo": ""
+    },
+    {
+        "title": "Python Object-Oriented Programming",
+        "sub_title": "Build robust and maintainable object-oriented Python applications and libraries",
+        "ed.": 4,
+        "series": "Expert Insight",
+        "authors": [
+            "Steven F. Lott",
+            "Dusty Phillips"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2021,
+        "pub_date": "July 2021",
+        "site": "https://www.packtpub.com/product/python-object-oriented-programming-fourth-edition/9781801077262",
+        "amazon": "https://www.amazon.com/dp/1801077266",
+        "repo": "https://github.com/PacktPublishing/Python-Object-Oriented-Programming---4th-edition"
+    },
+    {
+        "title": "Developing Apps with GPT-4 and ChatGPT",
+        "sub_title": "Build Intelligent Chatbots, Content Generators, and More",
+        "ed.": 1,
+        "series": "",
+        "authors": [
+            "Olivier Caelen",
+            "Marie-Alice Blete"
+        ],
+        "foreword": "",
+        "publisher": "O'Reilly",
+        "copyright": 2024,
+        "pub_date": "January 2024",
+        "site": "https://www.oreilly.com/library/view/developing-apps-with/9781098152475/",
+        "amazon": "",
+        "repo": ""
+    },
+    {
+        "title": "Architecting Data and Machine Learning Platforms",
+        "sub_title": "Enable Analytics and AI-Driven Innovation in the Cloud",
+        "ed.": 1,
+        "series": "",
+        "authors": [
+            "Marco Tranquillin",
+            "Valliappa Lakshmanan",
+            "Firat Tekiner"
+        ],
+        "foreword": "",
+        "publisher": "O'Reilly",
+        "copyright": 2024,
+        "pub_date": "December 2023",
+        "site": "https://www.oreilly.com/library/view/architecting-data-and/9781098151607/",
+        "amazon": "https://www.amazon.com/dp/1098151615",
+        "repo": ""
+    },
+    {
+        "title": "Software Requirements Essentials",
+        "sub_title": "Core Practices for Successful Business Analysis",
+        "ed.": "1",
+        "series": "",
+        "authors": [
+            "Karl Wiegers",
+            "Candase Hokanson"
+        ],
+        "foreword": "Joy Beatty",
+        "publisher": "Addison-Wesley",
+        "copyright": 2023,
+        "pub_date": "Mar 9, 2023",
+        "site": "https://www.informit.com/store/software-requirements-essentials-core-practices-for-9780138190286",
+        "amazon": "https://www.amazon.com/dp/0138190283",
+        "repo": ""
+    },
+    {
+        "title": "Pandas for Everyone",
+        "sub_title": "Python Data Analysis",
+        "ed.": 2,
+        "series": "Data & Analytics",
+        "authors": [
+            "Daniel Y. Chen"
+        ],
+        "foreword": "",
+        "publisher": "Addison-Wesley",
+        "copyright": null,
+        "pub_date": "Dec 20, 2022",
+        "site": "https://www.informit.com/store/pandas-for-everyone-python-data-analysis-9780137891153",
+        "amazon": "https://www.amazon.com/dp/0137891156",
+        "repo": ""
+    },
+    {
+        "title": "Mastering Blockchain",
+        "sub_title": "A technical reference guide to the inner workings of blockchain, from cryptography to DeFi and NFTs",
+        "ed.": 4,
+        "series": "Expert Insight",
+        "authors": [
+            "Imran Bashir"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2023,
+        "pub_date": "March 2023",
+        "site": "https://www.packtpub.com/product/mastering-blockchain-fourth-edition/9781803241067",
+        "amazon": "https://www.amazon.com/dp/1803241063",
+        "repo": "https://github.com/PacktPublishing/Mastering-Blockchain-Fourth-Edition"
+    },
+    {
+        "title": "TensorFlow in Action",
+        "sub_title": "",
+        "ed.": "1",
+        "series": "",
+        "authors": [
+            "Thushan Ganegedara"
+        ],
+        "foreword": "",
+        "publisher": "Manning",
+        "copyright": 2022,
+        "pub_date": "August 2022",
+        "site": "https://www.manning.com/books/tensorflow-in-action",
+        "amazon": "https://www.amazon.com/dp/1617298344",
+        "repo": "https://github.com/thushv89/manning_tf2_in_action"
+    },
+    {
+        "title": "Mastering Python",
+        "sub_title": "Write powerful and efficient code using the full range of Python's capabilities",
+        "ed.": 2,
+        "series": "Expert Insight",
+        "authors": [
+            "Rick van Hattem"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2022,
+        "pub_date": "May 2022",
+        "site": "https://www.packtpub.com/product/mastering-python-second-edition/9781800207721",
+        "amazon": "https://www.amazon.com/dp/1800207727",
+        "repo": "https://github.com/mastering-python/code_2"
+    },
+    {
+        "title": "Functional Python Programming",
+        "sub_title": "Use a functional approach to write succinct, expressive, and efficient Python code",
+        "ed.": 3,
+        "series": "Expert Insight",
+        "authors": [
+            "Steven F. Lott"
+        ],
+        "foreword": "Ricardo Bánffy",
+        "publisher": "Packt",
+        "copyright": 2022,
+        "pub_date": "December 2022",
+        "site": "https://www.packtpub.com/product/functional-python-programming-third-edition/9781803232577",
+        "amazon": "https://www.amazon.com/dp/1803232579",
+        "repo": "https://github.com/PacktPublishing/Functional-Python-Programming-3rd-Edition"
+    },
+    {
+        "title": "Hands-On Data Structures and Algorithms with Python",
+        "sub_title": "Store, manipulate, and access data effectively and boost the performance of your applications",
+        "ed.": 3,
+        "series": "Expert Insight",
+        "authors": [
+            "Dr. Basant Agarwal"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2022,
+        "pub_date": "July 2022",
+        "site": "https://www.packtpub.com/product/hands-on-data-structures-and-algorithms-with-python-third-edition/9781801073448",
+        "amazon": "https://www.amazon.com/dp/1801073449",
+        "repo": "https://github.com/PacktPublishing/Hands-On-Data-Structures-and-Algorithms-with-Python-Third-Edition"
+    },
+    {
+        "title": "Interpretable AI",
+        "sub_title": "Building explainable machine learning systems",
+        "ed.": "1",
+        "series": "",
+        "authors": [
+            "Ajay Thampi"
+        ],
+        "foreword": "",
+        "publisher": "Manning",
+        "copyright": 2022,
+        "pub_date": "May 2022",
+        "site": "https://www.manning.com/books/interpretable-ai",
+        "amazon": "https://www.amazon.com/dp/161729764X",
+        "repo": "https://github.com/thampiman/interpretable-ai-book"
+    },
+    {
+        "title": "Dive Into Data Science",
+        "sub_title": "Use Python to Tackle Your Toughest Business Challenges",
+        "ed.": "1",
+        "series": "",
+        "authors": [
+            "Bradford Tuckfield"
+        ],
+        "foreword": "",
+        "publisher": "No Starch",
+        "copyright": 2023,
+        "pub_date": "April 2023",
+        "site": "https://nostarch.com/dive-data-science",
+        "amazon": "https://www.amazon.com/dp/1718502885",
+        "repo": ""
+    },
+    {
+        "title": "Data Science on the Google Cloud Platform",
+        "sub_title": "Implementing End-to-End Real-Time Data Pipelines: From Ingest to Machine Learning",
+        "ed.": 2,
+        "series": "",
+        "authors": [
+            "Valliappa Lakshmanan"
+        ],
+        "foreword": "",
+        "publisher": "O'Reilly",
+        "copyright": 2022,
+        "pub_date": "2022-04-22",
+        "site": "https://www.oreilly.com/library/view/data-science-on/9781098118945/",
+        "amazon": "https://www.amazon.com/dp/1098118952",
+        "repo": "https://github.com/GoogleCloudPlatform/data-science-on-gcp"
+    },
+    {
+        "title": "Journey to Become a Google Cloud Machine Learning Engineer",
+        "sub_title": "Build the mind and hand of a Google Certified ML professional",
+        "ed.": "1",
+        "series": "",
+        "authors": [
+            "Dr. Logan Song"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2022,
+        "pub_date": "September 2022",
+        "site": "https://www.packtpub.com/product/journey-to-become-a-google-cloud-machine-learning-engineer/9781803233727",
+        "amazon": "https://www.amazon.com/dp/1803233729",
+        "repo": "https://github.com/PacktPublishing/Journey-to-a-Google-Cloud-Professional-Machine-Learning-Engineer"
+    },
+    {
+        "title": "Effective XGBoost",
+        "sub_title": "Optimizing, Tuning, Understanding, and Deploying Classification Models",
+        "ed.": "1",
+        "series": "Treading on Python",
+        "authors": [
+            "Matt Harrison"
+        ],
+        "foreword": "",
+        "publisher": "MetaSnake",
+        "copyright": 2023,
+        "pub_date": "March 21, 2023",
+        "site": "https://store.metasnake.com/xgboost",
+        "amazon": "https://www.amazon.com/dp/1792310390",
+        "repo": ""
+    },
+    {
+        "title": "Hands-On Machine Learning with Scikit-Learn, Keras, & TensorFlow",
+        "sub_title": "Concepts, Tools, and Techniques to Build Intelligent Systems",
+        "ed.": 3,
+        "series": "",
+        "authors": [
+            "Aurélien Géron"
+        ],
+        "foreword": "",
+        "publisher": "O'Reilly",
+        "copyright": 2023,
+        "pub_date": "2022-10-03",
+        "site": "https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/",
+        "amazon": "https://www.amazon.com/dp/1098125975",
+        "repo": "https://github.com/ageron/handson-ml3"
+    },
+    {
+        "title": "Python for Data Analysis",
+        "sub_title": "Data Wrangling with pandas, NumPy, & Jupyter",
+        "ed.": 3,
+        "series": "",
+        "authors": [
+            "Wes McKinney"
+        ],
+        "foreword": "",
+        "publisher": "O'Reilly",
+        "copyright": 2022,
+        "pub_date": "2022-08-12",
+        "site": "https://www.oreilly.com/library/view/python-for-data/9781098104023/",
+        "amazon": "https://www.amazon.com/dp/109810403X",
+        "repo": "https://github.com/wesm/pydata-book"
+    },
+    {
+        "title": "Deep Learning with Python",
+        "sub_title": "",
+        "ed.": 2,
+        "series": "",
+        "authors": [
+            "François Chollet"
+        ],
+        "foreword": "",
+        "publisher": "Manning",
+        "copyright": 2021,
+        "pub_date": "October 2021",
+        "site": "https://www.manning.com/books/deep-learning-with-python-second-edition",
+        "amazon": "https://www.amazon.com/dp/1617296864",
+        "repo": "https://github.com/fchollet/deep-learning-with-python-notebooks"
+    },
+    {
+        "title": "Becoming a Data Head",
+        "sub_title": "How to Think, Speak, and Understand Data Science, Statistics, and Machine Learning",
+        "ed.": "1",
+        "series": "",
+        "authors": [
+            "Alex J. Gutman",
+            "Jordan Goldmeier"
+        ],
+        "foreword": "",
+        "publisher": "Wiley",
+        "copyright": 2021,
+        "pub_date": "May 2021",
+        "site": "https://www.wiley.com/en-us/Becoming+a+Data+Head%3A+How+to+Think%2C+Speak%2C+and+Understand+Data+Science%2C+Statistics%2C+and+Machine+Learning-p-9781119741749",
+        "amazon": "https://www.amazon.com/dp/1119741742",
+        "repo": ""
+    },
+    {
+        "title": "Machine Learning with PyTorch and Scikit-Learn",
+        "sub_title": "Develop machine learning and deep learning models with Python",
+        "ed.": "1",
+        "series": "Expert Insight",
+        "authors": [
+            "Sebastian Raschka",
+            "Yuxi (Hayden) Liu",
+            "Vahid Mirjalili"
+        ],
+        "foreword": "Dmytro Dzhulgakov",
+        "publisher": "Packt",
+        "copyright": 2022,
+        "pub_date": "February 2022",
+        "site": "https://www.packtpub.com/product/machine-learning-with-pytorch-and-scikit-learn/9781801819312",
+        "amazon": "https://www.amazon.com/dp/1801819319",
+        "repo": "https://github.com/rasbt/machine-learning-book"
+    },
+    {
+        "title": "Effective Pandas",
+        "sub_title": "Patterns for Data Manipulation",
+        "ed.": "1",
+        "series": "Treading on Python",
+        "authors": [
+            "Matt Harrison"
+        ],
+        "foreword": "",
+        "publisher": "MetaSnake",
+        "copyright": 2021,
+        "pub_date": "December 8, 2021",
+        "site": "https://store.metasnake.com/effective-pandas-book",
+        "amazon": "https://www.amazon.com/dp/B09MYXXSFM",
+        "repo": "https://github.com/mattharrison/effective_pandas_book"
+    },
+    {
+        "title": "Designing Machine Learning Systems",
+        "sub_title": "An Iterative Process for Production-Ready Applications",
+        "ed.": "1",
+        "series": "",
+        "authors": [
+            "Chip Huyen"
+        ],
+        "foreword": "",
+        "publisher": "O'Reilly",
+        "copyright": 2022,
+        "pub_date": "2022-05-17",
+        "site": "https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/",
+        "amazon": "https://www.amazon.com/dp/1098107969",
+        "repo": "https://github.com/chiphuyen/dmls-book"
+    },
+    {
+        "title": "Learning Deep Learning",
+        "sub_title": "Theory and Practice of Neural Networks, Computer Vision, Natural Language Processing, and Transformers Using TensorFlow",
+        "ed.": "1",
+        "series": "",
+        "authors": [
+            "Magnus Ekman"
+        ],
+        "foreword": "",
+        "publisher": "Addison-Wesley",
+        "copyright": 2022,
+        "pub_date": "August 2021",
+        "site": "https://www.informit.com/store/learning-deep-learning-theory-and-practice-of-neural-9780137470358",
+        "amazon": "https://www.amazon.com/dp/0137470355",
+        "repo": "https://github.com/NVDLI/LDL/"
+    },
+    {
+        "title": "Transformers for Natural Language Processing",
+        "sub_title": "Build, train, and fine-tune deep neural network architectures for NLP with Python, PyTorch, TensorFlow, BERT, and GPT-3",
+        "ed.": 2,
+        "series": "Expert Insight",
+        "authors": [
+            "Denis Rothman"
+        ],
+        "foreword": "Antonio Gulli",
+        "publisher": "Packt",
+        "copyright": 2022,
+        "pub_date": "March 2022",
+        "site": "https://www.packtpub.com/product/transformers-for-natural-language-processing-second-edition/9781803247335",
+        "amazon": "https://github.com/PacktPublishing/Transformers-for-Natural-Language-Processing",
+        "repo": "https://github.com/Denis2054/Transformers-for-NLP-2nd-Edition"
+    },
+    {
+        "title": "TinyML Cookbook",
+        "sub_title": "Combine artificial intelligence and ultra-low-power embedded devices to make the world smarter",
+        "ed.": "1",
+        "series": "",
+        "authors": [
+            "Gian Marco Iodice"
+        ],
+        "foreword": "Ronan Naughton",
+        "publisher": "Packt",
+        "copyright": 2022,
+        "pub_date": "April 2022",
+        "site": "https://www.packtpub.com/product/tinyml-cookbook/9781801814973",
+        "amazon": "https://www.amazon.com/dp/180181497X",
+        "repo": "https://github.com/PacktPublishing/TinyML-Cookbook"
+    },
+    {
+        "title": "Natural Language Processing with TensorFlow",
+        "sub_title": "The definitive NLP book to implement the most sought-after machine learning models and tasks",
+        "ed.": 2,
+        "series": "Expert Insight",
+        "authors": [
+            "Thushan Ganegedara"
+        ],
+        "foreword": "Andrei Lopatenko",
+        "publisher": "Packt",
+        "copyright": 2022,
+        "pub_date": "July 2022",
+        "site": "https://www.packtpub.com/product/natural-language-processing-with-tensorflow-second-edition/9781838641351",
+        "amazon": "https://www.amazon.com/dp/1838641351",
+        "repo": "https://github.com/thushv89/packt_nlp_tensorflow_2"
+    },
+    {
+        "title": "Fundamentals of Data Engineering",
+        "sub_title": "Plan and Build Robust Data Systems",
+        "ed.": "1",
+        "series": "",
+        "authors": [
+            "Joe Reis",
+            "Matt Housley"
+        ],
+        "foreword": "",
+        "publisher": "O'Reilly",
+        "copyright": 2022,
+        "pub_date": "2022-06-22",
+        "site": "https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/",
+        "amazon": "https://www.amazon.com/dp/1098108302",
+        "repo": ""
+    },
+    {
+        "title": "Deep Learning with TensorFlow and Keras",
+        "sub_title": "Build and deploy supervised, unsupervised, deep, and reinforcement learning models",
+        "ed.": 3,
+        "series": "Expert Insight",
+        "authors": [
+            "Amita Kapoor",
+            "Antonio Gulli",
+            "Sujit Pal"
+        ],
+        "foreword": "François Chollet",
+        "publisher": "Packt",
+        "copyright": 2022,
+        "pub_date": "October 2022",
+        "site": "https://www.packtpub.com/product/deep-learning-with-tensorflow-and-keras-third-edition/9781803232911",
+        "amazon": "https://www.amazon.com/dp/1803232919",
+        "repo": "https://github.com/PacktPublishing/Deep-Learning-with-TensorFlow-and-Keras-3rd-edition"
+    },
+    {
+        "title": "AI at the Edge",
+        "sub_title": "Solving Real-World Problems with Embedded Machine Learning",
+        "ed.": "1",
+        "series": "",
+        "authors": [
+            "Daniel Situnayake",
+            "Jenny Plunkett"
+        ],
+        "foreword": "Pete Warden",
+        "publisher": "O'Reilly",
+        "copyright": 2023,
+        "pub_date": "January 2023",
+        "site": "https://www.oreilly.com/library/view/ai-at-the/9781098120191/",
+        "amazon": "https://www.amazon.com/dp/1098120205",
+        "repo": "https://github.com/ai-at-the-edge"
+    },
+    {
+        "title": "The Kaggle Book",
+        "sub_title": "Data analysis and machine learning for competitive data science",
+        "ed.": "1",
+        "series": "Expert Insight",
+        "authors": [
+            "Konrad Banachewicz",
+            "Luca Massaron"
+        ],
+        "foreword": "Anthony Goldbloom",
+        "publisher": "Packt",
+        "copyright": 2022,
+        "pub_date": "April 2022",
+        "site": "https://www.packtpub.com/product/the-kaggle-book/9781801817479",
+        "amazon": "https://www.amazon.com/dp/1801817472",
+        "repo": "https://github.com/PacktPublishing/The-Kaggle-Book"
+    },
+    {
+        "title": "Python Data Science Handbook",
+        "sub_title": "Essential Tools for Working with Data",
+        "ed.": 2,
+        "series": "",
+        "authors": [
+            "Jake VanderPlas"
+        ],
+        "foreword": "",
+        "publisher": "O'Reilly",
+        "copyright": 2023,
+        "pub_date": "2022-12-06",
+        "site": "https://www.oreilly.com/library/view/python-data-science/9781098121211/",
+        "amazon": "https://www.amazon.com/dp/1098121228",
+        "repo": "https://github.com/jakevdp/PythonDataScienceHandbook"
+    },
+    {
+        "title": "50 Algorithms Every Programmer Should Know",
+        "sub_title": "Python algorithms to live by to enhance your problem-solving skills",
+        "ed.": 2,
+        "series": "Expert Insight",
+        "authors": [
+            "Imran Ahmad"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2023,
+        "pub_date": "27 September 2023",
+        "site": "https://www.packtpub.com/product/50-algorithms-every-programmer-should-know-second-edition/9781803247762",
+        "amazon": "https://www.amazon.com/dp/1803247762",
+        "repo": ""
+    },
+    {
+        "title": "The Kaggle Workbook",
+        "sub_title": "Self-learning exercises and valuable insights for Kaggle data science competitions",
+        "ed.": "1",
+        "series": "Expert Insight",
+        "authors": [
+            "Konrad Banachewicz",
+            "Luca Massaron"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2023,
+        "pub_date": "February 2023",
+        "site": "https://www.packtpub.com/product/the-kaggle-workbook/9781804611210",
+        "amazon": "https://www.amazon.com/dp/1804611212",
+        "repo": "https://github.com/PacktPublishing/The-Kaggle-Workbook"
+    }
+]

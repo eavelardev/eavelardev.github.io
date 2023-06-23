@@ -1,0 +1,3 @@
+tensorflow-data-validation
+apache-beam[interactive]
+python-snappy

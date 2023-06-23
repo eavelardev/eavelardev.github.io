@@ -1,0 +1,4553 @@
+[
+  {
+    "name": "Google Cloud Big Data and Machine Learning Fundamentals",
+    "num": 3,
+    "modules": [
+      {
+        "name": "Course Introduction",
+        "lessons": [
+          {
+            "name": "Meet the author",
+            "type": "video",
+            "id": "75kxYraIvRQ",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Course introduction",
+            "type": "video",
+            "id": "pZa5F2YYGWY",
+            "date": "2023-04-06",
+            "references": []
+          },
+          {
+            "name": "Reading list",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1ydNy69KXfBo3s1-YOiyEMHBD1TpQz3zH",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Big Data and Machine Learning on Google Cloud",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "U8uQ6rRLWfw",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Compute",
+            "type": "video",
+            "id": "LHt4eKkKi0w",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Storage",
+            "type": "video",
+            "id": "4si0ELTnh2o",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "The history of big data and ML products",
+            "type": "video",
+            "id": "vsr16d4GuY0",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Big data and ML product categories",
+            "type": "video",
+            "id": "EaWWdwnVhjw",
+            "date": "2023-04-04",
+            "references": []
+          },
+          {
+            "name": "Customer example: Gojek",
+            "type": "video",
+            "id": "7eHEdyKf2DQ",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Pluralsight: Getting Started with Google Cloud and Qwiklabs",
+            "type": "video",
+            "id": "_sYJ0ClBPUE",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Lab introduction: Exploring a BigQuery Public Dataset",
+            "type": "video",
+            "id": "zcdBYtkKdoE",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Exploring a BigQuery Public Dataset",
+            "type": "lab",
+            "id": "1214596/labs/374753",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Summary",
+            "type": "video",
+            "id": "167BkLLcgPE",
+            "date": "2023-04-04",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "1214596/quizzes/374755"
+          },
+          {
+            "name": "Reading list",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1yehV-1SEjH8olUjYSLY3vp49EI7aiWlj",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Data Engineering for Streaming Data",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "Fa4jkyvLWl0",
+            "date": "2023-04-04",
+            "references": []
+          },
+          {
+            "name": "Big data challenges",
+            "type": "video",
+            "id": "AT6zJs5XxVQ",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Message-oriented architecture",
+            "type": "video",
+            "id": "3p2btn-j2aI",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Designing streaming pipelines with Apache Beam",
+            "type": "video",
+            "id": "-OIQb9g34e0",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Implementing streaming pipelines on Cloud Dataflow",
+            "type": "video",
+            "id": "ISDsNP9yZG4",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Visualization with Looker",
+            "type": "video",
+            "id": "EG2PgQtRyuA",
+            "date": "2023-04-04",
+            "references": []
+          },
+          {
+            "name": "Visualization with Data Studio",
+            "type": "video",
+            "id": "Wl1YYgvzrU8",
+            "date": "2023-04-04",
+            "references": []
+          },
+          {
+            "name": "Lab introduction: Creating a streaming data pipeline for a Real-Time dashboard with Dataflow",
+            "type": "video",
+            "id": "YbnzNtXcqEU",
+            "date": "2023-04-04",
+            "references": []
+          },
+          {
+            "name": "Creating a Streaming Data Pipeline for a Real-Time Dashboard with Dataflow",
+            "type": "lab",
+            "id": "1214596/labs/374765",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Summary",
+            "type": "video",
+            "id": "Mqx2INaP_3A",
+            "date": "2023-04-04",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "1214596/quizzes/374767"
+          },
+          {
+            "name": "Reading list",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1yhnGOtQFJmcU2UPclnKOhHN5U1obnZ6B",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Big Data with BigQuery",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "4QoUvBVRwaw",
+            "date": "2023-04-04",
+            "references": []
+          },
+          {
+            "name": "Storage and analytics",
+            "type": "video",
+            "id": "PVq9eIpKeyw",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "BigQuery demo - San Francisco bike share",
+            "type": "video",
+            "id": "sCEP2a79LS4",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Introduction to BigQuery ML",
+            "type": "video",
+            "id": "_E5NYD_pAq4",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Using BigQuery ML to predict customer lifetime value",
+            "type": "video",
+            "id": "i8F7JkiCKD0",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "BigQuery ML project phases",
+            "type": "video",
+            "id": "Ir7H1QsTkTQ",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "BigQuery ML key commands",
+            "type": "video",
+            "id": "lSS1i1q39J8",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Lab introduction: Predicting Visitor Purchases Using BigQuery ML",
+            "type": "video",
+            "id": "2yoD9_fzz64",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Predicting Visitor Purchases with a Classification Model with BigQuery ML",
+            "type": "lab",
+            "id": "1214596/labs/374777",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "1214596/quizzes/374779"
+          },
+          {
+            "name": "Summary",
+            "type": "video",
+            "id": "YOQNqTgmTIg",
+            "date": "2023-04-06",
+            "references": []
+          },
+          {
+            "name": "Reading list",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1ynaB4zUSTzQgdUOh2FCmieQBoeMB0D3G",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Machine Learning Options on Google Cloud",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "SiPjZ_88c-g",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Options to build ML models",
+            "type": "video",
+            "id": "Ym7sTJdjnIc",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Pre-built APIs",
+            "type": "video",
+            "id": "jW0SL9X14I4",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "AutoML",
+            "type": "video",
+            "id": "rwqBINPvMt0",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Custom training",
+            "type": "video",
+            "id": "xAHN04jKLMw",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Vertex AI",
+            "type": "video",
+            "id": "7NiSIiY9_Bc",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "AI Solutions",
+            "type": "video",
+            "id": "7HrOM7WoDtc",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Summary",
+            "type": "video",
+            "id": "tyGdEi_ZEh4",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "1214596/quizzes/374789"
+          },
+          {
+            "name": "Reading list",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1ynyDIkmo24Oeb5xJbpWlHHXGx0fGZTrc",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "The Machine Learning Workflow with Vertex AI",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "iBaugxfBjp8",
+            "date": "2023-04-04",
+            "references": []
+          },
+          {
+            "name": "Data preparation",
+            "type": "video",
+            "id": "6u37XUvcmKw",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Model training",
+            "type": "video",
+            "id": "TzRLtcHaUuM",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Model evaluation",
+            "type": "video",
+            "id": "C-T4B4moXS4",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Model deployment and monitoring",
+            "type": "video",
+            "id": "fh9nQJcgZZ8",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Lab introduction: Predicting loan risk with AutoML",
+            "type": "video",
+            "id": "FhM80rW2_1Y",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Vertex AI: Predicting Loan Risk with AutoML",
+            "type": "lab",
+            "id": "1214596/labs/374797",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Lab recap: Predicting loan risk with AutoML",
+            "type": "video",
+            "id": "mpnAJP1AQes",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Summary",
+            "type": "video",
+            "id": "hZSpz43QP8o",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "1214596/quizzes/374800"
+          },
+          {
+            "name": "Reading list",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1yoJUYXcI_sRSX0QN9C2ShFPLw9X3bcW3",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Course Summary",
+        "lessons": [
+          {
+            "name": "Course summary",
+            "type": "video",
+            "id": "igGoWiXgWbs",
+            "date": "2023-04-04",
+            "references": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "How Google Does Machine Learning",
+    "num": 10,
+    "modules": [
+      {
+        "name": "Introduction to Course and Series",
+        "lessons": [
+          {
+            "name": "Course series preview",
+            "type": "video",
+            "id": "UzeUmSswImU",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Course introduction",
+            "type": "video",
+            "id": "tEhIEKZsftQ",
+            "date": "2022-03-03",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "What It Means to be AI-First",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "MRWZ9tRd2H8",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "What is ML?",
+            "type": "video",
+            "id": "U2F49rkhjxQ",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "What kinds of problems can it solve?",
+            "type": "video",
+            "id": "cMZf20HszLI",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Framing a machine learning problem",
+            "type": "video",
+            "id": "yz5A9xl9zlc",
+            "date": "2022-10-06",
+            "references": []
+          },
+          {
+            "name": "Activity: Framing a machine learning problem",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1HIq_1Q2i2J7cf2D-H37Yub3J5dsPHGYB",
+            "references": []
+          },
+          {
+            "name": "Lab solutions: Framing a machine learning problem",
+            "type": "video",
+            "id": "vTr7smih5H4",
+            "date": "2022-10-06",
+            "references": []
+          },
+          {
+            "name": "Infuse your apps with ML",
+            "type": "video",
+            "id": "rWrY-IBTuTQ",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Build a data strategy around ML",
+            "type": "video",
+            "id": "E2wXNTmkEIs",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Quiz: What it Means to be AI First",
+            "type": "quiz",
+            "id": "1221586/quizzes/377641"
+          }
+        ]
+      },
+      {
+        "name": "How Google Does ML",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "wrgj1vbFuUE",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "ML surprise",
+            "type": "video",
+            "id": "cv_m3rMLwjs",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "The secret sauce",
+            "type": "video",
+            "id": "N_B-ew2bziM",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "ML and business processes",
+            "type": "video",
+            "id": "8-9MmU_0FrA",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "The path to ML",
+            "type": "video",
+            "id": "q-Ca31bsbC0",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "A closer look at the path",
+            "type": "video",
+            "id": "jT5rO9zhFXU",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "End of phases deep dive",
+            "type": "video",
+            "id": "dVuIWkrXTTI",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Quiz: How Google Does ML",
+            "type": "quiz",
+            "id": "1221586/quizzes/377650"
+          }
+        ]
+      },
+      {
+        "name": "Machine Learning Development with Vertex AI",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "UfQ6N00hy4Y",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Moving from experimentation to production",
+            "type": "video",
+            "id": "AcoWP0Px2uE",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Components of Vertex AI",
+            "type": "video",
+            "id": "CrUUgyrzKq0",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Getting Started with Google Cloud and Qwiklabs",
+            "type": "video",
+            "id": "sj2or8iseHk",
+            "date": "2021-01-29",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Using an image dataset to train an AutoML model",
+            "type": "video",
+            "id": "Rs4AzqQtVqM",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Lab demo: Using an image dataset to train an AutoML model",
+            "type": "video",
+            "id": "XwpkK0QLnzo",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Using an Image Dataset to Train an AutoML Model",
+            "type": "lab",
+            "id": "1221586/labs/340697",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Training an AutoML video classification model",
+            "type": "video",
+            "id": "iViuvGaD51s",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Lab demo: Training an AutoML video classification model",
+            "type": "video",
+            "id": "BbF03Rb_0ms",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Training an AutoML Video Classification Model",
+            "type": "lab",
+            "id": "1221586/labs/340700",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Tools to interact with Vertex AI",
+            "type": "video",
+            "id": "XiQ60eIFE7c",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Quiz: Machine Learning Development with Vertex AI",
+            "type": "quiz",
+            "id": "1221586/quizzes/377662"
+          }
+        ]
+      },
+      {
+        "name": "Machine Learning Development with Vertex Notebooks",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "iKszBAhj_dk",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Machine learning development with Vertex Notebooks",
+            "type": "video",
+            "id": "maE3CNLZMv4",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "(Optional) Lab intro: AutoML tabular training and prediction (SDK)",
+            "type": "video",
+            "id": "Zy5-8iSNCRY",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "(Optional) Lab demo: AutoML tabular training and prediction (SDK)",
+            "type": "video",
+            "id": "-sQt4MsTbJs",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Vertex AI Model Builder SDK: Training and Making Predictions on an AutoML Model",
+            "type": "lab",
+            "id": "1221586/labs/340708",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/how_google_does_ml/labs/automl-tabular-classification.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/how_google_does_ml/solutions/automl-tabular-classification.ipynb",
+            "references": []
+          },
+          {
+            "name": "Quiz: Machine Learning Development with Vertex Notebooks",
+            "type": "quiz",
+            "id": "1221586/quizzes/377669"
+          }
+        ]
+      },
+      {
+        "name": "Best Practices for Implementing Machine Learning on Vertex AI",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "hIxExVLY93A",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Best practices for machine learning development",
+            "type": "video",
+            "id": "31q0aL2fmJE",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Data preprocessing best practices",
+            "type": "video",
+            "id": "1dR0T5uFZjs",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Best practices for machine learning environment setup",
+            "type": "video",
+            "id": "vdZLrnGs_t4",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Quiz: Best Practices for Implementing Machine Learning on Vertex AI",
+            "type": "quiz",
+            "id": "1221586/quizzes/377675"
+          }
+        ]
+      },
+      {
+        "name": "Responsible AI Development",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "UN1EPlIRd3o",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Overview",
+            "type": "video",
+            "id": "udVMUM_6oRY",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Human biases lead to biases in ML models",
+            "type": "video",
+            "id": "6CafjbIRlvY",
+            "date": "2020-10-26",
+            "references": []
+          },
+          {
+            "name": "Biases in data",
+            "type": "video",
+            "id": "KgRQdO3I4YY",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Evaluating metrics with inclusion for your ML system",
+            "type": "video",
+            "id": "m5y8hADyejQ",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Equality of opportunity",
+            "type": "video",
+            "id": "2uC72NS8kVc",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "How to find errors in your dataset using Facets",
+            "type": "video",
+            "id": "tR-jXNOa6Zk",
+            "date": "2022-03-03",
+            "references": []
+          },
+          {
+            "name": "Quiz: Responsible AI Development",
+            "type": "quiz",
+            "id": "1221586/quizzes/377683"
+          }
+        ]
+      },
+      {
+        "name": "Summary",
+        "lessons": [
+          {
+            "name": "Summary",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1z-RLGRw1CAA1TkE0yCShFbaS12ThxIR4",
+            "references": []
+          },
+          {
+            "name": "Resource: All quiz questions",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1z-sR_4Z7sREbvN7if9jZ5ljgbS5JQJNV",
+            "references": []
+          },
+          {
+            "name": "Resource: All readings",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1z14dmq3FwRMJz0hV_U4Lp29jaQXfMNi1",
+            "references": []
+          },
+          {
+            "name": "Resource: All slides",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1z2OQzjbCSuOtD8ct92MCLzJF0TTczd1i",
+            "references": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Launching into Machine Learning",
+    "num": 8,
+    "modules": [
+      {
+        "name": "Introduction",
+        "lessons": [
+          {
+            "name": "Course introduction",
+            "type": "video",
+            "id": "VY9X9l7EY2Q",
+            "date": "2022-02-16",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Get to Know Your Data: Improve Data through Exploratory Data Analysis",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "fatY66P1zyk",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Improve data quality",
+            "type": "video",
+            "id": "8d7UKPd6S9c",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Lab Intro: Improve Data Quality",
+            "type": "video",
+            "id": "esRWLSGZB-s",
+            "date": "2021-09-24",
+            "references": []
+          },
+          {
+            "name": "Lab Demo: Improve the quality of your data",
+            "type": "video",
+            "id": "8wccd_l2J8M",
+            "date": "2022-02-21",
+            "references": []
+          },
+          {
+            "name": "Improving Data Quality",
+            "type": "lab",
+            "id": "2378465/labs/357090",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/launching_into_ml/labs/improve_data_quality.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/launching_into_ml/solutions/improve_data_quality.ipynb",
+            "references": []
+          },
+          {
+            "name": "What is exploratory data analysis",
+            "type": "video",
+            "id": "RxghRN8xiKI",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "How is EDA used in machine learning",
+            "type": "video",
+            "id": "MVX7TATzDGA",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Data analysis and visualization",
+            "type": "video",
+            "id": "wh_9fqeVhAc",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Explore the data using Python and BigQuery",
+            "type": "video",
+            "id": "ajfYLb5mV4U",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Exploratory Data Analysis Using Python and BigQuery",
+            "type": "lab",
+            "id": "2378465/labs/357095",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/launching_into_ml/labs/python.BQ_explore_data.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/launching_into_ml/solutions/python.BQ_explore_data.ipynb",
+            "references": []
+          },
+          {
+            "name": "Quiz: Get to know your data: Improve data through Exploratory Data Analysis",
+            "type": "quiz",
+            "id": "2378465/quizzes/377700"
+          }
+        ]
+      },
+      {
+        "name": "Machine Learning in Practice",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "zk3DmO27mPE",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Supervised Learning",
+            "type": "video",
+            "id": "jaOnIgnloto",
+            "date": "2021-09-24",
+            "references": []
+          },
+          {
+            "name": "Regression and Classification",
+            "type": "video",
+            "id": "GzKIE2lnLD0",
+            "date": "2021-09-24",
+            "references": []
+          },
+          {
+            "name": "Lab Intro: Introduction to Linear Regression",
+            "type": "video",
+            "id": "gUwGal5UNaU",
+            "date": "2021-09-24",
+            "references": []
+          },
+          {
+            "name": "Lab Demo: Intro to Linear Regression",
+            "type": "video",
+            "id": "8_VUT5kV9dw",
+            "date": "2022-02-21",
+            "references": []
+          },
+          {
+            "name": "Introduction to Linear Regression",
+            "type": "lab",
+            "id": "2378465/labs/357103",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/launching_into_ml/labs/intro_linear_regression.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/launching_into_ml/solutions/intro_linear_regression.ipynb",
+            "references": []
+          },
+          {
+            "name": "Logistic regression",
+            "type": "video",
+            "id": "8ptpVXbbSq4",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Quiz: Machine Learning in Practice",
+            "type": "quiz",
+            "id": "2378465/quizzes/377709"
+          }
+        ]
+      },
+      {
+        "name": "Training AutoML Models Using Vertex AI",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "8j6WyDGJi9w",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Machine learning vs. deep learning",
+            "type": "video",
+            "id": "82MquZTKvkM",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "What is automated machine learning?",
+            "type": "video",
+            "id": "9-TrKCoWTDk",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "AutoML regression mode",
+            "type": "video",
+            "id": "LSe8hHw5MHA",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "(Optional) Lab intro: Training an AutoML classification Model (Structured data)",
+            "type": "video",
+            "id": "JfUtU_Ub2aI",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "(Optional) Lab Demo: Training an AutoML classification model (Structured data)",
+            "type": "video",
+            "id": "dk6hY-gtw3A",
+            "date": "2022-02-21",
+            "references": []
+          },
+          {
+            "name": "Training an AutoML Classification Model - Structured Data",
+            "type": "lab",
+            "id": "2378465/labs/357113",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Evaluate AutoML models",
+            "type": "video",
+            "id": "hE1YADFKJf4",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Quiz: Training AutoML Models Using Vertex AI",
+            "type": "quiz",
+            "id": "2378465/quizzes/377719"
+          }
+        ]
+      },
+      {
+        "name": "BigQuery Machine Learning: Develop ML Models Where Your Data Lives",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "IINW5wfCYa8",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Training an ML model using BigQuery ML",
+            "type": "video",
+            "id": "mapkJAj-dlw",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "BigQuery ML supported models",
+            "type": "video",
+            "id": "P2okxpxlfi8",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Using BigQuery ML to predict penguin weight (BigQuery ML & Explainable AI)",
+            "type": "video",
+            "id": "IVDMBfG4HTM",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Lab Demo: Using BigQuery ML to predict penguin weight (BigQuery ML & Explainable AI)",
+            "type": "video",
+            "id": "7S-nWHJ4ziA",
+            "date": "2022-02-21",
+            "references": []
+          },
+          {
+            "name": "Using BigQuery ML to Predict Penguin Weight",
+            "type": "lab",
+            "id": "2378465/labs/357122",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "BigQuery ML hyperparameter tuning",
+            "type": "video",
+            "id": "Kt2f0nlinv4",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "(Optional) Lab intro: Using the BigQuery ML hyperparameter tuning to improve model Performance",
+            "type": "video",
+            "id": "mxqjOiN7Pco",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Using the BigQuery ML Hyperparameter Tuning to Improve Model Performance",
+            "type": "lab",
+            "id": "2378465/labs/357125",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "How to build and deploy a recommendation system with BigQuery ML",
+            "type": "video",
+            "id": "8p1VpjWd03E",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Quiz: BigQuery Machine Learning: Develop ML Models Where Your Data Lives",
+            "type": "quiz",
+            "id": "2378465/quizzes/377731"
+          }
+        ]
+      },
+      {
+        "name": "Optimization",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "jUEC0K29Il8",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Defining ML models",
+            "type": "video",
+            "id": "Ww7-iZ4XRCs",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Introducing the course dataset",
+            "type": "video",
+            "id": "WK45SYLPn6w",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Introduction to loss functions",
+            "type": "video",
+            "id": "k5NMhQiLwyA",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Gradient descent",
+            "type": "video",
+            "id": "u-KPBSK0uRM",
+            "date": "2021-09-24",
+            "references": []
+          },
+          {
+            "name": "Troubleshooting Loss Curves",
+            "type": "video",
+            "id": "rE-N_6OiYj0",
+            "date": "2021-09-24",
+            "references": []
+          },
+          {
+            "name": "ML model pitfalls",
+            "type": "video",
+            "id": "TnCQS8lH61U",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Lecture lab: Introducing the TensorFlow Playground",
+            "type": "video",
+            "id": "w5pfK2P6yT4",
+            "date": "2022-12-16",
+            "references": []
+          },
+          {
+            "name": "Lecture lab: TensorFlow Playground - Advanced",
+            "type": "video",
+            "id": "uXyp21DMdjI",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Lecture Lab: Practicing with Neural Networks",
+            "type": "video",
+            "id": "MpxVDHac0cg",
+            "date": "2021-09-24",
+            "references": []
+          },
+          {
+            "name": "Performance metrics",
+            "type": "video",
+            "id": "T9wrymXcveY",
+            "date": "2021-09-24",
+            "references": []
+          },
+          {
+            "name": "Confusion matrix",
+            "type": "video",
+            "id": "ND4QrtleFxY",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Quiz: Optimization",
+            "type": "quiz",
+            "id": "2378465/quizzes/377746"
+          }
+        ]
+      },
+      {
+        "name": "Generalization and Sampling",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "sfE95zAOQHY",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Generalization and ML models",
+            "type": "video",
+            "id": "TsauU4qf25U",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "When to stop model training",
+            "type": "video",
+            "id": "BaM_sGdUM50",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Creating repeatable samples in BigQuery",
+            "type": "video",
+            "id": "8NOO3ZmMmyA",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Demo: Splitting datasets in BigQuery",
+            "type": "video",
+            "id": "-HhCIJvNmzY",
+            "date": "2022-02-16",
+            "references": []
+          },
+          {
+            "name": "Quiz: Generalization and Sampling",
+            "type": "quiz",
+            "id": "2378465/quizzes/377753"
+          }
+        ]
+      },
+      {
+        "name": "Summary",
+        "lessons": [
+          {
+            "name": "Summary",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1PeroqkWDx9CzguyOD56qJwk9ZfbNvBW2",
+            "references": []
+          },
+          {
+            "name": "Resource: All quiz questions",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1PfX-u8kSWz_LM0dEXyXxdZ5RCTsym02k",
+            "references": []
+          },
+          {
+            "name": "Resource: All readings",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1PkJjXwYBHeydygTidHSJrv9xl_xeaQyU",
+            "references": []
+          },
+          {
+            "name": "Resource: All slides",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1PoH9SKPChJ7wfLLsmfq49814gSPh4HR3",
+            "references": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "TensorFlow on Google Cloud",
+    "num": 12,
+    "modules": [
+      {
+        "name": "Introduction to the Course",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "rDxQ849LGGI",
+            "date": "2022-03-11",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Introduction to the TensorFlow ecosystem",
+        "lessons": [
+          {
+            "name": "Introduction to the TensorFlow ecosystem",
+            "type": "video",
+            "id": "N6zm6IoMoH0",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Introduction to Tensorflow",
+            "type": "video",
+            "id": "DyrEEJT47Gs",
+            "date": "2022-03-11",
+            "references": []
+          },
+          {
+            "name": "TensorFlow API hierarchy",
+            "type": "video",
+            "id": "CLkXK9aJrhs",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Components of Tensorflow: Tensors and variables",
+            "type": "video",
+            "id": "c_83Wxv4NX0",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Quiz: Introduction to the TensorFlow Ecosystem",
+            "type": "quiz",
+            "id": "2438560/quizzes/376694"
+          }
+        ]
+      },
+      {
+        "name": "Design and Build an Input Data Pipeline",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "ZjC2t06Zexk",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "An ML recap",
+            "type": "video",
+            "id": "LfzZMRaKQS0",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Training on large datasets with tf.data API",
+            "type": "video",
+            "id": "U4ISWGuX-3E",
+            "date": "2022-03-11",
+            "references": []
+          },
+          {
+            "name": "Working in-memory and with files",
+            "type": "video",
+            "id": "o8xo-IT04Gc",
+            "date": "2022-03-11",
+            "references": []
+          },
+          {
+            "name": "Getting the data ready for model training",
+            "type": "video",
+            "id": "7LqLueX4LmQ",
+            "date": "2022-03-04",
+            "references": [
+              "[tf.feature_column](https://www.tensorflow.org/api_docs/python/tf/feature_column) is deprecated.",
+              "[Working with preprocessing layers](https://www.tensorflow.org/guide/keras/preprocessing_layers)",
+              "[Classify structured data using Keras preprocessing layers](https://www.tensorflow.org/tutorials/structured_data/preprocessing_layers)",
+              "[Migrate tf.feature_columns to Keras preprocessing layers](https://www.tensorflow.org/guide/migrate/migrating_feature_columns)",
+              "[An Introduction to Keras Preprocessing Layers](https://blog.tensorflow.org/2021/11/an-introduction-to-keras-preprocessing.html) (November 24, 2021)"
+            ]
+          },
+          {
+            "name": "Embeddings",
+            "type": "video",
+            "id": "WbxkYCDGaYw",
+            "date": "2022-03-04",
+            "references": [
+              "[tf.feature_column.embedding_column](https://www.tensorflow.org/api_docs/python/tf/feature_column/embedding_column) is deprecated.",
+              "[tf.keras.layers.Embedding](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Embedding)",
+              "[Word embeddings](https://www.tensorflow.org/text/guide/word_embeddings)"
+            ]
+          },
+          {
+            "name": "Lab intro: TensorFlow Dataset API",
+            "type": "video",
+            "id": "ByS99Z_Gd6M",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "TensorFlow Dataset API",
+            "type": "lab",
+            "id": "2438560/labs/376703",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/introduction_to_tensorflow/labs/2_dataset_api.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/introduction_to_tensorflow/solutions/2_dataset_api.ipynb",
+            "references": []
+          },
+          {
+            "name": "Scaling data processing with tf.data and Keras preprocessing layers",
+            "type": "video",
+            "id": "SLFeLWONXfw",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Classifying structured data using Keras preprocessing layers",
+            "type": "video",
+            "id": "jZ-EbMj_MsU",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Classifying Structured Data using Keras Preprocessing Layers",
+            "type": "lab",
+            "id": "2438560/labs/376706",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/introduction_to_tensorflow/labs/preprocessing_layers.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/introduction_to_tensorflow/solutions/preprocessing_layers.ipynb",
+            "references": []
+          },
+          {
+            "name": "Quiz: Design and Build Input Data Pipeline",
+            "type": "quiz",
+            "id": "2438560/quizzes/376707"
+          }
+        ]
+      },
+      {
+        "name": "Building Neural Networks with the TensorFlow and Keras API",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "2rQLLREROd0",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Activation functions",
+            "type": "video",
+            "id": "OHUh5EUdD74",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Training neural networks with TensorFlow 2 and the Keras Sequential API",
+            "type": "video",
+            "id": "bFYED2RZdPY",
+            "date": "2022-03-11",
+            "references": []
+          },
+          {
+            "name": "Serving models in the cloud",
+            "type": "video",
+            "id": "q0REuGXftaA",
+            "date": "2022-03-11",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Introducing the Keras Sequential API on Vertex AI Platform",
+            "type": "video",
+            "id": "B4VH0e3t0qA",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Introducing the Keras Sequential API on Vertex AI Platform",
+            "type": "lab",
+            "id": "2438560/labs/376714",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/introduction_to_tensorflow/labs/3_keras_sequential_api.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/introduction_to_tensorflow/solutions/3_keras_sequential_api.ipynb",
+            "references": []
+          },
+          {
+            "name": "Training neural networks with TensorFlow 2 and the Keras Functional API",
+            "type": "video",
+            "id": "KJk-ADypwO8",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Build a DNN using the Keras Functional API on Vertex AI Platform",
+            "type": "video",
+            "id": "mPNsnojiWvk",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Build a DNN using the Keras Functional API",
+            "type": "lab",
+            "id": "2438560/labs/376717",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/art_and_science_of_ml/labs/neural_network.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/art_and_science_of_ml/solutions/neural_network.ipynb",
+            "references": [
+              "`4_keras_functional_api.ipynb` - [lab](https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/courses/machine_learning/deepdive2/introduction_to_tensorflow/labs/4_keras_functional_api.ipynb), [sol](https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/courses/machine_learning/deepdive2/introduction_to_tensorflow/solutions/4_keras_functional_api.ipynb)"
+            ]
+          },
+          {
+            "name": "Model subclassing",
+            "type": "video",
+            "id": "E-a0zZYOLDo",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "(Optional) Lab intro: Making new layers and models via subclassing",
+            "type": "video",
+            "id": "AeCYZkRpF-E",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "(Optional) Making New Layers and Models via Subclassing",
+            "type": "lab",
+            "id": "2438560/labs/376720",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/introduction_to_tensorflow/labs/custom_layers_and_models.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/introduction_to_tensorflow/solutions/custom_layers_and_models.ipynb",
+            "references": []
+          },
+          {
+            "name": "Regularization basics",
+            "type": "video",
+            "id": "7_Y-68QliVo",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "How can we meaure model complexity: L1 vs. L2 Regularization",
+            "type": "video",
+            "id": "aQ_LW3eWMMM",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Quiz: Building Neural Networks in TensorFlow with Keras API",
+            "type": "quiz",
+            "id": "2438560/quizzes/376723"
+          }
+        ]
+      },
+      {
+        "name": "Training at Scale with Vertex AI",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "ta_3sUir94A",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Training at scale with Vertex AI",
+            "type": "video",
+            "id": "gx-vJzACbqk",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Training at scale with the Vertex AI Training Service",
+            "type": "video",
+            "id": "eZpVr1bjlbI",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Training at Scale with Vertex AI Training Service",
+            "type": "lab",
+            "id": "2438560/labs/376728",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/introduction_to_tensorflow/labs/1_training_at_scale_vertex.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/introduction_to_tensorflow/solutions/1_training_at_scale_vertex.ipynb",
+            "references": []
+          },
+          {
+            "name": "Quiz: Training at Scale with Vertex AI",
+            "type": "quiz",
+            "id": "2438560/quizzes/376729"
+          }
+        ]
+      },
+      {
+        "name": "Summary",
+        "lessons": [
+          {
+            "name": "Summary",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1Tp2ZcodY0G0zHNOvIhAql4Q4SSWtACxi",
+            "references": []
+          },
+          {
+            "name": "Resource: All quiz questions",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1TprYxd03b5xJOXXBqIpB_SPEPOA8wGPZ",
+            "references": []
+          },
+          {
+            "name": "Resource: All readings",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1Tqt0fb2jGbfitc33mVy4aZZfScIrzLX3",
+            "references": []
+          },
+          {
+            "name": "Resource: All slides",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1TuEeQsN3RwNYZmAHbUY3A7EyzwmifHrk",
+            "references": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Feature Engineering",
+    "num": 11,
+    "modules": [
+      {
+        "name": "Introduction",
+        "lessons": [
+          {
+            "name": "Course introduction",
+            "type": "video",
+            "id": "YjZ4wrEs2B4",
+            "date": "2022-03-04",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Introduction to Vertex AI Feature Store",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "05sOUYD1WpI",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Feature Store benefits",
+            "type": "video",
+            "id": "HJNoOt9LAR0",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Feature Store terminology and concepts",
+            "type": "video",
+            "id": "cwTcaxi8tV0",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "The Feature Store data model",
+            "type": "video",
+            "id": "ViXZcbezSfc",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Creating a Feature Store",
+            "type": "video",
+            "id": "Y50GQUvc2-Y",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Serving features: Batch and online",
+            "type": "video",
+            "id": "VrlpE49pARE",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "(Optional) Lab intro: Using Feature Store",
+            "type": "video",
+            "id": "_9frJMLTvRQ",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Getting Started with GCP and Qwiklabs",
+            "type": "video",
+            "id": "_sYJ0ClBPUE",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Using Feature Store",
+            "type": "lab",
+            "id": "2438561/labs/376744",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/feature_engineering/labs/6_gapic_feature_store.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/feature_engineering/solutions/6_gapic_feature_store.ipynb",
+            "references": [
+              "`7_get_started_with_feature_store.ipynb` - [lab](https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/courses/machine_learning/deepdive2/feature_engineering/labs/7_get_started_with_feature_store.ipynb), [sol](https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/courses/machine_learning/deepdive2/feature_engineering/solutions/7_get_started_with_feature_store.ipynb)",
+              "vertex-ai-samples/notebooks/official/feature_store/[sdk-feature-store.ipynb](https://github.com/GoogleCloudPlatform/vertex-ai-samples/blob/main/notebooks/official/feature_store/sdk-feature-store.ipynb)",
+              "vertex-ai-samples/notebooks/community/feature_store/[gapic-feature-store.ipynb](https://github.com/GoogleCloudPlatform/vertex-ai-samples/blob/main/notebooks/community/feature_store/gapic-feature-store.ipynb)",
+              "fraudfinder/[03_feature_engineering_streaming.ipynb](https://github.com/GoogleCloudPlatform/fraudfinder/blob/main/03_feature_engineering_streaming.ipynb)"
+            ]
+          },
+          {
+            "name": "Quiz: Introduction to Vertex AI Feature Store",
+            "type": "quiz",
+            "id": "2438561/quizzes/376745"
+          }
+        ]
+      },
+      {
+        "name": "Raw Data to Features",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "oOZ6Y6wNdPo",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Overview of feature engineering",
+            "type": "video",
+            "id": "8r0V05FXaa4",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Raw data to features",
+            "type": "video",
+            "id": "Gaxi74SzEfg",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Good features versus bad features",
+            "type": "video",
+            "id": "FLpXm3uVs68",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Features should be known at prediction-time",
+            "type": "video",
+            "id": "tz_cW3o8Hy0",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Features should be numeric",
+            "type": "video",
+            "id": "-kdyaTk_ACU",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Features should have enough examples",
+            "type": "video",
+            "id": "lJCz_TwGIBU",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Bringing human insight",
+            "type": "video",
+            "id": "hu_TisiCwf4",
+            "date": "2022-03-16",
+            "references": []
+          },
+          {
+            "name": "Representing features",
+            "type": "video",
+            "id": "gdJT0hkjk2I",
+            "date": "2022-03-16",
+            "references": []
+          },
+          {
+            "name": "Quiz: Raw Data to Features",
+            "type": "quiz",
+            "id": "2438561/quizzes/376756"
+          }
+        ]
+      },
+      {
+        "name": "Feature Engineering",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "XXbGma3UuRE",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Machine learning versus statistics",
+            "type": "video",
+            "id": "ZiPJyR8e06M",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Basic feature engineering",
+            "type": "video",
+            "id": "7x5S37S5eVw",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Performing Basic Feature Engineering in BigQuery ML",
+            "type": "video",
+            "id": "nYWwUQLwDA4",
+            "date": "2022-03-16",
+            "references": []
+          },
+          {
+            "name": "Performing Basic Feature Engineering in BQML",
+            "type": "lab",
+            "id": "2438561/labs/376762",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/feature_engineering/labs/1_bqml_basic_feat_eng_bqml-lab.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/feature_engineering/solutions/1_bqml_basic_feat_eng.ipynb",
+            "references": []
+          },
+          {
+            "name": "Advanced feature engineering: Feature crosses",
+            "type": "video",
+            "id": "Zo1d_07Y3lk",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Bucketize and Transform Functions",
+            "type": "video",
+            "id": "TG66HwjWQMc",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "(Optional) Lab intro: Advanced Feature Engineering BigQuery ML",
+            "type": "video",
+            "id": "2BdGFifwgnw",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Performing Advanced Feature Engineering in BQML",
+            "type": "lab",
+            "id": "2438561/labs/376766",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/feature_engineering/labs/2_bqml_adv_feat_eng-lab.ipyn",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/feature_engineering/solutions/2_bqml_adv_feat_eng.ipynb",
+            "references": []
+          },
+          {
+            "name": "Predict housing prices",
+            "type": "video",
+            "id": "o6Ez4deX49g",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Estimate taxi fare",
+            "type": "video",
+            "id": "0oSnzcusc48",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Temporal and geolocation features",
+            "type": "video",
+            "id": "PxmnL-AohaQ",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Basic Feature Engineering in Keras",
+            "type": "video",
+            "id": "AE18psmcNaw",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Performing Basic Feature Engineering in Keras",
+            "type": "lab",
+            "id": "2438561/labs/376771",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/feature_engineering/labs/3_keras_basic_feat_eng-lab.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/feature_engineering/solutions/3_keras_basic_feat_eng.ipynb",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Advanced Feature Engineering in Keras",
+            "type": "video",
+            "id": "MfA0H0McTL4",
+            "date": "2022-03-16",
+            "references": []
+          },
+          {
+            "name": "Performing Advanced Feature Engineering in Keras",
+            "type": "lab",
+            "id": "2438561/labs/376773",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/feature_engineering/labs/4_keras_adv_feat_eng-lab.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/feature_engineering/solutions/4_keras_adv_feat_eng.ipynb",
+            "references": []
+          },
+          {
+            "name": "Quiz: Feature Engineering",
+            "type": "quiz",
+            "id": "2438561/quizzes/376774"
+          }
+        ]
+      },
+      {
+        "name": "Preprocessing and Feature Creation",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "k0lhL5LMCxo",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Apache Beam and Dataflow",
+            "type": "video",
+            "id": "Xr2D-lDz-B0",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Dataflow terms and concepts",
+            "type": "video",
+            "id": "5MAN4fserOQ",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Quiz: Preprocessing and Feature Creation",
+            "type": "quiz",
+            "id": "2438561/quizzes/376779"
+          }
+        ]
+      },
+      {
+        "name": "Feature Crosses - TensorFlow Playground",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "I1B_gNy2SIg",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "What is a feature cross",
+            "type": "video",
+            "id": "h0bVHakJN_0",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Discretization",
+            "type": "video",
+            "id": "KeB3PzqO_fs",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Lab intro: TensorFlow Playground: Use feature crosses to create a good classifier",
+            "type": "video",
+            "id": "Fl9-Ma844Hw",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Lab intro: TensorFlow Playground: Too much of a good thing",
+            "type": "video",
+            "id": "_NxNrCOXnx8",
+            "date": "2022-03-16",
+            "references": []
+          },
+          {
+            "name": "Quiz: Feature Crosses - TensorFlow Playground",
+            "type": "quiz",
+            "id": "2438561/quizzes/376786"
+          }
+        ]
+      },
+      {
+        "name": "Introduction to TensorFlow Transform",
+        "lessons": [
+          {
+            "name": "Introducing TensorFlow Transform",
+            "type": "video",
+            "id": "eeY850mZnC0",
+            "date": "2021-12-08",
+            "references": []
+          },
+          {
+            "name": "TensorFlow Transform",
+            "type": "video",
+            "id": "2oZvmsMGGjE",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Analyze phase",
+            "type": "video",
+            "id": "i6IuBfUd2aM",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Transform phase",
+            "type": "video",
+            "id": "AO9uZPOVHk8",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Supporting serving",
+            "type": "video",
+            "id": "0qq2LQR7aXM",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Lab Intro: Exploring tf.transform",
+            "type": "video",
+            "id": "PZQ7p3B3seQ",
+            "date": "2022-03-04",
+            "references": []
+          },
+          {
+            "name": "Exploring tf.transform",
+            "type": "lab",
+            "id": "2438561/labs/376794",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/feature_engineering/labs/5_tftransform_taxifare.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/feature_engineering/solutions/5_tftransform_taxifare.ipynb",
+            "references": []
+          },
+          {
+            "name": "Quiz: Introduction to TensorFlow Transform",
+            "type": "quiz",
+            "id": "2438561/quizzes/376795"
+          }
+        ]
+      },
+      {
+        "name": "Summary",
+        "lessons": [
+          {
+            "name": "Summary",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1-e1JgfygLfwZuM05Cy8AuJIQnudesqo0",
+            "references": []
+          },
+          {
+            "name": "Resource: All quiz questions",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1-fVYuoObZ4RRKsxBZOMExvUHY5JpKLbt",
+            "references": []
+          },
+          {
+            "name": "Resource: All readings",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1-zMJPKtx-Q14DfzeRoYnxSCO_QsE5yWD",
+            "references": []
+          },
+          {
+            "name": "Resource: All slides",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1-j3bR9GyVBgYt5t9Qf2E2pdyZgg8DBU1",
+            "references": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Machine Learning in the Enterprise",
+    "num": 9,
+    "modules": [
+      {
+        "name": "Introduction",
+        "lessons": [
+          {
+            "name": "Course introduction",
+            "type": "video",
+            "id": "1tzqwgj8VLY",
+            "date": "2023-04-27",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Understanding the Machine Learning Enterprise Workflow",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "ThHDzKiNGrg",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Overview of an ML enterprise workflow",
+            "type": "video",
+            "id": "SxqVKFUg8TQ",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Quiz: Understanding the ML Enterprise Workflow",
+            "type": "quiz",
+            "id": "2438562/quizzes/376583"
+          }
+        ]
+      },
+      {
+        "name": "Data in the Enterprise",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "TNYYJiawP7U",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Feature Store",
+            "type": "video",
+            "id": "7rfdI9XpNdM",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Data Catalog",
+            "type": "video",
+            "id": "vQGYOzHz_zo",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Dataplex",
+            "type": "video",
+            "id": "R4BtGkEWN4Y",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Analytics Hub",
+            "type": "video",
+            "id": "MR2mN2GWi94",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Data preprocessing options",
+            "type": "video",
+            "id": "njslHFatnQg",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Dataprep",
+            "type": "video",
+            "id": "yrS8cKA-vrg",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Exploring and Creating an Ecommerce Analytics Pipeline with Dataprep",
+            "type": "video",
+            "id": "jwFtmlYRfzg",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Exploring and Creating an Ecommerce Analytics Pipeline with Cloud Dataprep v1.5",
+            "type": "lab",
+            "id": "2438562/labs/376593",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Quiz: Data in the Enterprise",
+            "type": "quiz",
+            "id": "2438562/quizzes/376594"
+          }
+        ]
+      },
+      {
+        "name": "The Science of Machine Learning and Custom Training",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "VNCFyBE8c1A",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "The art and science of machine learning",
+            "type": "video",
+            "id": "qr7roIwi6dg",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Make training faster",
+            "type": "video",
+            "id": "DwSS5I6bUlI",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "When to use custom training",
+            "type": "video",
+            "id": "v4SQfr0cC7A",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Training requirements and dependencies (part 1)",
+            "type": "video",
+            "id": "NQ1hSLDvXbs",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Training requirements and dependencies (part 2)",
+            "type": "video",
+            "id": "HarFmj-R8so",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Training custom ML models using Vertex AI",
+            "type": "video",
+            "id": "6SXgGD9hJwM",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Vertex AI: Custom Training Job and Prediction Using Managed Datasets",
+            "type": "video",
+            "id": "psHQOkfVark",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Vertex AI: Custom Training Job and Prediction Using Managed Datasets",
+            "type": "lab",
+            "id": "2438562/labs/376604",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Quiz: Science of Machine Learning and Custom Training",
+            "type": "quiz",
+            "id": "2438562/quizzes/376605"
+          },
+          {
+            "name": "Resources: The Science of Machine Learning",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1fl7ZfWtgX1LgFvDHtK-IFS5CkNucrqHo",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Vertex Vizier Hyperparameter Tuning",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "3ESB-9UEqfg",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Vertex AI Vizier hyperparameter tuning",
+            "type": "video",
+            "id": "ChkQ_gX0n-w",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Vertex Vizier Hyperparameter Tuning",
+            "type": "video",
+            "id": "ogU3gK2wTAI",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Vertex AI: Hyperparameter Tuning",
+            "type": "lab",
+            "id": "2438562/labs/376611",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Using Vertex Vizier to Optimize Multiple Objectives",
+            "type": "lab",
+            "id": "2438562/labs/376612",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/machine_learning_in_the_enterprise/labs/gapic-vizier-multi-objective-optimization.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/machine_learning_in_the_enterprise/solutions/gapic-vizier-multi-objective-optimization.ipynb",
+            "references": []
+          },
+          {
+            "name": "Quiz: Vertex Vizier Hyperparameter Tuning",
+            "type": "quiz",
+            "id": "2438562/quizzes/376613"
+          }
+        ]
+      },
+      {
+        "name": "Prediction and Model Monitoring using Vertex AI",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "r1fPhdyqAFc",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Predictions using Vertex AI",
+            "type": "video",
+            "id": "lqzp9k7sAhA",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Vertex SDK: Custom Training Tabular Regression Models for Online Prediction and Explainability",
+            "type": "lab",
+            "id": "2438562/labs/376617",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/machine_learning_in_the_enterprise/labs/sdk_custom_tabular_regression_online_explain.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/machine_learning_in_the_enterprise/solutions/sdk_custom_tabular_regression_online_explain.ipynb",
+            "references": []
+          },
+          {
+            "name": "Model management using Vertex AI",
+            "type": "video",
+            "id": "bGy5NwXpqZY",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Vertex AI Model Monitoring",
+            "type": "video",
+            "id": "Yw9yHDIbZPE",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Monitoring Vertex AI Model",
+            "type": "lab",
+            "id": "2438562/labs/376620",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/machine_learning_in_the_enterprise/labs/model_monitoring.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/machine_learning_in_the_enterprise/solutions/model_monitoring.ipynb",
+            "references": []
+          },
+          {
+            "name": "Quiz: Prediction and Model Monitoring Using Vertex AI",
+            "type": "quiz",
+            "id": "2438562/quizzes/376621"
+          }
+        ]
+      },
+      {
+        "name": "Vertex AI Pipelines",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "kth7gKDLaqs",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Prediction using Vertex AI pipelines",
+            "type": "video",
+            "id": "7OugCBYXGz8",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Vertex AI Pipelines",
+            "type": "video",
+            "id": "aYNVH7QBZrY",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Introduction to Vertex AI Pipelines Lab Walkthrough",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1gXuG245jbjAv5Cs8swl_Hw2kjtykeDG5",
+            "references": []
+          },
+          {
+            "name": "Introduction to Vertex Pipelines",
+            "type": "lab",
+            "id": "2438562/labs/376627",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/machine_learning_in_the_enterprise/labs/intro_to_vertex_pipelines.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/machine_learning_in_the_enterprise/solutions/intro_to_vertex_pipelines.ipynb",
+            "references": []
+          },
+          {
+            "name": "Running Pipelines on Vertex AI 2.5",
+            "type": "lab",
+            "id": "2438562/labs/376628",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Quiz: Vertex AI Pipelines",
+            "type": "quiz",
+            "id": "2438562/quizzes/376629"
+          }
+        ]
+      },
+      {
+        "name": "Best Practices for Machine Learning Development",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "1gi0oZHfD94",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Best practices for model deployment and serving",
+            "type": "video",
+            "id": "gxUntJeqO-8",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Best practices for model monitoring",
+            "type": "video",
+            "id": "koxD3PhmSUs",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Vertex AI pipeline best practices",
+            "type": "video",
+            "id": "s_2WSukPS8c",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Best practices for artifact organization",
+            "type": "video",
+            "id": "Pp730pzcG6A",
+            "date": "2023-04-27",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Course Summary",
+        "lessons": [
+          {
+            "name": "Summary",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1gUueQZ2cteazH0oqvdgAZ2ub2rq3dQkQ",
+            "references": []
+          },
+          {
+            "name": "Resource: All quiz questions",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1gW7LdtaxmIepW_bMews2j45fHyU9W9L9",
+            "references": []
+          },
+          {
+            "name": "Resource: All readings",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1gWQRb-S_EKEJRhTsdZc6PtVbnfHWPnMr",
+            "references": []
+          },
+          {
+            "name": "Resource: All slides",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1gWajwoEWQxr4DDNYwZ4CQGhRIlIRlP5O",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Series Summary",
+        "lessons": [
+          {
+            "name": "Series summary",
+            "type": "video",
+            "id": "pl1FiPCDXhc",
+            "date": "2023-04-27",
+            "references": []
+          },
+          {
+            "name": "Resource: Best practices summary",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1gT89GPGJg3QQ12xvN1JyNXZISMaXK6rj",
+            "references": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Production Machine Learning Systems",
+    "num": 17,
+    "modules": [
+      {
+        "name": "Introduction to Advanced Machine Learning on Google Cloud",
+        "lessons": [
+          {
+            "name": "Advanced Machine Learning on Google Cloud",
+            "type": "video",
+            "id": "e5qXbD6h6j0",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Welcome",
+            "type": "video",
+            "id": "4WC0Rd3lbI4",
+            "date": "2022-12-13",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Architecting Production ML Systems",
+        "lessons": [
+          {
+            "name": "Architecting ML systems",
+            "type": "video",
+            "id": "36U-DGvmQtE",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Data extraction, analysis, and preparation",
+            "type": "video",
+            "id": "a_T2gmBIc5M",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Model training, evaluation, and validation",
+            "type": "video",
+            "id": "lK0OtgibhAY",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Trained model, prediction service, and performance monitoring",
+            "type": "video",
+            "id": "SZgy7j0CBd0",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Training design decisions",
+            "type": "video",
+            "id": "hWsCLoWMdRE",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Serving design decisions",
+            "type": "video",
+            "id": "WZC6Fcddf1g",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Designing from scratch",
+            "type": "video",
+            "id": "nYAiWZx8EOk",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Using Vertex AI",
+            "type": "video",
+            "id": "uU9FlOKKnKI",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Lab introduction: Structured data prediction",
+            "type": "video",
+            "id": "BWs9E5LlLDc",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Structured data prediction using Vertex AI Platform",
+            "type": "lab",
+            "id": "2438563/labs/354434",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/production_ml/babyweight/train_deploy.ipynb",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Quiz: Architecting production ML systems",
+            "type": "quiz",
+            "id": "2438563/quizzes/354435"
+          }
+        ]
+      },
+      {
+        "name": "Designing Adaptable ML Systems",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "Rr86vy4UTzk",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Adapting to data",
+            "type": "video",
+            "id": "GjU2U3qPqXY",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Changing distributions",
+            "type": "video",
+            "id": "a-6wWJWxB9k",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Lab: Adapting to data",
+            "type": "video",
+            "id": "gUMFSpx_Ba8",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Right and wrong decisions",
+            "type": "video",
+            "id": "vQfPD7MrLNc",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "System failure",
+            "type": "video",
+            "id": "KBA_mTUUyfc",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Concept drift",
+            "type": "video",
+            "id": "PHdM4hsi4K0",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Actions to mitigate concept drift",
+            "type": "video",
+            "id": "YS1jFHpixfQ",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "TensorFlow data validation",
+            "type": "video",
+            "id": "2V-F7iG3pwk",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Components of TensorFlow data validation",
+            "type": "video",
+            "id": "no0qLRColnw",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Lab Introduction: Introduction to TensorFlow Data Validation",
+            "type": "video",
+            "id": "GTbByKuCMz0",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Introduction to TensorFlow Data Validation",
+            "type": "lab",
+            "id": "2438563/labs/354448",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/production_ml/labs/tfdv_basic_spending.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/production_ml/solutions/tfdv_basic_spending.ipynb",
+            "references": []
+          },
+          {
+            "name": "Lab Introduction: Advanced Visualizations with TensorFlow Data Validation",
+            "type": "video",
+            "id": "stXBTBcxfMI",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Advanced Visualizations with TensorFlow Data Validation",
+            "type": "lab",
+            "id": "2438563/labs/354450",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/production_ml/labs/tfdv_advanced_taxi.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/production_ml/solutions/tfdv_advanced_taxi.ipynb",
+            "references": []
+          },
+          {
+            "name": "Mitigating training-serving skew through design",
+            "type": "video",
+            "id": "a_BgeuMOx00",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Lab Introduction: Serving ML Predictions in Batch and Real Time",
+            "type": "video",
+            "id": "0-KARyEbzXA",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Serving ML Predictions in Batch and Real Time",
+            "type": "lab",
+            "id": "2438563/labs/354453",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/production_ml/labs/serving_ml_prediction.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/production_ml/solutions/serving_ml_prediction.ipynb",
+            "references": []
+          },
+          {
+            "name": "Lab Debrief: Serving ML Predictions in Batch and Real Time",
+            "type": "video",
+            "id": "IQgQaAS9AmI",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Diagnosing a production model",
+            "type": "video",
+            "id": "-FVz8Q7gnu0",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Quiz: Designing adaptable ML systems",
+            "type": "quiz",
+            "id": "2438563/quizzes/354456"
+          }
+        ]
+      },
+      {
+        "name": "Designing High-performance ML Systems",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "6aSCPLL0B3I",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Training",
+            "type": "video",
+            "id": "rlhb-SHGdp8",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Predictions",
+            "type": "video",
+            "id": "PaKvzTWOJ68",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Why distributed training is needed",
+            "type": "video",
+            "id": "yrQXH9dV1Hk",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Distributed training architectures",
+            "type": "video",
+            "id": "DTV9MeOrO64",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "TensorFlow distributed training strategies",
+            "type": "video",
+            "id": "jNnj6KUgRoA",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Mirrored strategy",
+            "type": "video",
+            "id": "tbmlZ1T1sxM",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Multi-worker mirrored strategy",
+            "type": "video",
+            "id": "QIuJDnsbP3E",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "TPU strategy",
+            "type": "video",
+            "id": "UiupJeCSquI",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Parameter server strategy",
+            "type": "video",
+            "id": "gSCHwdCN310",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Lab Introduction: Distributed Training with Keras",
+            "type": "video",
+            "id": "5zPotyAmkSQ",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Distributed Training with Keras",
+            "type": "lab",
+            "id": "2438563/labs/354469",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/production_ml/labs/keras.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/production_ml/solutions/keras.ipynb",
+            "references": []
+          },
+          {
+            "name": "Lab Introduction: Distributed Training using GPUs on Cloud AI Platform",
+            "type": "video",
+            "id": "fedO0we7rv8",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Distributed Training using GPUs on Cloud AI Platform",
+            "type": "lab",
+            "id": "2438563/labs/354471",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/production_ml/labs/distributed_training.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/production_ml/solutions/distributed_training.ipynb",
+            "references": []
+          },
+          {
+            "name": "Training on large datasets with tf.data API",
+            "type": "video",
+            "id": "m9Ecd6THJv0",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Lab Introduction: TPU-speed Data Pipelines",
+            "type": "video",
+            "id": "574DXfBmW2Q",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "TPU Speed Data Pipelines",
+            "type": "lab",
+            "id": "2438563/labs/354474",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/production_ml/labs/tpu_speed_data_pipelines.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/production_ml/solutions/tpu_speed_data_pipelines.ipynb",
+            "references": []
+          },
+          {
+            "name": "Inference",
+            "type": "video",
+            "id": "ILZuFizU8hw",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Quiz: Designing high-performance ML systems",
+            "type": "quiz",
+            "id": "2438563/quizzes/354476"
+          }
+        ]
+      },
+      {
+        "name": "Building Hybrid ML Systems",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "ZMtqMI7SFX4",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Machine Learning on Hybrid Cloud",
+            "type": "video",
+            "id": "w5q0HHSu7GA",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Kubeflow",
+            "type": "video",
+            "id": "juJ2ylUfnWk",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Lab Introduction: Kubeflow Pipelines with AI Platform",
+            "type": "video",
+            "id": "EH-iMWf9svM",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Running Pipelines on Vertex AI 2.5",
+            "type": "lab",
+            "id": "2438563/labs/354482",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "TensorFlow Lite",
+            "type": "video",
+            "id": "c7lJZE44MHQ",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Optimizing TensorFlow for mobile",
+            "type": "video",
+            "id": "ZpgAZEcEadY",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Summary",
+            "type": "video",
+            "id": "eaxS7PH22KU",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Quiz: Hybrid ML systems",
+            "type": "quiz",
+            "id": "2438563/quizzes/354486"
+          }
+        ]
+      },
+      {
+        "name": "Summary",
+        "lessons": [
+          {
+            "name": "Course summary",
+            "type": "video",
+            "id": "OAbXCUPH8HY",
+            "date": "2022-12-13",
+            "references": []
+          },
+          {
+            "name": "Production Machine learning systems - readings",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1h_iZyep2j15-HL5bxi28POhAkKOqRb3J",
+            "references": []
+          },
+          {
+            "name": "All quiz questions and answers",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1hd331HFNsOpmlDmJ5aTIHRWAOser8l8c",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Course Resources",
+        "lessons": [
+          {
+            "name": "Architecting Production ML Systems Course Resources",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1hTiq7DFlg1eroGjECnTmpIHflChyU99a",
+            "references": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Computer Vision Fundamentals with Google Cloud",
+    "num": 18,
+    "modules": [
+      {
+        "name": "Introduction",
+        "lessons": [
+          {
+            "name": "Course Introduction",
+            "type": "video",
+            "id": "fCO_PSZMUqQ",
+            "date": "2022-06-16",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Introduction to Computer Vision and Pre-built ML Models for Image Classification",
+        "lessons": [
+          {
+            "name": "What Is Computer Vision",
+            "type": "video",
+            "id": "jP-ieD5lGHM",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Different Type of Computer Vision Problems",
+            "type": "video",
+            "id": "XcrB8jPa1Kg",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Computer Vision Use Cases",
+            "type": "video",
+            "id": "pRYm8w3heCA",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Vision API - Pre-built ML Models",
+            "type": "video",
+            "id": "dtbvM66GlyM",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Lab Introduction - Detecting Labels, Faces, and Landmarks in Images with the Cloud Vision API",
+            "type": "video",
+            "id": "KOV3PsYp_Xc",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Detecting Labels, Faces, and Landmarks in Images with the Cloud Vision API",
+            "type": "lab",
+            "id": "1914114/labs/325248",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Lab Introduction - Lab: Extracting Text from the images using the Google Cloud Vision API",
+            "type": "video",
+            "id": "Ei4a5CkdVf8",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Extracting Text from the Images using the Google Cloud Vision API",
+            "type": "lab",
+            "id": "1914114/labs/325250",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Readings",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1xH0UcqMCeXZeL-SEWPrzcCUDZL1oyXUe",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "1914114/quizzes/325252"
+          }
+        ]
+      },
+      {
+        "name": "Vertex AI and AutoML Vision on Vertex AI",
+        "lessons": [
+          {
+            "name": "What is Vertex AI and why does a unified platform matter?",
+            "type": "video",
+            "id": "amRHz8C07mo",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Introduction to AutoML Vision on Vertex AI",
+            "type": "video",
+            "id": "AXaRwccugh0",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "How does Vertex AI help with the ML workflow, part 1 ?",
+            "type": "video",
+            "id": "FGLmLdrwJBA",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "How does Vertex AI help with the ML workflow, part 2 ?",
+            "type": "video",
+            "id": "eacv9by4UnY",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Which vision product is right for you?",
+            "type": "video",
+            "id": "Vxh_f5d9zXE",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Lab Introduction - Identifying Damaged Car Parts with Vertex AI for AutoML Vision users",
+            "type": "video",
+            "id": "noyeT4rY5hU",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Identifying Damaged Car Parts with Vertex AI for AutoML Vision Users",
+            "type": "lab",
+            "id": "1914114/labs/325259",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Readings",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1xKk_HMfSpsAoo22bKg7b3iIpDuukpyZd",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "1914114/quizzes/325261"
+          }
+        ]
+      },
+      {
+        "name": "Custom Training with Linear, Neural Network and Deep Neural Network models",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "1FDTkutVGns",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Introduction to Linear Models",
+            "type": "video",
+            "id": "wGKfDhkWdBo",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Reading the Data",
+            "type": "video",
+            "id": "_q7I6YPFylk",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Implementing Linear Models for Image Classification",
+            "type": "video",
+            "id": "6s5TE4zTKig",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Lab Introduction - Classifying Images with a Linear Model",
+            "type": "video",
+            "id": "9bUfxHe_7Aw",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Classifying Images with a Linear Model",
+            "type": "lab",
+            "id": "1914114/labs/325267",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/computer_vision_fun/labs/classifying_images_with_a_linear_model.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/computer_vision_fun/solutions/classifying_images_with_a_linear_model.ipynb",
+            "references": []
+          },
+          {
+            "name": "Neural Networks and Deep Neural Networks for Image Classification",
+            "type": "video",
+            "id": "mZeXa85QqLg",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Lab Introduction - Classifying Images with a NN and DNN Model",
+            "type": "video",
+            "id": "O8s9YgJPceo",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Classifying Images with a NN and DNN Model",
+            "type": "lab",
+            "id": "1914114/labs/325270",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/computer_vision_fun/labs/classifying_images_with_a_nn_and_dnn_model.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/computer_vision_fun/solutions/classifying_images_with_a_nn_and_dnn_model.ipynb",
+            "references": []
+          },
+          {
+            "name": "Deep Neural Networks with Dropout and Batch Normalization",
+            "type": "video",
+            "id": "wIi9b0WsYNU",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Lab Introduction - Classifying Images using Dropout and Batchnorm Layer",
+            "type": "video",
+            "id": "6Q2J8wvKam8",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Classifying Images using Dropout and Batchnorm Layer",
+            "type": "lab",
+            "id": "1914114/labs/325273",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/computer_vision_fun/labs/classifying_images_using_dropout_and_batchnorm_layer.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/computer_vision_fun/solutions/classifying_images_using_dropout_and_batchnorm_layer.ipynb",
+            "references": []
+          },
+          {
+            "name": "Readings",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1xXsU0FpP9cKrTokuokW822niVcFu2ReI",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "1914114/quizzes/325275"
+          }
+        ]
+      },
+      {
+        "name": "Convolutional Neural Networks",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "ylmzuk-jv-w",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Convolutional Neural Networks",
+            "type": "video",
+            "id": "4pcqScI1jhA",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Understanding Convolutions",
+            "type": "video",
+            "id": "HsQs_Tl6E_0",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "CNN Model Parameters",
+            "type": "video",
+            "id": "Kxw_Cgg2vZ4",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Working with Pooling Layers",
+            "type": "video",
+            "id": "OK2JvFzZR4U",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Implementing CNNs on Vertex AI with pre-built TF container using Vertex Workbench",
+            "type": "video",
+            "id": "63ye-xDdQVk",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Classifying Images with pre-built TF Container on Vertex AI",
+            "type": "lab",
+            "id": "1914114/labs/325282",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/computer_vision_fun/labs/classifying_images_with_pre-built_tf_container_on_vertex_ai.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/computer_vision_fun/solutions/classifying_images_with_pre-built_tf_container_on_vertex_ai.ipynb",
+            "references": []
+          },
+          {
+            "name": "Readings",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1xRGsXw46SUvJj76YEfqEF2YrxAjV6KWA",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "1914114/quizzes/325284"
+          }
+        ]
+      },
+      {
+        "name": "Dealing with Image Data",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "SRHK9b9SWc8",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Preprocessing the Image Data",
+            "type": "video",
+            "id": "GPug_o8EGPI",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Model Parameters and the Data Scarcity Problem",
+            "type": "video",
+            "id": "3-QS85brVTQ",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Data Augmentation",
+            "type": "video",
+            "id": "podZxxDv_Tg",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Lab Introduction - Classifying Images using Data Augmentation",
+            "type": "video",
+            "id": "D0F-GCSqUi8",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Classifying Images using Data Augmentation",
+            "type": "lab",
+            "id": "1914114/labs/325290",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/computer_vision_fun/labs/classifying_images_using_data_augmentation.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/computer_vision_fun/solutions/classifying_images_using_data_augmentation.ipynb",
+            "references": []
+          },
+          {
+            "name": "Transfer Learning",
+            "type": "video",
+            "id": "KXJYgImdnXQ",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Lab Introduction - Classifying Images with Transfer Learning",
+            "type": "video",
+            "id": "Te-IwjHFvVY",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Classifying Images with Transfer Learning",
+            "type": "lab",
+            "id": "1914114/labs/325293",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/computer_vision_fun/labs/classifying_images_with_transfer_learning.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/computer_vision_fun/solutions/classifying_images_with_transfer_learning.ipynb",
+            "references": []
+          },
+          {
+            "name": "Readings",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1xPxvq9EQXVMWRxBW-KdeFJhQOBHHkfGD",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "1914114/quizzes/325295"
+          }
+        ]
+      },
+      {
+        "name": "Summary",
+        "lessons": [
+          {
+            "name": "Summary",
+            "type": "video",
+            "id": "EqDGvOPhz6o",
+            "date": "2022-06-16",
+            "references": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Natural Language Processing on Google Cloud",
+    "num": 40,
+    "modules": [
+      {
+        "name": "Course introduction",
+        "lessons": [
+          {
+            "name": "Meet the author",
+            "type": "video",
+            "id": "8jOZYcgL-go",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Course Introduction",
+            "type": "video",
+            "id": "-k9F41d052w",
+            "date": "2023-02-03",
+            "references": []
+          },
+          {
+            "name": "Reading list",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1xzAML13ZWmoBIWO6OzIuDiIH5cLQ_REA",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "NLP on Google Cloud",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "CmHo9res-6Q",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "What is NLP?",
+            "type": "video",
+            "id": "QPbe3NDnzzo",
+            "date": "2023-02-06",
+            "references": []
+          },
+          {
+            "name": "NLP history",
+            "type": "video",
+            "id": "9X58PmSiq2k",
+            "date": "2023-02-06",
+            "references": []
+          },
+          {
+            "name": "NLP architecture",
+            "type": "video",
+            "id": "AYPECmI_8D4",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "NLP APIs",
+            "type": "video",
+            "id": "_ZkgcY35v8o",
+            "date": "2023-02-06",
+            "references": []
+          },
+          {
+            "name": "NLP solutions",
+            "type": "video",
+            "id": "elC440ISjyo",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Lab introduction: Exploring the Dialogflow API",
+            "type": "video",
+            "id": "SiY_ssjoc5o",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Exploring the Dialogflow API",
+            "type": "lab",
+            "id": "1748181/labs/363194",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Summary",
+            "type": "video",
+            "id": "uLLVs1ZWA2E",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "1748181/quizzes/363196"
+          },
+          {
+            "name": "Reading list",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1y-CPSwTjZxJmLt5MkAr0gVHNDWY8r4e5",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "NLP with Vertex AI",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "aLxsze8v8SI",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "NLP options",
+            "type": "video",
+            "id": "MUcWO5bLIZc",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Vertex AI",
+            "type": "video",
+            "id": "BzHvLzo45pM",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "NLP with AutoML",
+            "type": "video",
+            "id": "OMzr4EGgdzg",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "NLP with custom training",
+            "type": "video",
+            "id": "1v-wZxsbZLo",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "NLP end-to-end workflow",
+            "type": "video",
+            "id": "mtDQVPHV20A",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Lab introduction: Text Classification with AutoML",
+            "type": "video",
+            "id": "_5fOHP_hDU4",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Text Classification using AutoML",
+            "type": "lab",
+            "id": "1748181/labs/363205",
+            "nb_lab": "",
+            "nb_sol": "",
+            "references": []
+          },
+          {
+            "name": "Summary",
+            "type": "video",
+            "id": "b_LIIVlY7m8",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "1748181/quizzes/363207"
+          },
+          {
+            "name": "Reading list",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1yC0FJOaw6sNRCBD7JMfDcEiz7FUzHDql",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Text representation",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "v1WUcA6rf5I",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Tokenization",
+            "type": "video",
+            "id": "MSskpst-bEE",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "One-hot encoding and bag-of-words",
+            "type": "video",
+            "id": "G1UuPOXBzmw",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Word embeddings",
+            "type": "video",
+            "id": "vLLXwLSOgts",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Word2vec",
+            "type": "video",
+            "id": "PrxBN1zPMuc",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Transfer learning and reusable embeddings",
+            "type": "video",
+            "id": "govXfgYa0g8",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Lab introduction: Reusable Embeddings",
+            "type": "video",
+            "id": "maHm6k7SOCE",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Text classification using reusable embeddings",
+            "type": "lab",
+            "id": "1748181/labs/363216",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/text_classification/labs/reusable_embeddings.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/text_classification/solutions/reusable_embeddings.ipynb",
+            "references": []
+          },
+          {
+            "name": "Summary",
+            "type": "video",
+            "id": "tCnVID-s-YU",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "1748181/quizzes/363218"
+          },
+          {
+            "name": "Reading list",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1yK9MXxYrlsHoe0ekaSxS8Wpcx2TWZmDm",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "NLP models",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "ibU25Sq3oaA",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "ANN",
+            "type": "video",
+            "id": "5hd2Uagc9UI",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "TensorFlow",
+            "type": "video",
+            "id": "jw5VqpYmkRM",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "DNN",
+            "type": "video",
+            "id": "NDIaDkZg9mE",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "RNN",
+            "type": "video",
+            "id": "xFQGF0MHvKo",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "LSTM",
+            "type": "video",
+            "id": "E9hmetlFJME",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "GRU",
+            "type": "video",
+            "id": "CKfvenJLYW8",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Lab introduction: Text Classification with Keras",
+            "type": "video",
+            "id": "-oHgjkqDLlU",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Keras for Text Classification using Vertex AI",
+            "type": "lab",
+            "id": "1748181/labs/363228",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/text_classification/labs/keras_for_text_classification.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/text_classification/solutions/keras_for_text_classification.ipynb",
+            "references": []
+          },
+          {
+            "name": "Summary",
+            "type": "video",
+            "id": "4FG4dLWPAZw",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Reading list",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1yOX9hH67wc8Uyfun7ufVvzJG3Yg6oclZ",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "1748181/quizzes/363230"
+          }
+        ]
+      },
+      {
+        "name": "Advanced NLP models",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "ghXmw7z9d_8",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Encoder-decoder architecture",
+            "type": "video",
+            "id": "_Bc1CSWZVds",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Attention mechanism",
+            "type": "video",
+            "id": "vTaxSOuTm4A",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Transformer",
+            "type": "video",
+            "id": "OmhAs4_CYAo",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "BERT",
+            "type": "video",
+            "id": "skDPXrxILPA",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Large language models",
+            "type": "video",
+            "id": "Khn2sh1c4FY",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Lab introduction: Text Translation using Encoder-decoder Architecture",
+            "type": "video",
+            "id": "EylegnkKNYM",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Encoder decoder",
+            "type": "lab",
+            "id": "1748181/labs/363239",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/text_classification/labs/rnn_encoder_decoder.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/text_classification/solutions/rnn_encoder_decoder.ipynb",
+            "references": []
+          },
+          {
+            "name": "Summary",
+            "type": "video",
+            "id": "cCJQxdjxZR8",
+            "date": "2022-08-12",
+            "references": []
+          },
+          {
+            "name": "Reading list",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1yPCScD9Y3qJEJfqgWU7K1QNQ24L5zG3H",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "1748181/quizzes/363241"
+          }
+        ]
+      },
+      {
+        "name": "Course summary",
+        "lessons": [
+          {
+            "name": "Course Summary",
+            "type": "video",
+            "id": "t2nHDrx34NM",
+            "date": "2022-08-12",
+            "references": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Recommendation Systems on Google Cloud",
+    "num": 39,
+    "modules": [
+      {
+        "name": "Welcome to Recommendation Systems on Google Cloud",
+        "lessons": [
+          {
+            "name": "Welcome to Recommendation Systems on Google Cloud",
+            "type": "video",
+            "id": "s0iqj39yQH4",
+            "date": "2022-06-16",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Recommendation Systems Overview",
+        "lessons": [
+          {
+            "name": "Introduction",
+            "type": "video",
+            "id": "NrVHAPbA5gw",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Types of Recommendation Systems",
+            "type": "video",
+            "id": "HA7Zza5-chI",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Content-Based or Collaborative",
+            "type": "video",
+            "id": "l-ieLZoUaKI",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Recommendation System Pitfalls",
+            "type": "video",
+            "id": "a9o_6S-d_G8",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Discussion",
+            "type": "video",
+            "id": "_VZlLKufhOM",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Recommendation Systems Overview",
+            "type": "quiz",
+            "id": "2438564/quizzes/325059"
+          }
+        ]
+      },
+      {
+        "name": "Content-Based Recommendation Systems",
+        "lessons": [
+          {
+            "name": "Content-Based Recommendation Systems",
+            "type": "video",
+            "id": "ON6eJHWCjKg",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Similarity Measures",
+            "type": "video",
+            "id": "n58ZJBvWn6w",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Building a User Vector",
+            "type": "video",
+            "id": "chJZzhIAvLo",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Making Recommendations Using a User Vector",
+            "type": "video",
+            "id": "_ER4cQZnhoM",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Making Recommendations for Many Users",
+            "type": "video",
+            "id": "LNNvkJ9DbGY",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Lab intro: Create a Content-Based Recommendation System",
+            "type": "video",
+            "id": "pbgMjiEST2w",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Implementing a Content-Based Filtering using Low Level TensorFlow Operations",
+            "type": "lab",
+            "id": "2438564/labs/325066",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/recommendation_systems/labs/content_based_by_hand.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/recommendation_systems/solutions/content_based_by_hand.ipynb",
+            "references": []
+          },
+          {
+            "name": "Using Neural Networks for Content-Based Recommendation Systems",
+            "type": "video",
+            "id": "hBPfJj82XMM",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Lab Intro: Create a Content-Based Recommendation System Using a Neural Network",
+            "type": "video",
+            "id": "yIOi9cVRLJo",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Using Neural Networks for Content-Based Filtering",
+            "type": "lab",
+            "id": "2438564/labs/325069",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/recommendation_systems/labs/content_based_using_neural_networks.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/recommendation_systems/solutions/content_based_using_neural_networks.ipynb",
+            "references": []
+          },
+          {
+            "name": "Summary",
+            "type": "video",
+            "id": "JldVZBK6uSY",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Content-Based Recommendation Systems Quiz",
+            "type": "quiz",
+            "id": "2438564/quizzes/325072"
+          }
+        ]
+      },
+      {
+        "name": "Collaborative Filtering Recommendations Systems",
+        "lessons": [
+          {
+            "name": "Types of User Feedback Data",
+            "type": "video",
+            "id": "KDkllYwy9sA",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Embedding Users and Items",
+            "type": "video",
+            "id": "dWL6n5aj0Q0",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Factorization Approaches",
+            "type": "video",
+            "id": "r8qfF0qe54M",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "The ALS Algorithm",
+            "type": "video",
+            "id": "r9ISJA4aZ-o",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Preparing Input Data for ALS",
+            "type": "video",
+            "id": "Umgsg05sVxs",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Creating Sparse Tensors For Efficient WALS Input",
+            "type": "video",
+            "id": "8aQgWjwDj5Q",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Instantiating a WALS Estimator: From Input to Estimator",
+            "type": "video",
+            "id": "BQ3wbezEcW4",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Instantiating a WAL Estimator: Decoding TFRecords",
+            "type": "video",
+            "id": "l2dbuh9tCg0",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Instantiating a WALS Estimator: Recovering Keys",
+            "type": "video",
+            "id": "rDr4qbklNw4",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Instantiating a WALS Estimator: Training and Prediction",
+            "type": "video",
+            "id": "3ljIgZpGzyM",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Lab Intro: Collaborative Filtering with Google Analytics Data",
+            "type": "video",
+            "id": "ZVx36n-NwIg",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Collaborative Filtering on Google Analytics data",
+            "type": "lab",
+            "id": "2438564/labs/325084",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/recommendation_systems/labs/wals.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/recommendation_systems/solutions/wals.ipynb",
+            "references": []
+          },
+          {
+            "name": "Issues with Collaborative Filtering",
+            "type": "video",
+            "id": "yAdimp80VzQ",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Cold Starts",
+            "type": "video",
+            "id": "rZUGirGYQu4",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Collaborative Filtering Recommendations Systems",
+            "type": "quiz",
+            "id": "2438564/quizzes/325088"
+          }
+        ]
+      },
+      {
+        "name": "Neural Networks for Recommendation Systems",
+        "lessons": [
+          {
+            "name": "Hybrid Recommendation Systems",
+            "type": "video",
+            "id": "VThcYIXK_Ik",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Lab Intro: Designing a Hybrid Recommendation System",
+            "type": "video",
+            "id": "U7UoWaOzt3o",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Lab Intro: Designing a Hybrid Collaborative Filtering Recommendation System",
+            "type": "video",
+            "id": "Rf0za9XzYx4",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Lab Intro: Designing a Hybrid Knowledge-based Recommendation System",
+            "type": "video",
+            "id": "ByqGOKWULXI",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Lab Intro: Building a Neural Network Hybrid Recommendation System",
+            "type": "video",
+            "id": "Favnh4nf1aA",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "ML on GCP: Hybrid Recommendations with the MovieLens Dataset",
+            "type": "lab",
+            "id": "2438564/labs/325094",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/recommendation_systems/labs/als_bqml_hybrid.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/recommendation_systems/solutions/als_bqml_hybrid.ipynb",
+            "references": []
+          },
+          {
+            "name": "Context-Aware Recommendation Systems",
+            "type": "video",
+            "id": "zZNekYfklXo",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Context-Aware Algorithms",
+            "type": "video",
+            "id": "t5DgttumSYM",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Contextual Postfiltering",
+            "type": "video",
+            "id": "3NVpiIJHhn0",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Modeling Using Context-Aware Algorithms",
+            "type": "video",
+            "id": "Mq7gdc1txmA",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "YouTube Recommendation System Case Study: Overview",
+            "type": "video",
+            "id": "uEGVtzW1mg0",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "YouTube Recommendation System Case Study: Candidate Generation",
+            "type": "video",
+            "id": "D2VbCwbFUvg",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "YouTube Recommendation System Case Study: Ranking",
+            "type": "video",
+            "id": "OLZSB5-hhkA",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Summary",
+            "type": "video",
+            "id": "UPe1-iUnht8",
+            "date": "2022-06-16",
+            "references": []
+          },
+          {
+            "name": "Neural Networks for Recommendations",
+            "type": "quiz",
+            "id": "2438564/quizzes/325104"
+          }
+        ]
+      },
+      {
+        "name": "Reinforcement Learning",
+        "lessons": [
+          {
+            "name": "Introduction to module",
+            "type": "video",
+            "id": "-10tO6QwzwY",
+            "date": "2022-06-17",
+            "references": []
+          },
+          {
+            "name": "Introduction to Reinforcement Learning",
+            "type": "video",
+            "id": "RYs2NAVqe4A",
+            "date": "2022-06-17",
+            "references": []
+          },
+          {
+            "name": "The reinforcement learning framework and workflow",
+            "type": "video",
+            "id": "rwh5OI7zR6Y",
+            "date": "2022-06-17",
+            "references": []
+          },
+          {
+            "name": "Model-based and model-free reinforcement learning",
+            "type": "video",
+            "id": "Fb08kNJZCbg",
+            "date": "2022-06-17",
+            "references": []
+          },
+          {
+            "name": "Value-based reinforcement learning",
+            "type": "video",
+            "id": "qSffVdHgwCY",
+            "date": "2022-06-17",
+            "references": []
+          },
+          {
+            "name": "Policy-based reinforcement learning",
+            "type": "video",
+            "id": "9f_Tx-eot8M",
+            "date": "2022-06-17",
+            "references": []
+          },
+          {
+            "name": "Contextual bandits",
+            "type": "video",
+            "id": "UgLGGhfQnVk",
+            "date": "2022-06-17",
+            "references": []
+          },
+          {
+            "name": "Applications of reinforcement learning",
+            "type": "video",
+            "id": "s8Y2Wqdy-gQ",
+            "date": "2022-06-17",
+            "references": []
+          },
+          {
+            "name": "Reinforcement Learning",
+            "type": "quiz",
+            "id": "2438564/quizzes/325113"
+          },
+          {
+            "name": "Lab Intro",
+            "type": "video",
+            "id": "vWi9FRlTBss",
+            "date": "2022-06-17",
+            "references": []
+          },
+          {
+            "name": "Applying Contextual Bandits for Recommendations with Tensorflow and TF-Agents",
+            "type": "lab",
+            "id": "2438564/labs/325116",
+            "nb_lab": "training-data-analyst/courses/machine_learning/deepdive2/recommendation_systems/labs/exercise_movielens_notebook.ipynb",
+            "nb_sol": "training-data-analyst/courses/machine_learning/deepdive2/recommendation_systems/solutions/exercise_movielens_notebook.ipynb",
+            "references": []
+          },
+          {
+            "name": "Lab Review",
+            "type": "video",
+            "id": "DOCWd39u63Y",
+            "date": "2022-06-17",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Summary",
+        "lessons": [
+          {
+            "name": "Course Summary",
+            "type": "video",
+            "id": "3AsltwZQpSw",
+            "date": "2022-06-17",
+            "references": []
+          },
+          {
+            "name": "Specialization Summary",
+            "type": "video",
+            "id": "J3Ycw0-sV-w",
+            "date": "2022-06-17",
+            "references": []
+          },
+          {
+            "name": "All Course Readings",
+            "type": "doc",
+            "url": "https://drive.google.com/open?id=1yZR-n6xJFAOnWACJaP3remaF8zIFbxS4",
+            "references": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Machine Learning Operations (MLOps): Getting Started",
+    "num": 158,
+    "modules": [
+      {
+        "name": "Welcome to the Machine Learning Operations (MLOps): Getting Started",
+        "lessons": [
+          {
+            "name": "Course introduction",
+            "type": "video",
+            "id": "3jDv4mdAbXo",
+            "date": "2023-03-22",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Employing Machine Learning Operations",
+        "lessons": [
+          {
+            "name": "Introduction to MLOps-Why and when to employ MLOps",
+            "type": "video",
+            "id": "dMKoiIfK8aA",
+            "date": "2023-03-22",
+            "references": []
+          },
+          {
+            "name": "Machine learning (ML) practitioners\u2019 pain points",
+            "type": "video",
+            "id": "FhQXAh4K0Yg",
+            "date": "2023-03-22",
+            "references": []
+          },
+          {
+            "name": "The concept of devOps in ML",
+            "type": "video",
+            "id": "crMVhxo0GWA",
+            "date": "2023-03-22",
+            "references": []
+          },
+          {
+            "name": "ML lifecycle",
+            "type": "video",
+            "id": "V6UWNteDHcA",
+            "date": "2023-03-22",
+            "references": []
+          },
+          {
+            "name": "Automating the ML process",
+            "type": "video",
+            "id": "bA1dschO6wo",
+            "date": "2023-03-22",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "2438566/quizzes/372926"
+          }
+        ]
+      },
+      {
+        "name": "Vertex AI and MLOps on Vertex AI",
+        "lessons": [
+          {
+            "name": "What is vertex ai and why does a unified platform matter?",
+            "type": "video",
+            "id": "5U5Bl9mpiu4",
+            "date": "2023-03-22",
+            "references": []
+          },
+          {
+            "name": "Introduction to mlops on vertex ai",
+            "type": "video",
+            "id": "P61sn88Pfsc",
+            "date": "2023-03-22",
+            "references": []
+          },
+          {
+            "name": "How does vertex ai help with the mlops workflow, part 1?",
+            "type": "video",
+            "id": "aQCxOt7xbV4",
+            "date": "2023-03-22",
+            "references": []
+          },
+          {
+            "name": "How does vertex ai help with the mlops workflow, part 2?",
+            "type": "video",
+            "id": "bmI753R_bT0",
+            "date": "2023-03-22",
+            "references": []
+          },
+          {
+            "name": "Lab introduction Vertex AI: Qwik Start",
+            "type": "video",
+            "id": "Q450YPbTKqc",
+            "date": "2023-03-22",
+            "references": []
+          },
+          {
+            "name": "Quiz",
+            "type": "quiz",
+            "id": "2438566/quizzes/372933"
+          },
+          {
+            "name": "Training and Deploying a TensorFlow Model in Vertex AI",
+            "type": "lab",
+            "id": "2438566/labs/372935",
+            "nb_lab": "training-data-analyst/self-paced-labs/vertex-ai/vertex-ai-qwikstart/lab_exercise.ipynb",
+            "nb_sol": "",
+            "references": []
+          }
+        ]
+      },
+      {
+        "name": "Summary",
+        "lessons": [
+          {
+            "name": "Summary",
+            "type": "video",
+            "id": "IHqBSh-8XG8",
+            "date": "2023-03-22",
+            "references": []
+          }
+        ]
+      }
+    ]
+  }
+]
