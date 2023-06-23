@@ -1,0 +1,2271 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>C2W4: Multi-class Classification &#8212; Eduardo Avelar</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/myscript.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <link rel="shortcut icon" href="../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="C3W1: Explore the BBC News archive" href="c3w1_bbc_news_archive.html" />
+    <link rel="prev" title="C2W3: Transfer Learning" href="c2w3_transfer_learning.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Eduardo Avelar</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="" aria-label="" autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../elearning_ml_data/index.html">
+   E-learning ML/Data resources
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/books.html">
+     ML/Data/Dev Books
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/coursera.html">
+     Coursera courses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/gcp_data_analysis.html">
+     GCP Courses/Videos Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/gcp_skills_boost_updates.html">
+     GCP Skills Boost Updates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/google_cloud_labs.html">
+     GCP ML/Data labs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/ml_pages_posts.html">
+     Pages/Posts/Lectures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/ml_platforms.html">
+     Platforms/Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/ml_training.html">
+     Courses/Videos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../mldev_tools/index.html">
+   Dev-ML Tools
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mldev_tools/check_duplicated_questions.html">
+     Check for duplicated questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mldev_tools/create_questions_html.html">
+     Create html page with ML questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mldev_tools/paste_online_ext.html">
+     VS Code ext to paste one line
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mldev_tools/qwiklabs_quiz_to_json.html">
+     Qwiklabs Quizzes to JSON
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mldev_tools/site_builder.html">
+     GCP Courses Builder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mldev_tools/videoslides_to_images.html">
+     GCP Videos to Images
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../dev_notes/index.html">
+   My Dev notes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../dev_notes/dev-essentials.html">
+     apt install dev-essentials
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../dev_notes/dev_commands.html">
+     Dev commands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../dev_notes/dev_troubleshoot.html">
+     Dev Troubleshooting Notes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../dev_notes/install_kubeflow.html">
+     Install Kubeflow Pipelines for Local Deployment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../dev_notes/kfp_v1.html">
+     Kubeflow Pipelines v1 sdk v2 examples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../dev_notes/my_vscode_theme.html">
+     My VS Code theme
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ml_notes/index.html">
+   ML Notes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ml_notes/good_practice.html">
+     ML Good practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ml_notes/nvidia_tools.html">
+     Nvidia ML
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../gcp_courses/index.html">
+   Google Cloud Skills Boost Courses
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_courses/gcp_big_data_and_ml_fundamentals/index.html">
+     Google Cloud Big Data and Machine Learning Fundamentals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_courses/how_google_does_ml/index.html">
+     How Google Does Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_courses/launching_into_ml/index.html">
+     Launching into Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_courses/tf_on_gcp/index.html">
+     TensorFlow on Google Cloud
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_courses/feature_engineering/index.html">
+     Feature Engineering
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/index.html">
+     Machine Learning in the Enterprise
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/index.html">
+       Vertex Vizier Hyperparameter Tuning
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/vertex_ai_vizier_hyperparameter_tuning.html">
+         Vertex AI Vizier hyperparameter tuning
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/lab_intro_vertex_vizier_hyperparameter_tuning.html">
+         Lab intro: Vertex Vizier Hyperparameter Tuning
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/index.html">
+       Prediction and Model Monitoring using Vertex AI
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/predictions_using_vertex_ai.html">
+         Predictions using Vertex AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/model_management_using_vertex_ai.html">
+         Model management using Vertex AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/lab_intro_vertex_ai_model_monitoring.html">
+         Lab intro: Vertex AI Model Monitoring
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/index.html">
+       Vertex AI Pipelines
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+      <label for="toctree-checkbox-9">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/prediction_using_vertex_ai_pipelines.html">
+         Prediction using Vertex AI pipelines
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/lab_intro_vertex_ai_pipelines.html">
+         Lab intro: Vertex AI Pipelines
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/index.html">
+       Best Practices for Machine Learning Development
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+      <label for="toctree-checkbox-10">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/best_practices_for_model_deployment_and_serving.html">
+         Best practices for model deployment and serving
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/best_practices_for_model_monitoring.html">
+         Best practices for model monitoring
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/vertex_ai_pipeline_best_practices.html">
+         Vertex AI pipeline best practices
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/best_practices_for_artifact_organization.html">
+         Best practices for artifact organization
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/series_summary/index.html">
+       Series Summary
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/series_summary/series_summary.html">
+         Series summary
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/working_dir/index.html">
+       Working dir
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/working_dir/my_intro_to_vertex_pipelines.html">
+         intro_to_vertex_pipelines.ipynb
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../gcp_courses/production_ml_systems/index.html">
+     Production Machine Learning Systems
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/production_ml_systems/intro_to_advanced_ml_on_gcp/index.html">
+       Introduction to Advanced Machine Learning on Google Cloud
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+      <label for="toctree-checkbox-14">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/intro_to_advanced_ml_on_gcp/advanced_ml_on_gcp.html">
+         Advanced Machine Learning on Google Cloud
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/intro_to_advanced_ml_on_gcp/welcome.html">
+         Welcome
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/index.html">
+       Architecting Production ML Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+      <label for="toctree-checkbox-15">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/architecting_ml_systems.html">
+         Architecting ML systems
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/data_extraction_analysis_and_preparation.html">
+         Data extraction, analysis, and preparation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/model_training_evaluation_and_validation.html">
+         Model training, evaluation, and validation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/trained_model_prediction_service_and_performance_mo.html">
+         Trained model, prediction service, and performance monitoring
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/training_design_decisions.html">
+         Training design decisions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/serving_design_decisions.html">
+         Serving design decisions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/using_vertex_ai.html">
+         Using Vertex AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/lab_intro_structured_data_prediction.html">
+         Lab introduction: Structured data prediction
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/index.html">
+       Designing Adaptable ML Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+      <label for="toctree-checkbox-16">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/adapting_to_data.html">
+         Adapting to data
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/changing_distributions.html">
+         Changing distributions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_adapting_to_data.html">
+         Lab: Adapting to data
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/right_and_wrong_decisions.html">
+         Right and wrong decisions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/system_failure.html">
+         System failure
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/concept_drift.html">
+         Concept drift
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/actions_to_mitigate_concept_drift.html">
+         Actions to mitigate concept drift
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/tf_data_validation.html">
+         TensorFlow data validation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/components_of_tf_data_validation.html">
+         Components of TensorFlow data validation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_intro_intro_to_tf_data_validation.html">
+         Lab Introduction: Introduction to TensorFlow Data Validation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_intro_advanced_visualizations_with_tf_data_vali.html">
+         Lab Introduction: Advanced Visualizations with TensorFlow Data Validation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/mitigating_training_serving_skew_through_design.html">
+         Mitigating training-serving skew through design
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_intro_serving_ml_predictions_in_batch_and_real.html">
+         Lab Introduction: Serving ML Predictions in Batch and Real Time
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/diagnosing_a_production_model.html">
+         Diagnosing a production model
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/index.html">
+       Designing High-performance ML Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+      <label for="toctree-checkbox-17">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/training.html">
+         Training
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/why_distributed_training_is_needed.html">
+         Why distributed training is needed
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/distributed_training_architectures.html">
+         Distributed training architectures
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/tf_distributed_training_strategies.html">
+         TensorFlow distributed training strategies
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/mirrored_strategy.html">
+         Mirrored strategy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/multi_worker_mirrored_strategy.html">
+         Multi-worker mirrored strategy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/tpu_strategy.html">
+         TPU strategy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/parameter_server_strategy.html">
+         Parameter server strategy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/lab_intro_distributed_training_with_keras.html">
+         Lab Introduction: Distributed Training with Keras
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/lab_intro_distributed_training_using_gpus_on_cloud.html">
+         Lab Introduction: Distributed Training using GPUs on Cloud AI Platform
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/training_on_large_datasets_with_tf_data_api.html">
+         Training on large datasets with tf.data API
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/lab_intro_tpu_speed_data_pipelines.html">
+         Lab Introduction: TPU-speed Data Pipelines
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/production_ml_systems/building_hybrid_ml_systems/index.html">
+       Building Hybrid ML Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+      <label for="toctree-checkbox-18">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/building_hybrid_ml_systems/kubeflow.html">
+         Kubeflow
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/building_hybrid_ml_systems/optimizing_tf_for_mobile.html">
+         Optimizing TensorFlow for mobile
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/production_ml_systems/summary/index.html">
+       Summary
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+      <label for="toctree-checkbox-19">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/summary/course_summary.html">
+         Course summary
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/production_ml_systems/working_dir/index.html">
+       Working dir
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+      <label for="toctree-checkbox-20">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/working_dir/my_keras.html">
+         keras.ipynb
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/working_dir/my_serving_ml_prediction.html">
+         serving_ml_prediction.ipynb
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/working_dir/my_tfdv_basic_spending.html">
+         tfdv_basic_spending.ipynb
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/working_dir/my_train_deploy.html">
+         babyweight/train_deploy.ipynb
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/index.html">
+     Computer Vision Fundamentals with Google Cloud
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+    <label for="toctree-checkbox-21">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/index.html">
+       Introduction to Computer Vision and Pre-built ML Models for Image Classification
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+      <label for="toctree-checkbox-22">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/what_is_cv.html">
+         What Is Computer Vision
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/different_type_of_cv_problems.html">
+         Different Type of Computer Vision Problems
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/cv_use_cases.html">
+         Computer Vision Use Cases
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/vision_api_pre_built_ml_models.html">
+         Vision API - Pre-built ML Models
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/index.html">
+       Vertex AI and AutoML Vision on Vertex AI
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+      <label for="toctree-checkbox-23">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/what_is_vertex_ai_and_why_does_a_unified_platform_m.html">
+         What is Vertex AI and why does a unified platform matter?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/intro_to_automl_vision_on_vertex_ai.html">
+         Introduction to AutoML Vision on Vertex AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/how_does_vertex_ai_help_with_the_ml_workflow_part_1.html">
+         How does Vertex AI help with the ML workflow, part 1 ?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/how_does_vertex_ai_help_with_the_ml_workflow_part_2.html">
+         How does Vertex AI help with the ML workflow, part 2 ?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/which_vision_product_is_right_for_you.html">
+         Which vision product is right for you?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/lab_intro_identifying_damaged_car_parts_with_vertex.html">
+         Lab Introduction - Identifying Damaged Car Parts with Vertex AI for AutoML Vision users
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/index.html">
+       Custom Training with Linear, Neural Network and Deep Neural Network models
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+      <label for="toctree-checkbox-24">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/intro_to_linear_models.html">
+         Introduction to Linear Models
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/reading_the_data.html">
+         Reading the Data
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/implementing_linear_models_for_image_classification.html">
+         Implementing Linear Models for Image Classification
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/nns_and_dnns_for_image_classification.html">
+         Neural Networks and Deep Neural Networks for Image Classification
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/dnns_with_dropout_and_batch_normalization.html">
+         Deep Neural Networks with Dropout and Batch Normalization
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/cnns/index.html">
+       Convolutional Neural Networks
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+      <label for="toctree-checkbox-25">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/cnns/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/cnns/cnns.html">
+         Convolutional Neural Networks
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/cnns/understanding_convolutions.html">
+         Understanding Convolutions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/cnns/cnn_model_parameters.html">
+         CNN Model Parameters
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/cnns/working_with_pooling_layers.html">
+         Working with Pooling Layers
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/cnns/implementing_cnns_on_vertex_ai_with_pre_built_tf_co.html">
+         Implementing CNNs on Vertex AI with pre-built TF container using Vertex Workbench
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/index.html">
+       Dealing with Image Data
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
+      <label for="toctree-checkbox-26">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/preprocessing_the_image_data.html">
+         Preprocessing the Image Data
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/model_parameters_and_the_data_scarcity_problem.html">
+         Model Parameters and the Data Scarcity Problem
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/data_augmentation.html">
+         Data Augmentation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/transfer_learning.html">
+         Transfer Learning
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/summary/index.html">
+       Summary
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/>
+      <label for="toctree-checkbox-27">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/summary/summary.html">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/index.html">
+     Natural Language Processing on Google Cloud
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/>
+    <label for="toctree-checkbox-28">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/course_intro/index.html">
+       Course introduction
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/>
+      <label for="toctree-checkbox-29">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/course_intro/course_intro.html">
+         Course Introduction
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/index.html">
+       NLP on Google Cloud
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/>
+      <label for="toctree-checkbox-30">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/what_is_nlp.html">
+         What is NLP?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_history.html">
+         NLP history
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_architecture.html">
+         NLP architecture
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_apis.html">
+         NLP APIs
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_solutions.html">
+         NLP solutions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/summary.html">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/index.html">
+       NLP with Vertex AI
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/>
+      <label for="toctree-checkbox-31">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_options.html">
+         NLP options
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/vertex_ai.html">
+         Vertex AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_with_automl.html">
+         NLP with AutoML
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_with_custom_training.html">
+         NLP with custom training
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_end_to_end_workflow.html">
+         NLP end-to-end workflow
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/summary.html">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/index.html">
+       Text representation
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/>
+      <label for="toctree-checkbox-32">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/tokenization.html">
+         Tokenization
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/one_hot_encoding_and_bag_of_words.html">
+         One-hot encoding and bag-of-words
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/word_embeddings.html">
+         Word embeddings
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/word2vec.html">
+         Word2vec
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/transfer_learning_and_reusable_embeddings.html">
+         Transfer learning and reusable embeddings
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/summary.html">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/index.html">
+       Advanced NLP models
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/>
+      <label for="toctree-checkbox-33">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/encoder_decoder_architecture.html">
+         Encoder-decoder architecture
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/attention_mechanism.html">
+         Attention mechanism
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/transformer.html">
+         Transformer
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/bert.html">
+         BERT
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/large_language_models.html">
+         Large language models
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/lab_intro_text_translation_using_encoder_decoder_ar.html">
+         Lab introduction: Text Translation using Encoder-decoder Architecture
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/summary.html">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/index.html">
+     Recommendation Systems on Google Cloud
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/>
+    <label for="toctree-checkbox-34">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/index.html">
+       Recommendation Systems Overview
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/>
+      <label for="toctree-checkbox-35">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/types_of_recommendation_systems.html">
+         Types of Recommendation Systems
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/content_based_or_collaborative.html">
+         Content-Based or Collaborative
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/recommendation_system_pitfalls.html">
+         Recommendation System Pitfalls
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/index.html">
+       Content-Based Recommendation Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/>
+      <label for="toctree-checkbox-36">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/content_based_recommendation_systems.html">
+         Content-Based Recommendation Systems
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/similarity_measures.html">
+         Similarity Measures
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/building_a_user_vector.html">
+         Building a User Vector
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/making_recommendations_using_a_user_vector.html">
+         Making Recommendations Using a User Vector
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/making_recommendations_for_many_users.html">
+         Making Recommendations for Many Users
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/using_nns_for_content_based_recommendation_systems.html">
+         Using Neural Networks for Content-Based Recommendation Systems
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/index.html">
+     Machine Learning Operations (MLOps): Getting Started
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/>
+    <label for="toctree-checkbox-37">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/index.html">
+       Employing Machine Learning Operations
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/>
+      <label for="toctree-checkbox-38">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/ml_ml_practitioners_pain_points.html">
+         Machine learning (ML) practitioners’ pain points
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/the_concept_of_devops_in_ml.html">
+         The concept of devOps in ML
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/ml_lifecycle.html">
+         ML lifecycle
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/automating_the_ml_process.html">
+         Automating the ML process
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/index.html">
+       Vertex AI and MLOps on Vertex AI
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/>
+      <label for="toctree-checkbox-39">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/what_is_vertex_ai_and_why_does_a_unified_platform_m.html">
+         What is vertex ai and why does a unified platform matter?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/intro_to_mlops_on_vertex_ai.html">
+         Introduction to mlops on vertex ai
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/how_does_vertex_ai_help_with_the_mlops_workflow_par.html">
+         How does vertex ai help with the mlops workflow, part 2?
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../gcp_official/index.html">
+   Official GCP codes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/>
+  <label for="toctree-checkbox-40">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_official/Create%20machine%20learning%20models%20in%20BigQuery%20ML.html">
+     Create machine learning models in BigQuery ML
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../gcp_resources/index.html">
+   GCP notes/resources
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-41" name="toctree-checkbox-41" type="checkbox"/>
+  <label for="toctree-checkbox-41">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_resources/gcp_setup.html">
+     GCP notes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_resources/ml_cert_exam_guide.html">
+     Machine Learning Cert guide
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_resources/notebooks_to_do.html">
+     Notebooks To Do
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_resources/vertex_ai_mlops.html">
+     Vertex AI MLOps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tf_official/index.html">
+   Official TF codes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-42" name="toctree-checkbox-42" type="checkbox"/>
+  <label for="toctree-checkbox-42">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../tf_official/structured_data/index.html">
+     Structured Data
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-43" name="toctree-checkbox-43" type="checkbox"/>
+    <label for="toctree-checkbox-43">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../tf_official/structured_data/time_series.html">
+       Time series forecasting
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../tf_official/distribute/index.html">
+     Distributed training
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-44" name="toctree-checkbox-44" type="checkbox"/>
+    <label for="toctree-checkbox-44">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../tf_official/distribute/multi_worker_with_keras.html">
+       Multi-worker training with Keras
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tf_resources/index.html">
+   Tensorflow Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-45" name="toctree-checkbox-45" type="checkbox"/>
+  <label for="toctree-checkbox-45">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tf_resources/libs.html">
+     TF Libraries &amp; extensions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tf_resources/my_tfdv_basic.html">
+     tfdv_basic.ipynb
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tf_resources/preprocessing.html">
+     Preprocessing Layers and tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tf_resources/sklearn.html">
+     Scikit Learn anf TF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tf_resources/tf_cert.html">
+     TensorFlow Developer Certificate
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../feature_eng/index.html">
+   Feature Engineering Tools
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   DeepLearning.AI Courses
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-46" name="toctree-checkbox-46" type="checkbox"/>
+  <label for="toctree-checkbox-46">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
+     TensorFlow Dev Cert - original version
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-47" name="toctree-checkbox-47" type="checkbox"/>
+    <label for="toctree-checkbox-47">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="c1w1_housing_prices.html">
+       C1W1 Assignment: Housing Prices
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c1w2_%20callbacks_mnist.html">
+       C1W2: Implementing Callbacks in TensorFlow using the MNIST Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c1w3_mnist_convolutions.html">
+       C1W3: Improve MNIST with Convolutions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c1w4_complex_images_happy_sad.html">
+       C1W4: Handling Complex Images - Happy or Sad Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c2w1_cnns_cats_vs_dogs.html">
+       C2W1: Using CNN’s with the Cats vs Dogs Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c2w2_overfitting_data_augmentation.html">
+       C2W2: Tackle Overfitting with Data Augmentation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c2w3_transfer_learning.html">
+       C2W3: Transfer Learning
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       C2W4: Multi-class Classification
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c3w1_bbc_news_archive.html">
+       C3W1: Explore the BBC News archive
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c3w2_deep_bbc_news_archive.html">
+       C3W2: Diving deeper into the BBC News archive
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c3w3_overfitting_nlp.html">
+       C3W3: Exploring Overfitting in NLP
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c3w4_predicting_next_word.html">
+       C3W4: Predicting the next word
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c4w1_working_with_time_series.html">
+       C4W1: Working with time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c4w2_predicting_time_series.html">
+       C4W2: Predicting time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c4w3_rnns_predict_time_series.html">
+       C4W3: Using RNNs to predict time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c4w4_using_real_world_data.html">
+       C4W4: Using real world data
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../tf_dev_course_updated/index.html">
+     TensorFlow Dev Cert - updated
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-48" name="toctree-checkbox-48" type="checkbox"/>
+    <label for="toctree-checkbox-48">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c1w1_housing_prices.html">
+       C1W1 Assignment: Housing Prices
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c1w2_%20callbacks_mnist.html">
+       C1W2: Implementing Callbacks in TensorFlow using the MNIST Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c1w3_mnist_convolutions.html">
+       C1W3: Improve MNIST with Convolutions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c1w4_complex_images_happy_sad.html">
+       C1W4: Handling Complex Images - Happy or Sad Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c2w1_cnns_cats_vs_dogs.html">
+       C2W1: Using CNN’s with the Cats vs Dogs Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c2w2_overfitting_data_augmentation.html">
+       C2W2: Tackle Overfitting with Data Augmentation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c2w3_transfer_learning.html">
+       C2W3: Transfer Learning
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c2w4_multi_class_classification.html">
+       C2W4: Multi-class Classification
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c3w1_bbc_news_archive.html">
+       C3W1: Explore the BBC News archive
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c3w2_deep_bbc_news_archive.html">
+       C3W2: Diving deeper into the BBC News archive
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c3w3_overfitting_nlp.html">
+       C3W3: Exploring Overfitting in NLP
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c3w4_predicting_next_word.html">
+       C3W4: Predicting the next word
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c4w1_working_with_time_series.html">
+       C4W1: Working with time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c4w2_predicting_time_series.html">
+       C4W2: Predicting time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c4w3_rnns_predict_time_series.html">
+       C4W3: Using RNNs to predict time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c4w4_using_real_world_data.html">
+       C4W4: Using real world data
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/eavelardev/eavelardev.github.io/gh-pages?urlpath=tree/deeplearningai/tf_dev_course_original/c2w4_multi_class_classification.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/deeplearningai/tf_dev_course_original/c2w4_multi_class_classification.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parsing-the-dataset">
+   Parsing the dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualizing-the-numpy-arrays">
+   Visualizing the numpy arrays
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-the-generators-for-the-cnn">
+   Creating the generators for the CNN
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coding-the-cnn">
+   Coding the CNN
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>C2W4: Multi-class Classification</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parsing-the-dataset">
+   Parsing the dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualizing-the-numpy-arrays">
+   Visualizing the numpy arrays
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-the-generators-for-the-cnn">
+   Creating the generators for the CNN
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coding-the-cnn">
+   Coding the CNN
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="c2w4-multi-class-classification">
+<h1>C2W4: Multi-class Classification<a class="headerlink" href="#c2w4-multi-class-classification" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>https-deeplearning-ai/<strong>tensorflow-1-public</strong>/C2/W4/assignment/<a class="reference external" href="https://github.com/https-deeplearning-ai/tensorflow-1-public/blob/main/C2/W4/assignment/C2W4_Assignment.ipynb">C2W4_Assignment.ipynb</a></p></li>
+<li><p>Commit <code class="docutils literal notranslate"><span class="pre">d79901f</span></code> on Feb 23, 2023 - <a class="reference external" href="https://github.com/https-deeplearning-ai/tensorflow-1-public/compare/d79901f..">Compare</a></p></li>
+</ul>
+<p>Sign Language MNIST</p>
+<ul class="simple">
+<li><p>28x28 images</p></li>
+<li><p>26 letters</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">string</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span><span class="p">,</span> <span class="n">array_to_img</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sign_mnist_train.csv</span>
+<span class="o">!</span>gdown<span class="w"> </span>--id<span class="w"> </span>1z0DkA9BytlLxO1C0BAWzknLyQmZAp0HR
+<span class="c1"># sign_mnist_test.csv</span>
+<span class="o">!</span>gdown<span class="w"> </span>--id<span class="w"> </span>1z1BIj4qmri59GWBG4ivMNFtpZ4AXIbzg
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRAINING_FILE</span> <span class="o">=</span> <span class="s1">&#39;./sign_mnist_train.csv&#39;</span>
+<span class="n">VALIDATION_FILE</span> <span class="o">=</span> <span class="s1">&#39;./sign_mnist_test.csv&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">TRAINING_FILE</span><span class="p">)</span> <span class="k">as</span> <span class="n">training_file</span><span class="p">:</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">training_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;First line (header) looks like this:</span><span class="se">\n</span><span class="si">{</span><span class="n">line</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">training_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Each subsequent line (data points) look like this:</span><span class="se">\n</span><span class="si">{</span><span class="n">line</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>First line (header) looks like this:
+label,pixel1,pixel2,pixel3,pixel4,pixel5,pixel6,pixel7,pixel8,pixel9,pixel10,pixel11,pixel12,pixel13,pixel14,pixel15,pixel16,pixel17,pixel18,pixel19,pixel20,pixel21,pixel22,pixel23,pixel24,pixel25,pixel26,pixel27,pixel28,pixel29,pixel30,pixel31,pixel32,pixel33,pixel34,pixel35,pixel36,pixel37,pixel38,pixel39,pixel40,pixel41,pixel42,pixel43,pixel44,pixel45,pixel46,pixel47,pixel48,pixel49,pixel50,pixel51,pixel52,pixel53,pixel54,pixel55,pixel56,pixel57,pixel58,pixel59,pixel60,pixel61,pixel62,pixel63,pixel64,pixel65,pixel66,pixel67,pixel68,pixel69,pixel70,pixel71,pixel72,pixel73,pixel74,pixel75,pixel76,pixel77,pixel78,pixel79,pixel80,pixel81,pixel82,pixel83,pixel84,pixel85,pixel86,pixel87,pixel88,pixel89,pixel90,pixel91,pixel92,pixel93,pixel94,pixel95,pixel96,pixel97,pixel98,pixel99,pixel100,pixel101,pixel102,pixel103,pixel104,pixel105,pixel106,pixel107,pixel108,pixel109,pixel110,pixel111,pixel112,pixel113,pixel114,pixel115,pixel116,pixel117,pixel118,pixel119,pixel120,pixel121,pixel122,pixel123,pixel124,pixel125,pixel126,pixel127,pixel128,pixel129,pixel130,pixel131,pixel132,pixel133,pixel134,pixel135,pixel136,pixel137,pixel138,pixel139,pixel140,pixel141,pixel142,pixel143,pixel144,pixel145,pixel146,pixel147,pixel148,pixel149,pixel150,pixel151,pixel152,pixel153,pixel154,pixel155,pixel156,pixel157,pixel158,pixel159,pixel160,pixel161,pixel162,pixel163,pixel164,pixel165,pixel166,pixel167,pixel168,pixel169,pixel170,pixel171,pixel172,pixel173,pixel174,pixel175,pixel176,pixel177,pixel178,pixel179,pixel180,pixel181,pixel182,pixel183,pixel184,pixel185,pixel186,pixel187,pixel188,pixel189,pixel190,pixel191,pixel192,pixel193,pixel194,pixel195,pixel196,pixel197,pixel198,pixel199,pixel200,pixel201,pixel202,pixel203,pixel204,pixel205,pixel206,pixel207,pixel208,pixel209,pixel210,pixel211,pixel212,pixel213,pixel214,pixel215,pixel216,pixel217,pixel218,pixel219,pixel220,pixel221,pixel222,pixel223,pixel224,pixel225,pixel226,pixel227,pixel228,pixel229,pixel230,pixel231,pixel232,pixel233,pixel234,pixel235,pixel236,pixel237,pixel238,pixel239,pixel240,pixel241,pixel242,pixel243,pixel244,pixel245,pixel246,pixel247,pixel248,pixel249,pixel250,pixel251,pixel252,pixel253,pixel254,pixel255,pixel256,pixel257,pixel258,pixel259,pixel260,pixel261,pixel262,pixel263,pixel264,pixel265,pixel266,pixel267,pixel268,pixel269,pixel270,pixel271,pixel272,pixel273,pixel274,pixel275,pixel276,pixel277,pixel278,pixel279,pixel280,pixel281,pixel282,pixel283,pixel284,pixel285,pixel286,pixel287,pixel288,pixel289,pixel290,pixel291,pixel292,pixel293,pixel294,pixel295,pixel296,pixel297,pixel298,pixel299,pixel300,pixel301,pixel302,pixel303,pixel304,pixel305,pixel306,pixel307,pixel308,pixel309,pixel310,pixel311,pixel312,pixel313,pixel314,pixel315,pixel316,pixel317,pixel318,pixel319,pixel320,pixel321,pixel322,pixel323,pixel324,pixel325,pixel326,pixel327,pixel328,pixel329,pixel330,pixel331,pixel332,pixel333,pixel334,pixel335,pixel336,pixel337,pixel338,pixel339,pixel340,pixel341,pixel342,pixel343,pixel344,pixel345,pixel346,pixel347,pixel348,pixel349,pixel350,pixel351,pixel352,pixel353,pixel354,pixel355,pixel356,pixel357,pixel358,pixel359,pixel360,pixel361,pixel362,pixel363,pixel364,pixel365,pixel366,pixel367,pixel368,pixel369,pixel370,pixel371,pixel372,pixel373,pixel374,pixel375,pixel376,pixel377,pixel378,pixel379,pixel380,pixel381,pixel382,pixel383,pixel384,pixel385,pixel386,pixel387,pixel388,pixel389,pixel390,pixel391,pixel392,pixel393,pixel394,pixel395,pixel396,pixel397,pixel398,pixel399,pixel400,pixel401,pixel402,pixel403,pixel404,pixel405,pixel406,pixel407,pixel408,pixel409,pixel410,pixel411,pixel412,pixel413,pixel414,pixel415,pixel416,pixel417,pixel418,pixel419,pixel420,pixel421,pixel422,pixel423,pixel424,pixel425,pixel426,pixel427,pixel428,pixel429,pixel430,pixel431,pixel432,pixel433,pixel434,pixel435,pixel436,pixel437,pixel438,pixel439,pixel440,pixel441,pixel442,pixel443,pixel444,pixel445,pixel446,pixel447,pixel448,pixel449,pixel450,pixel451,pixel452,pixel453,pixel454,pixel455,pixel456,pixel457,pixel458,pixel459,pixel460,pixel461,pixel462,pixel463,pixel464,pixel465,pixel466,pixel467,pixel468,pixel469,pixel470,pixel471,pixel472,pixel473,pixel474,pixel475,pixel476,pixel477,pixel478,pixel479,pixel480,pixel481,pixel482,pixel483,pixel484,pixel485,pixel486,pixel487,pixel488,pixel489,pixel490,pixel491,pixel492,pixel493,pixel494,pixel495,pixel496,pixel497,pixel498,pixel499,pixel500,pixel501,pixel502,pixel503,pixel504,pixel505,pixel506,pixel507,pixel508,pixel509,pixel510,pixel511,pixel512,pixel513,pixel514,pixel515,pixel516,pixel517,pixel518,pixel519,pixel520,pixel521,pixel522,pixel523,pixel524,pixel525,pixel526,pixel527,pixel528,pixel529,pixel530,pixel531,pixel532,pixel533,pixel534,pixel535,pixel536,pixel537,pixel538,pixel539,pixel540,pixel541,pixel542,pixel543,pixel544,pixel545,pixel546,pixel547,pixel548,pixel549,pixel550,pixel551,pixel552,pixel553,pixel554,pixel555,pixel556,pixel557,pixel558,pixel559,pixel560,pixel561,pixel562,pixel563,pixel564,pixel565,pixel566,pixel567,pixel568,pixel569,pixel570,pixel571,pixel572,pixel573,pixel574,pixel575,pixel576,pixel577,pixel578,pixel579,pixel580,pixel581,pixel582,pixel583,pixel584,pixel585,pixel586,pixel587,pixel588,pixel589,pixel590,pixel591,pixel592,pixel593,pixel594,pixel595,pixel596,pixel597,pixel598,pixel599,pixel600,pixel601,pixel602,pixel603,pixel604,pixel605,pixel606,pixel607,pixel608,pixel609,pixel610,pixel611,pixel612,pixel613,pixel614,pixel615,pixel616,pixel617,pixel618,pixel619,pixel620,pixel621,pixel622,pixel623,pixel624,pixel625,pixel626,pixel627,pixel628,pixel629,pixel630,pixel631,pixel632,pixel633,pixel634,pixel635,pixel636,pixel637,pixel638,pixel639,pixel640,pixel641,pixel642,pixel643,pixel644,pixel645,pixel646,pixel647,pixel648,pixel649,pixel650,pixel651,pixel652,pixel653,pixel654,pixel655,pixel656,pixel657,pixel658,pixel659,pixel660,pixel661,pixel662,pixel663,pixel664,pixel665,pixel666,pixel667,pixel668,pixel669,pixel670,pixel671,pixel672,pixel673,pixel674,pixel675,pixel676,pixel677,pixel678,pixel679,pixel680,pixel681,pixel682,pixel683,pixel684,pixel685,pixel686,pixel687,pixel688,pixel689,pixel690,pixel691,pixel692,pixel693,pixel694,pixel695,pixel696,pixel697,pixel698,pixel699,pixel700,pixel701,pixel702,pixel703,pixel704,pixel705,pixel706,pixel707,pixel708,pixel709,pixel710,pixel711,pixel712,pixel713,pixel714,pixel715,pixel716,pixel717,pixel718,pixel719,pixel720,pixel721,pixel722,pixel723,pixel724,pixel725,pixel726,pixel727,pixel728,pixel729,pixel730,pixel731,pixel732,pixel733,pixel734,pixel735,pixel736,pixel737,pixel738,pixel739,pixel740,pixel741,pixel742,pixel743,pixel744,pixel745,pixel746,pixel747,pixel748,pixel749,pixel750,pixel751,pixel752,pixel753,pixel754,pixel755,pixel756,pixel757,pixel758,pixel759,pixel760,pixel761,pixel762,pixel763,pixel764,pixel765,pixel766,pixel767,pixel768,pixel769,pixel770,pixel771,pixel772,pixel773,pixel774,pixel775,pixel776,pixel777,pixel778,pixel779,pixel780,pixel781,pixel782,pixel783,pixel784
+
+Each subsequent line (data points) look like this:
+3,107,118,127,134,139,143,146,150,153,156,158,160,163,165,159,166,168,170,170,171,171,171,172,171,171,170,170,169,111,121,129,135,141,144,148,151,154,157,160,163,164,170,119,152,171,171,170,171,172,172,172,172,172,171,171,170,113,123,131,137,142,145,150,152,155,158,161,163,164,172,105,142,170,171,171,171,172,172,173,173,172,171,171,171,116,125,133,139,143,146,151,153,156,159,162,163,167,167,95,144,171,172,172,172,172,172,173,173,173,172,172,171,117,126,134,140,145,149,153,156,158,161,163,164,175,156,87,154,172,173,173,173,173,173,174,174,174,173,172,172,119,128,136,142,146,150,153,156,159,163,165,164,184,148,89,164,172,174,174,174,174,175,175,174,175,174,173,173,122,130,138,143,147,150,154,158,162,165,166,172,181,128,94,170,173,175,174,175,176,177,177,177,177,175,175,174,122,132,139,145,149,152,156,160,163,165,166,181,172,103,113,175,176,178,178,179,179,179,179,178,179,177,175,174,125,134,141,147,150,153,157,161,164,167,168,184,179,116,126,165,176,179,180,180,181,180,180,180,179,178,177,176,128,135,142,148,152,154,158,162,165,168,170,187,180,156,161,124,143,179,178,178,181,182,181,180,181,180,179,179,129,136,144,150,153,155,159,163,166,169,172,187,184,153,102,117,110,175,169,154,182,183,183,182,182,181,181,179,131,138,145,150,155,157,161,165,168,174,190,189,175,146,94,97,113,151,158,129,184,184,184,184,183,183,182,180,131,139,146,151,155,159,163,167,175,182,179,171,159,114,102,89,121,136,136,96,172,186,186,185,185,184,182,181,131,140,147,154,157,160,164,179,186,191,187,180,157,100,88,84,108,111,126,90,120,186,187,187,186,185,184,182,133,141,149,155,158,160,174,201,189,165,151,143,146,120,87,78,87,76,108,98,96,181,188,187,186,186,185,183,133,141,150,156,160,161,179,197,174,135,99,72,95,134,97,72,74,68,116,105,108,187,189,187,187,186,186,185,134,143,151,156,161,163,179,194,156,110,74,42,52,139,94,67,75,75,118,106,129,189,191,190,188,188,187,186,135,144,152,158,163,163,177,193,161,122,84,43,71,134,81,57,71,88,112,98,157,193,193,192,190,190,189,188,136,144,152,158,162,163,176,192,164,128,98,62,60,100,71,76,96,101,105,95,174,195,194,194,194,193,191,190,137,145,152,159,164,165,178,191,164,135,113,82,59,87,98,111,120,108,97,108,190,196,195,195,194,193,193,192,139,146,154,160,164,165,175,186,163,139,112,85,67,102,126,133,126,105,104,176,197,198,197,196,195,195,194,193,138,147,155,161,165,167,172,186,163,137,107,87,76,106,122,125,117,96,156,199,199,200,198,196,196,195,195,194,139,148,156,163,166,168,172,180,158,131,108,99,86,108,118,116,103,107,191,202,201,200,200,200,199,197,198,196,140,149,157,164,168,167,177,178,155,131,118,105,87,100,106,100,96,164,202,202,202,202,202,201,200,199,199,198,140,150,157,165,167,170,181,175,152,130,115,98,82,85,90,99,165,202,203,204,203,203,202,202,201,201,200,200,142,150,159,165,170,191,173,157,144,119,97,84,79,79,91,172,202,203,203,205,204,204,204,203,202,202,201,200,142,151,160,165,188,190,187,150,119,109,85,79,79,78,137,203,205,206,206,207,207,206,206,204,205,204,203,202,142,151,160,172,196,188,188,190,135,96,86,77,77,79,176,205,207,207,207,207,207,207,206,206,206,204,203,202
+</pre></div>
+</div>
+</div>
+</div>
+<section id="parsing-the-dataset">
+<h2>Parsing the dataset<a class="headerlink" href="#parsing-the-dataset" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">parse_data_from_input</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span> 
+        <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+        <span class="nb">next</span><span class="p">(</span><span class="n">csv_reader</span><span class="p">)</span>
+        
+        <span class="n">images</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
+            <span class="n">images</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">:]])</span>
+            <span class="n">labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        
+        <span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+        <span class="n">images</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">images</span><span class="p">,</span> <span class="n">labels</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">training_images</span><span class="p">,</span> <span class="n">training_labels</span> <span class="o">=</span> <span class="n">parse_data_from_input</span><span class="p">(</span><span class="n">TRAINING_FILE</span><span class="p">)</span>
+<span class="n">validation_images</span><span class="p">,</span> <span class="n">validation_labels</span> <span class="o">=</span> <span class="n">parse_data_from_input</span><span class="p">(</span><span class="n">VALIDATION_FILE</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Training images has shape: </span><span class="si">{</span><span class="n">training_images</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> and dtype: </span><span class="si">{</span><span class="n">training_images</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Training labels has shape: </span><span class="si">{</span><span class="n">training_labels</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> and dtype: </span><span class="si">{</span><span class="n">training_labels</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Validation images has shape: </span><span class="si">{</span><span class="n">validation_images</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> and dtype: </span><span class="si">{</span><span class="n">validation_images</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Validation labels has shape: </span><span class="si">{</span><span class="n">validation_labels</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> and dtype: </span><span class="si">{</span><span class="n">validation_labels</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Training images has shape: (27455, 28, 28) and dtype: uint8
+Training labels has shape: (27455,) and dtype: uint8
+Validation images has shape: (7172, 28, 28) and dtype: uint8
+Validation labels has shape: (7172,) and dtype: uint8
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualizing-the-numpy-arrays">
+<h2>Visualizing the numpy arrays<a class="headerlink" href="#visualizing-the-numpy-arrays" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_categories</span><span class="p">(</span><span class="n">training_images</span><span class="p">,</span> <span class="n">training_labels</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+    <span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+    <span class="n">letters</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="n">training_images</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="n">array_to_img</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Greys_r&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">letters</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">training_labels</span><span class="p">[</span><span class="n">k</span><span class="p">])]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">plot_categories</span><span class="p">(</span><span class="n">training_images</span><span class="p">,</span> <span class="n">training_labels</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/c2w4_multi_class_classification_11_0.png" src="../../_images/c2w4_multi_class_classification_11_0.png" />
+</div>
+</div>
+</section>
+<section id="creating-the-generators-for-the-cnn">
+<h2>Creating the generators for the CNN<a class="headerlink" href="#creating-the-generators-for-the-cnn" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">train_val_generators</span><span class="p">(</span><span class="n">training_images</span><span class="p">,</span> <span class="n">training_labels</span><span class="p">,</span> <span class="n">validation_images</span><span class="p">,</span> <span class="n">validation_labels</span><span class="p">):</span>
+
+    <span class="n">training_images</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">training_images</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">validation_images</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">validation_images</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">train_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">255</span><span class="p">)</span>
+
+    <span class="n">train_generator</span> <span class="o">=</span> <span class="n">train_datagen</span><span class="o">.</span><span class="n">flow</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">training_images</span><span class="p">,</span>
+                                         <span class="n">y</span><span class="o">=</span><span class="n">training_labels</span><span class="p">,</span>
+                                         <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span> 
+
+    <span class="n">validation_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">255</span><span class="p">)</span>
+
+    <span class="n">validation_generator</span> <span class="o">=</span> <span class="n">validation_datagen</span><span class="o">.</span><span class="n">flow</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">validation_images</span><span class="p">,</span>
+                                                   <span class="n">y</span><span class="o">=</span><span class="n">validation_labels</span><span class="p">,</span>
+                                                   <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span> 
+
+    <span class="k">return</span> <span class="n">train_generator</span><span class="p">,</span> <span class="n">validation_generator</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_generator</span><span class="p">,</span> <span class="n">validation_generator</span> <span class="o">=</span> <span class="n">train_val_generators</span><span class="p">(</span><span class="n">training_images</span><span class="p">,</span> <span class="n">training_labels</span><span class="p">,</span> <span class="n">validation_images</span><span class="p">,</span> <span class="n">validation_labels</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Images of training generator have shape: </span><span class="si">{</span><span class="n">train_generator</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Labels of training generator have shape: </span><span class="si">{</span><span class="n">train_generator</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Images of validation generator have shape: </span><span class="si">{</span><span class="n">validation_generator</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Labels of validation generator have shape: </span><span class="si">{</span><span class="n">validation_generator</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Images of training generator have shape: (27455, 28, 28, 1)
+Labels of training generator have shape: (27455,)
+Images of validation generator have shape: (7172, 28, 28, 1)
+Labels of validation generator have shape: (7172,)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="coding-the-cnn">
+<h2>Coding the CNN<a class="headerlink" href="#coding-the-cnn" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_model</span><span class="p">():</span>
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+        <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+        <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">(),</span>
+
+        <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+        <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">(),</span>
+
+        <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Flatten</span><span class="p">(),</span>
+        <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>
+        <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+        <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">26</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">)])</span>
+    
+
+    <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span> <span class="o">=</span> <span class="s1">&#39;rmsprop&#39;</span><span class="p">,</span>
+                  <span class="n">loss</span> <span class="o">=</span> <span class="s1">&#39;sparse_categorical_crossentropy&#39;</span><span class="p">,</span>
+                  <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>    
+    
+    <span class="k">return</span> <span class="n">model</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">create_model</span><span class="p">()</span>
+
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_generator</span><span class="p">,</span>
+                    <span class="n">epochs</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
+                    <span class="n">validation_data</span><span class="o">=</span><span class="n">validation_generator</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/9
+858/858 [==============================] - 13s 14ms/step - loss: 0.7530 - accuracy: 0.7693 - val_loss: 0.3589 - val_accuracy: 0.8882
+Epoch 2/9
+858/858 [==============================] - 12s 14ms/step - loss: 0.0918 - accuracy: 0.9693 - val_loss: 0.2649 - val_accuracy: 0.9247
+Epoch 3/9
+858/858 [==============================] - 12s 14ms/step - loss: 0.0359 - accuracy: 0.9885 - val_loss: 0.2610 - val_accuracy: 0.9357
+Epoch 4/9
+858/858 [==============================] - 12s 14ms/step - loss: 0.0227 - accuracy: 0.9929 - val_loss: 0.2722 - val_accuracy: 0.9339
+Epoch 5/9
+858/858 [==============================] - 13s 15ms/step - loss: 0.0160 - accuracy: 0.9948 - val_loss: 0.2597 - val_accuracy: 0.9406
+Epoch 6/9
+858/858 [==============================] - 12s 14ms/step - loss: 0.0105 - accuracy: 0.9962 - val_loss: 0.2653 - val_accuracy: 0.9448
+Epoch 7/9
+858/858 [==============================] - 12s 14ms/step - loss: 0.0105 - accuracy: 0.9967 - val_loss: 0.2756 - val_accuracy: 0.9405
+Epoch 8/9
+858/858 [==============================] - 12s 14ms/step - loss: 0.0091 - accuracy: 0.9975 - val_loss: 0.2975 - val_accuracy: 0.9477
+Epoch 9/9
+858/858 [==============================] - 12s 14ms/step - loss: 0.0064 - accuracy: 0.9984 - val_loss: 0.3080 - val_accuracy: 0.9552
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">acc</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">]</span>
+<span class="n">val_acc</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_accuracy&#39;</span><span class="p">]</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;loss&#39;</span><span class="p">]</span>
+<span class="n">val_loss</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_loss&#39;</span><span class="p">]</span>
+
+<span class="n">epochs</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">acc</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">acc</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Training accuracy&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">val_acc</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Validation accuracy&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Training and validation accuracy&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">loss</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Training Loss&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">val_loss</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Validation Loss&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Training and validation loss&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/c2w4_multi_class_classification_18_0.png" src="../../_images/c2w4_multi_class_classification_18_0.png" />
+<img alt="../../_images/c2w4_multi_class_classification_18_1.png" src="../../_images/c2w4_multi_class_classification_18_1.png" />
+</div>
+</div>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="c2w3_transfer_learning.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">C2W3: Transfer Learning</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="c3w1_bbc_news_archive.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">C3W1: Explore the BBC News archive</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Eduardo Avelar<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,2089 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>GCP ML/Data labs &#8212; Eduardo Avelar</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/myscript.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pages/Posts/Lectures" href="ml_pages_posts.html" />
+    <link rel="prev" title="GCP Skills Boost Updates" href="gcp_skills_boost_updates.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Eduardo Avelar</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="" aria-label="" autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   E-learning ML/Data resources
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="books.html">
+     ML/Data/Dev Books
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="coursera.html">
+     Coursera courses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gcp_data_analysis.html">
+     GCP Courses/Videos Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gcp_skills_boost_updates.html">
+     GCP Skills Boost Updates
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     GCP ML/Data labs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ml_pages_posts.html">
+     Pages/Posts/Lectures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ml_platforms.html">
+     Platforms/Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ml_training.html">
+     Courses/Videos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../mldev_tools/index.html">
+   Dev-ML Tools
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mldev_tools/check_duplicated_questions.html">
+     Check for duplicated questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mldev_tools/create_questions_html.html">
+     Create html page with ML questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mldev_tools/paste_online_ext.html">
+     VS Code ext to paste one line
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mldev_tools/qwiklabs_quiz_to_json.html">
+     Qwiklabs Quizzes to JSON
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mldev_tools/site_builder.html">
+     GCP Courses Builder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mldev_tools/videoslides_to_images.html">
+     GCP Videos to Images
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../dev_notes/index.html">
+   My Dev notes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../dev_notes/dev-essentials.html">
+     apt install dev-essentials
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../dev_notes/dev_commands.html">
+     Dev commands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../dev_notes/dev_troubleshoot.html">
+     Dev Troubleshooting Notes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../dev_notes/install_kubeflow.html">
+     Install Kubeflow Pipelines for Local Deployment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../dev_notes/kfp_v1.html">
+     Kubeflow Pipelines v1 sdk v2 examples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../dev_notes/my_vscode_theme.html">
+     My VS Code theme
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ml_notes/index.html">
+   ML Notes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml_notes/good_practice.html">
+     ML Good practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml_notes/nvidia_tools.html">
+     Nvidia ML
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../gcp_courses/index.html">
+   Google Cloud Skills Boost Courses
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gcp_courses/gcp_big_data_and_ml_fundamentals/index.html">
+     Google Cloud Big Data and Machine Learning Fundamentals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gcp_courses/how_google_does_ml/index.html">
+     How Google Does Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gcp_courses/launching_into_ml/index.html">
+     Launching into Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gcp_courses/tf_on_gcp/index.html">
+     TensorFlow on Google Cloud
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gcp_courses/feature_engineering/index.html">
+     Feature Engineering
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/index.html">
+     Machine Learning in the Enterprise
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/index.html">
+       Vertex Vizier Hyperparameter Tuning
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/vertex_ai_vizier_hyperparameter_tuning.html">
+         Vertex AI Vizier hyperparameter tuning
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/lab_intro_vertex_vizier_hyperparameter_tuning.html">
+         Lab intro: Vertex Vizier Hyperparameter Tuning
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/index.html">
+       Prediction and Model Monitoring using Vertex AI
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/predictions_using_vertex_ai.html">
+         Predictions using Vertex AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/model_management_using_vertex_ai.html">
+         Model management using Vertex AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/lab_intro_vertex_ai_model_monitoring.html">
+         Lab intro: Vertex AI Model Monitoring
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/index.html">
+       Vertex AI Pipelines
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+      <label for="toctree-checkbox-9">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/prediction_using_vertex_ai_pipelines.html">
+         Prediction using Vertex AI pipelines
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/lab_intro_vertex_ai_pipelines.html">
+         Lab intro: Vertex AI Pipelines
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/index.html">
+       Best Practices for Machine Learning Development
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+      <label for="toctree-checkbox-10">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/best_practices_for_model_deployment_and_serving.html">
+         Best practices for model deployment and serving
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/best_practices_for_model_monitoring.html">
+         Best practices for model monitoring
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/vertex_ai_pipeline_best_practices.html">
+         Vertex AI pipeline best practices
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/best_practices_for_artifact_organization.html">
+         Best practices for artifact organization
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/series_summary/index.html">
+       Series Summary
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/series_summary/series_summary.html">
+         Series summary
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/working_dir/index.html">
+       Working dir
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_in_the_enterprise/working_dir/my_intro_to_vertex_pipelines.html">
+         intro_to_vertex_pipelines.ipynb
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../gcp_courses/production_ml_systems/index.html">
+     Production Machine Learning Systems
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/production_ml_systems/intro_to_advanced_ml_on_gcp/index.html">
+       Introduction to Advanced Machine Learning on Google Cloud
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+      <label for="toctree-checkbox-14">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/intro_to_advanced_ml_on_gcp/advanced_ml_on_gcp.html">
+         Advanced Machine Learning on Google Cloud
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/intro_to_advanced_ml_on_gcp/welcome.html">
+         Welcome
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/production_ml_systems/architecting_production_ml_s/index.html">
+       Architecting Production ML Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+      <label for="toctree-checkbox-15">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/architecting_production_ml_s/architecting_ml_systems.html">
+         Architecting ML systems
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/architecting_production_ml_s/data_extraction_analysis_and_preparation.html">
+         Data extraction, analysis, and preparation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/architecting_production_ml_s/model_training_evaluation_and_validation.html">
+         Model training, evaluation, and validation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/architecting_production_ml_s/trained_model_prediction_service_and_performance_mo.html">
+         Trained model, prediction service, and performance monitoring
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/architecting_production_ml_s/training_design_decisions.html">
+         Training design decisions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/architecting_production_ml_s/serving_design_decisions.html">
+         Serving design decisions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/architecting_production_ml_s/using_vertex_ai.html">
+         Using Vertex AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/architecting_production_ml_s/lab_intro_structured_data_prediction.html">
+         Lab introduction: Structured data prediction
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/index.html">
+       Designing Adaptable ML Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+      <label for="toctree-checkbox-16">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/adapting_to_data.html">
+         Adapting to data
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/changing_distributions.html">
+         Changing distributions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_adapting_to_data.html">
+         Lab: Adapting to data
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/right_and_wrong_decisions.html">
+         Right and wrong decisions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/system_failure.html">
+         System failure
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/concept_drift.html">
+         Concept drift
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/actions_to_mitigate_concept_drift.html">
+         Actions to mitigate concept drift
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/tf_data_validation.html">
+         TensorFlow data validation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/components_of_tf_data_validation.html">
+         Components of TensorFlow data validation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_intro_intro_to_tf_data_validation.html">
+         Lab Introduction: Introduction to TensorFlow Data Validation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_intro_advanced_visualizations_with_tf_data_vali.html">
+         Lab Introduction: Advanced Visualizations with TensorFlow Data Validation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/mitigating_training_serving_skew_through_design.html">
+         Mitigating training-serving skew through design
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_intro_serving_ml_predictions_in_batch_and_real.html">
+         Lab Introduction: Serving ML Predictions in Batch and Real Time
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/diagnosing_a_production_model.html">
+         Diagnosing a production model
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_high_performance_m/index.html">
+       Designing High-performance ML Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+      <label for="toctree-checkbox-17">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_high_performance_m/training.html">
+         Training
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_high_performance_m/why_distributed_training_is_needed.html">
+         Why distributed training is needed
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_high_performance_m/distributed_training_architectures.html">
+         Distributed training architectures
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_high_performance_m/tf_distributed_training_strategies.html">
+         TensorFlow distributed training strategies
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_high_performance_m/mirrored_strategy.html">
+         Mirrored strategy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_high_performance_m/multi_worker_mirrored_strategy.html">
+         Multi-worker mirrored strategy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_high_performance_m/tpu_strategy.html">
+         TPU strategy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_high_performance_m/parameter_server_strategy.html">
+         Parameter server strategy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_high_performance_m/lab_intro_distributed_training_with_keras.html">
+         Lab Introduction: Distributed Training with Keras
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_high_performance_m/lab_intro_distributed_training_using_gpus_on_cloud.html">
+         Lab Introduction: Distributed Training using GPUs on Cloud AI Platform
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_high_performance_m/training_on_large_datasets_with_tf_data_api.html">
+         Training on large datasets with tf.data API
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/designing_high_performance_m/lab_intro_tpu_speed_data_pipelines.html">
+         Lab Introduction: TPU-speed Data Pipelines
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/production_ml_systems/building_hybrid_ml_systems/index.html">
+       Building Hybrid ML Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+      <label for="toctree-checkbox-18">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/building_hybrid_ml_systems/kubeflow.html">
+         Kubeflow
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/building_hybrid_ml_systems/optimizing_tf_for_mobile.html">
+         Optimizing TensorFlow for mobile
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/production_ml_systems/summary/index.html">
+       Summary
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+      <label for="toctree-checkbox-19">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/summary/course_summary.html">
+         Course summary
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/production_ml_systems/working_dir/index.html">
+       Working dir
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+      <label for="toctree-checkbox-20">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/working_dir/my_keras.html">
+         keras.ipynb
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/working_dir/my_serving_ml_prediction.html">
+         serving_ml_prediction.ipynb
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/working_dir/my_tfdv_basic_spending.html">
+         tfdv_basic_spending.ipynb
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/production_ml_systems/working_dir/my_train_deploy.html">
+         babyweight/train_deploy.ipynb
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/index.html">
+     Computer Vision Fundamentals with Google Cloud
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+    <label for="toctree-checkbox-21">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/index.html">
+       Introduction to Computer Vision and Pre-built ML Models for Image Classification
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+      <label for="toctree-checkbox-22">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/what_is_cv.html">
+         What Is Computer Vision
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/different_type_of_cv_problems.html">
+         Different Type of Computer Vision Problems
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/cv_use_cases.html">
+         Computer Vision Use Cases
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/vision_api_pre_built_ml_models.html">
+         Vision API - Pre-built ML Models
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/index.html">
+       Vertex AI and AutoML Vision on Vertex AI
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+      <label for="toctree-checkbox-23">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/what_is_vertex_ai_and_why_does_a_unified_platform_m.html">
+         What is Vertex AI and why does a unified platform matter?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/intro_to_automl_vision_on_vertex_ai.html">
+         Introduction to AutoML Vision on Vertex AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/how_does_vertex_ai_help_with_the_ml_workflow_part_1.html">
+         How does Vertex AI help with the ML workflow, part 1 ?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/how_does_vertex_ai_help_with_the_ml_workflow_part_2.html">
+         How does Vertex AI help with the ML workflow, part 2 ?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/which_vision_product_is_right_for_you.html">
+         Which vision product is right for you?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/lab_intro_identifying_damaged_car_parts_with_vertex.html">
+         Lab Introduction - Identifying Damaged Car Parts with Vertex AI for AutoML Vision users
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/index.html">
+       Custom Training with Linear, Neural Network and Deep Neural Network models
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+      <label for="toctree-checkbox-24">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/intro_to_linear_models.html">
+         Introduction to Linear Models
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/reading_the_data.html">
+         Reading the Data
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/implementing_linear_models_for_image_classification.html">
+         Implementing Linear Models for Image Classification
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/nns_and_dnns_for_image_classification.html">
+         Neural Networks and Deep Neural Networks for Image Classification
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/dnns_with_dropout_and_batch_normalization.html">
+         Deep Neural Networks with Dropout and Batch Normalization
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/cnns/index.html">
+       Convolutional Neural Networks
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+      <label for="toctree-checkbox-25">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/cnns/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/cnns/cnns.html">
+         Convolutional Neural Networks
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/cnns/understanding_convolutions.html">
+         Understanding Convolutions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/cnns/cnn_model_parameters.html">
+         CNN Model Parameters
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/cnns/working_with_pooling_layers.html">
+         Working with Pooling Layers
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/cnns/implementing_cnns_on_vertex_ai_with_pre_built_tf_co.html">
+         Implementing CNNs on Vertex AI with pre-built TF container using Vertex Workbench
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/index.html">
+       Dealing with Image Data
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
+      <label for="toctree-checkbox-26">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/preprocessing_the_image_data.html">
+         Preprocessing the Image Data
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/model_parameters_and_the_data_scarcity_problem.html">
+         Model Parameters and the Data Scarcity Problem
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/data_augmentation.html">
+         Data Augmentation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/transfer_learning.html">
+         Transfer Learning
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/summary/index.html">
+       Summary
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/>
+      <label for="toctree-checkbox-27">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/cv_fundamentals_with_gcp/summary/summary.html">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../gcp_courses/nlp_on_gcp/index.html">
+     Natural Language Processing on Google Cloud
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/>
+    <label for="toctree-checkbox-28">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/nlp_on_gcp/course_intro/index.html">
+       Course introduction
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/>
+      <label for="toctree-checkbox-29">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/course_intro/course_intro.html">
+         Course Introduction
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_on_gcp/index.html">
+       NLP on Google Cloud
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/>
+      <label for="toctree-checkbox-30">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_on_gcp/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_on_gcp/what_is_nlp.html">
+         What is NLP?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_history.html">
+         NLP history
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_architecture.html">
+         NLP architecture
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_apis.html">
+         NLP APIs
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_solutions.html">
+         NLP solutions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_on_gcp/summary.html">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/index.html">
+       NLP with Vertex AI
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/>
+      <label for="toctree-checkbox-31">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_options.html">
+         NLP options
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/vertex_ai.html">
+         Vertex AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_with_automl.html">
+         NLP with AutoML
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_with_custom_training.html">
+         NLP with custom training
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_end_to_end_workflow.html">
+         NLP end-to-end workflow
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/summary.html">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/nlp_on_gcp/text_representation/index.html">
+       Text representation
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/>
+      <label for="toctree-checkbox-32">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/text_representation/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/text_representation/tokenization.html">
+         Tokenization
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/text_representation/one_hot_encoding_and_bag_of_words.html">
+         One-hot encoding and bag-of-words
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/text_representation/word_embeddings.html">
+         Word embeddings
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/text_representation/word2vec.html">
+         Word2vec
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/text_representation/transfer_learning_and_reusable_embeddings.html">
+         Transfer learning and reusable embeddings
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/text_representation/summary.html">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/nlp_on_gcp/advanced_nlp_models/index.html">
+       Advanced NLP models
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/>
+      <label for="toctree-checkbox-33">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/advanced_nlp_models/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/advanced_nlp_models/encoder_decoder_architecture.html">
+         Encoder-decoder architecture
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/advanced_nlp_models/attention_mechanism.html">
+         Attention mechanism
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/advanced_nlp_models/transformer.html">
+         Transformer
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/advanced_nlp_models/bert.html">
+         BERT
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/advanced_nlp_models/large_language_models.html">
+         Large language models
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/advanced_nlp_models/lab_intro_text_translation_using_encoder_decoder_ar.html">
+         Lab introduction: Text Translation using Encoder-decoder Architecture
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/nlp_on_gcp/advanced_nlp_models/summary.html">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../gcp_courses/recommendation_systems_on_gcp/index.html">
+     Recommendation Systems on Google Cloud
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/>
+    <label for="toctree-checkbox-34">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/index.html">
+       Recommendation Systems Overview
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/>
+      <label for="toctree-checkbox-35">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/types_of_recommendation_systems.html">
+         Types of Recommendation Systems
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/content_based_or_collaborative.html">
+         Content-Based or Collaborative
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/recommendation_system_pitfalls.html">
+         Recommendation System Pitfalls
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/index.html">
+       Content-Based Recommendation Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/>
+      <label for="toctree-checkbox-36">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/content_based_recommendation_systems.html">
+         Content-Based Recommendation Systems
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/similarity_measures.html">
+         Similarity Measures
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/building_a_user_vector.html">
+         Building a User Vector
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/making_recommendations_using_a_user_vector.html">
+         Making Recommendations Using a User Vector
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/making_recommendations_for_many_users.html">
+         Making Recommendations for Many Users
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/using_nns_for_content_based_recommendation_systems.html">
+         Using Neural Networks for Content-Based Recommendation Systems
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../gcp_courses/ml_operations_mlops_getting_started/index.html">
+     Machine Learning Operations (MLOps): Getting Started
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/>
+    <label for="toctree-checkbox-37">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/index.html">
+       Employing Machine Learning Operations
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/>
+      <label for="toctree-checkbox-38">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/ml_ml_practitioners_pain_points.html">
+         Machine learning (ML) practitioners’ pain points
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/the_concept_of_devops_in_ml.html">
+         The concept of devOps in ML
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/ml_lifecycle.html">
+         ML lifecycle
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/automating_the_ml_process.html">
+         Automating the ML process
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/index.html">
+       Vertex AI and MLOps on Vertex AI
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/>
+      <label for="toctree-checkbox-39">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/what_is_vertex_ai_and_why_does_a_unified_platform_m.html">
+         What is vertex ai and why does a unified platform matter?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/intro_to_mlops_on_vertex_ai.html">
+         Introduction to mlops on vertex ai
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/how_does_vertex_ai_help_with_the_mlops_workflow_par.html">
+         How does vertex ai help with the mlops workflow, part 2?
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../gcp_official/index.html">
+   Official GCP codes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/>
+  <label for="toctree-checkbox-40">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gcp_official/Create%20machine%20learning%20models%20in%20BigQuery%20ML.html">
+     Create machine learning models in BigQuery ML
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../gcp_resources/index.html">
+   GCP notes/resources
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-41" name="toctree-checkbox-41" type="checkbox"/>
+  <label for="toctree-checkbox-41">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gcp_resources/gcp_setup.html">
+     GCP notes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gcp_resources/ml_cert_exam_guide.html">
+     Machine Learning Cert guide
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gcp_resources/notebooks_to_do.html">
+     Notebooks To Do
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gcp_resources/vertex_ai_mlops.html">
+     Vertex AI MLOps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../tf_official/index.html">
+   Official TF codes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-42" name="toctree-checkbox-42" type="checkbox"/>
+  <label for="toctree-checkbox-42">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../tf_official/structured_data/index.html">
+     Structured Data
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-43" name="toctree-checkbox-43" type="checkbox"/>
+    <label for="toctree-checkbox-43">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_official/structured_data/time_series.html">
+       Time series forecasting
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../tf_official/distribute/index.html">
+     Distributed training
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-44" name="toctree-checkbox-44" type="checkbox"/>
+    <label for="toctree-checkbox-44">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_official/distribute/multi_worker_with_keras.html">
+       Multi-worker training with Keras
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../tf_resources/index.html">
+   Tensorflow Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-45" name="toctree-checkbox-45" type="checkbox"/>
+  <label for="toctree-checkbox-45">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tf_resources/libs.html">
+     TF Libraries &amp; extensions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tf_resources/my_tfdv_basic.html">
+     tfdv_basic.ipynb
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tf_resources/preprocessing.html">
+     Preprocessing Layers and tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tf_resources/sklearn.html">
+     Scikit Learn anf TF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tf_resources/tf_cert.html">
+     TensorFlow Developer Certificate
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../feature_eng/index.html">
+   Feature Engineering Tools
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../deeplearningai/index.html">
+   DeepLearning.AI Courses
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-46" name="toctree-checkbox-46" type="checkbox"/>
+  <label for="toctree-checkbox-46">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../deeplearningai/tf_dev_course_original/index.html">
+     TensorFlow Dev Cert - original version
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-47" name="toctree-checkbox-47" type="checkbox"/>
+    <label for="toctree-checkbox-47">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c1w1_housing_prices.html">
+       C1W1 Assignment: Housing Prices
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c1w2_%20callbacks_mnist.html">
+       C1W2: Implementing Callbacks in TensorFlow using the MNIST Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c1w3_mnist_convolutions.html">
+       C1W3: Improve MNIST with Convolutions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c1w4_complex_images_happy_sad.html">
+       C1W4: Handling Complex Images - Happy or Sad Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c2w1_cnns_cats_vs_dogs.html">
+       C2W1: Using CNN’s with the Cats vs Dogs Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c2w2_overfitting_data_augmentation.html">
+       C2W2: Tackle Overfitting with Data Augmentation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c2w3_transfer_learning.html">
+       C2W3: Transfer Learning
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c2w4_multi_class_classification.html">
+       C2W4: Multi-class Classification
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c3w1_bbc_news_archive.html">
+       C3W1: Explore the BBC News archive
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c3w2_deep_bbc_news_archive.html">
+       C3W2: Diving deeper into the BBC News archive
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c3w3_overfitting_nlp.html">
+       C3W3: Exploring Overfitting in NLP
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c3w4_predicting_next_word.html">
+       C3W4: Predicting the next word
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c4w1_working_with_time_series.html">
+       C4W1: Working with time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c4w2_predicting_time_series.html">
+       C4W2: Predicting time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c4w3_rnns_predict_time_series.html">
+       C4W3: Using RNNs to predict time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_original/c4w4_using_real_world_data.html">
+       C4W4: Using real world data
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/index.html">
+     TensorFlow Dev Cert - updated
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-48" name="toctree-checkbox-48" type="checkbox"/>
+    <label for="toctree-checkbox-48">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c1w1_housing_prices.html">
+       C1W1 Assignment: Housing Prices
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c1w2_%20callbacks_mnist.html">
+       C1W2: Implementing Callbacks in TensorFlow using the MNIST Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c1w3_mnist_convolutions.html">
+       C1W3: Improve MNIST with Convolutions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c1w4_complex_images_happy_sad.html">
+       C1W4: Handling Complex Images - Happy or Sad Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c2w1_cnns_cats_vs_dogs.html">
+       C2W1: Using CNN’s with the Cats vs Dogs Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c2w2_overfitting_data_augmentation.html">
+       C2W2: Tackle Overfitting with Data Augmentation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c2w3_transfer_learning.html">
+       C2W3: Transfer Learning
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c2w4_multi_class_classification.html">
+       C2W4: Multi-class Classification
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c3w1_bbc_news_archive.html">
+       C3W1: Explore the BBC News archive
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c3w2_deep_bbc_news_archive.html">
+       C3W2: Diving deeper into the BBC News archive
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c3w3_overfitting_nlp.html">
+       C3W3: Exploring Overfitting in NLP
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c3w4_predicting_next_word.html">
+       C3W4: Predicting the next word
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c4w1_working_with_time_series.html">
+       C4W1: Working with time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c4w2_predicting_time_series.html">
+       C4W2: Predicting time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c4w3_rnns_predict_time_series.html">
+       C4W3: Using RNNs to predict time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deeplearningai/tf_dev_course_updated/c4w4_using_real_world_data.html">
+       C4W4: Using real world data
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/elearning_ml_data/google_cloud_labs.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>GCP ML/Data labs</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="gcp-ml-data-labs">
+<h1>GCP ML/Data labs<a class="headerlink" href="#gcp-ml-data-labs" title="Permalink to this headline">#</a></h1>
+<p><strong>Machine Learning Engineer Learning Path</strong> [<a class="reference external" href="https://www.cloudskillsboost.google/journeys/17">courses</a>]</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/2794">Lab</a> - A Tour of Google Cloud Hands-on Labs</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/course_templates/3">Course</a> - Google Cloud Big Data and Machine Learning Fundamentals</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/course_templates/10">Course</a> - How Google Does Machine Learning</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/course_templates/8">Course</a> - Launching into Machine Learning</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/course_templates/12">Course</a> - TensorFlow on Google Cloud</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/course_templates/11">Course</a> - Feature Engineering</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/course_templates/9">Course</a> - Machine Learning in the Enterprise</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/course_templates/17">Course</a> - Production Machine Learning Systems (AI Platform, Vertex AI)</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/course_templates/18">Course</a> - Computer Vision Fundamentals with Google Cloud</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/course_templates/40">Course</a> - Natural Language Processing on Google Cloud</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/course_templates/39">Course</a> - Recommendation Systems on Google Cloud</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/course_templates/158">Course</a> - MLOps (Machine Learning Operations) Fundamentals</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/course_templates/191">Course</a> - ML Pipelines on Google Cloud (outdated - AI Platform)</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/quests/117">Quest</a> - <strong>Perform Foundational Data, ML, and AI Tasks in Google Cloud</strong> (Introductory)</p>
+<ul>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/18940?parent=catalog">Lab</a> (Intermediate) - Vertex AI: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/584?parent=catalog">Lab</a> (Introductory) - Dataprep: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1101?parent=catalog">Lab</a> (Introductory) - Dataflow: Qwik Start - Templates</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1100?parent=catalog">Lab</a> (Introductory) - Dataflow: Qwik Start - Python</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/586?parent=catalog">Lab</a> (Introductory) - Dataproc: Qwik Start - Console</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/585?parent=catalog">Lab</a> (Introductory) - Dataproc: Qwik Start - Command Line</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/582?parent=catalog">Lab</a> (Introductory) - Cloud Natural Language API: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/588?parent=catalog">Lab</a> (Introductory) - Google Cloud Speech API: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/603?parent=catalog">Lab</a> (Introductory) - Video Intelligence: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/11044?parent=catalog">Lab</a> - Perform Foundational Data, ML, and AI Tasks in Google Cloud: Challenge Lab</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/quests/183">Quest</a> - <strong>Build and Deploy Machine Learning Solutions on Vertex AI</strong> (Advanced)</p>
+<ul>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/18940?parent=catalog">Lab</a> (Intermediate) - Vertex AI: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/22020?parent=catalog">Lab</a> (Intermediate) - Identify Damaged Car Parts with Vertex AutoML Vision</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/20069?parent=catalog">Lab</a> (Intermediate) - Deploy a BigQuery ML Customer Churn Classifier to Vertex AI for Online Predictions</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/21234?parent=catalog">Lab</a> (Intermediate) - Vertex Pipelines: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/22019?parent=catalog">Lab</a> (Intermediate) - Build and Deploy Machine Learning Solutions with Vertex AI: Challenge Lab</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Machine Learning, Data Science quests/labs</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/quests/146">Quest</a> (Introductory) - <strong>Create ML Models with BigQuery ML</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/2157?parent=catalog">Lab</a> - Getting Started with BigQuery Machine Learning</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1794?parent=catalog">Lab</a> - Predict Visitor Purchases with a Classification Model in BQML</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1797?parent=catalog">Lab</a> - Predict Taxi Fare with a BigQuery ML Forecasting Model</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/4337?parent=catalog">Lab</a> - Bracketology with Google Machine Learning</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/4414?parent=catalog">Lab</a> - Integrating BigQuery ML with Dialogflow ES Chatbot</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/14294?parent=catalog">Lab</a> - Create ML Models with BigQuery ML: Challenge Lab</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/quests/204">Quest</a> (Introductory) - <strong>Predict Soccer Match Outcomes with BigQuery ML</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/23114?parent=catalog">Lab</a> - BigQuery Soccer Data Ingestion</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/23118?parent=catalog">Lab</a> - BigQuery Soccer Data Analysis</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/23131?parent=catalog">Lab</a> - BigQuery Soccer Data Analytical Insight</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/23293?parent=catalog">Lab</a> - BigQuery Machine Learning using Soccer Data</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/37320?parent=catalog">Lab</a> - Predict Soccer Match Outcomes with BigQuery ML: Challenge Lab</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/quests/132">Quest</a> (Intermediate) - <strong>Engineer Data in Google Cloud</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/4415?parent=catalog">Lab</a> - Creating a Data Transformation Pipeline with Cloud Dataprep</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/3460?parent=catalog">Lab</a> - ETL Processing on Google Cloud Using Dataflow and BigQuery</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1794?parent=catalog">Lab</a> - Predict Visitor Purchases with a Classification Model in BigQuery ML</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/3528?parent=catalog">Lab</a> - Cloud Composer: Copying BigQuery Tables Across Different Locations</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/12379?parent=catalog">Lab</a> - Engineer Data in Google Cloud: Challenge Lab</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/quests/179">Quest</a> (Intermediate) - <strong>Language, Speech, Text, &amp; Translation with Google Cloud APIs</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/2187?parent=catalog">Lab</a> - Speech to Text Transcription with the Cloud Speech API</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/13597?parent=catalog">Lab</a> - Measuring and Improving Speech Accuracy</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/697?parent=catalog">Lab</a> - Translate Text with the Cloud Translation API</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1749?parent=catalog">Lab</a> - Classify Text into Categories with the Natural Language API</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1843?parent=catalog">Lab</a> - Entity and Sentiment Analysis with the Natural Language API</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1290?parent=catalog">Lab</a> - It Speaks! Create Synthetic Speech Using Text-to-Speech</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Vertex AI related quests/labs</strong> [33 <a class="reference external" href="https://www.cloudskillsboost.google/catalog?keywords=vertex">results</a>]</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/course_templates/55">Course</a> (Introductory) - Smart Analytics, Machine Learning, and AI on Google Cloud</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/course_templates/511">Course</a> (Intermediate) - Vertex Forecasting and Time Series in Practice</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/quests/34">Quest</a> (Fundamental) - <strong>Baseline: Data, ML, AI</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/18940?parent=catalog">Lab</a> (Intermediate) - Vertex AI: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/584?parent=catalog">Lab</a> (Introductory) - Dataprep: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1101?parent=catalog">Lab</a> (Introductory) - Dataflow: Qwik Start - Templates</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1100?parent=catalog">Lab</a> (Introductory) - Dataflow: Qwik Start - Python</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/586?parent=catalog">Lab</a> (Introductory) - Dataproc: Qwik Start - Console</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/585?parent=catalog">Lab</a> (Introductory) - Dataproc: Qwik Start - Command Line</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/582?parent=catalog">Lab</a> (Introductory) - Cloud Natural Language API: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/588?parent=catalog">Lab</a> (Introductory) - Google Cloud Speech API: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/603?parent=catalog">Lab</a> (Introductory) - Video Intelligence: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/10285?parent=catalog">Lab</a> (Introductory) - Reinforcement Learning: Qwik Start</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/quests/85">Quest</a> (Fundamental) - <strong>Intro to ML: Image Processing</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/581?parent=catalog">Lab</a> (Introductory) - Vertex AI Workbench Notebook: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/584?parent=catalog">Lab</a> (Introductory) - APIs Explorer: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/8406?parent=catalog">Lab</a> (Intermediate) - Classify Images of Clouds in the Cloud with AutoML Images</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1841?parent=catalog">Lab</a> (Intermediate) - Detect Labels, Faces, and Landmarks in Images with the Cloud Vision API</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1836?parent=catalog">Lab</a> (Advanced) - Extract, Analyze, and Translate Text from Images with the Cloud ML APIs</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/quests/249">Quest</a> (Introductory) - <strong>Get Started with TensorFlow on Google Cloud</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/7639?parent=catalog">Lab</a> (Introductory) - TensorFlow: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/43204?parent=catalog">Lab</a> (Introductory) - Introduction to Computer Vision with TensorFlow</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/49256?parent=catalog">Lab</a> (Introductory) - Introduction to Convolutions with TensorFlow</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/53697?parent=catalog">Lab</a> (Introductory) - Classify Images with TensorFlow Convolutional Neural Networks</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/53699?parent=catalog">Lab</a> (Introductory) - Identify Horses or Humans with TensorFlow and Vertex AI</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/53698?parent=catalog">Lab</a> (Introductory) - Get Started with TensorFlow on Google Cloud: Challenge Lab</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/quests/83">Quest</a> (Fundamental) - <strong>Intermediate ML: TensorFlow on Google Cloud</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/18940?parent=catalog">Lab</a> (Intermediate) - Vertex AI: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/581?parent=catalog">Lab</a> (Introductory) - Vertex AI Workbench Notebook: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/21228?parent=catalog">Lab</a> (Introductory) - Classify Images of Cats and Dogs using Transfer Learning</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/21599?parent=catalog">Lab</a> (Intermediate) - Running Distributed TensorFlow using Vertex AI</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1823?parent=catalog">Lab</a> (Introductory) - Creating an Object Detection Application Using TensorFlow</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/quests/84">Quest</a> (Intermediate) - <strong>Advanced ML: ML Infrastructure</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/18940?parent=catalog">Lab</a> (Intermediate) - Vertex AI: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/29775?parent=catalog">Lab</a> (Intermediate) - TFX on Google Cloud Vertex Pipelines</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/17649?parent=catalog">Lab</a> (Intermediate) - Autoscaling TensorFlow Model Deployments with TF Serving and Kubernetes</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/18471?parent=catalog">Lab</a> (Intermediate) - Implementing Canary Releases of TensorFlow Model Deployments with Kubernetes and Istio</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/quests/43">Quest</a> (Advanced) - <strong>Data Science on Google Cloud</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/2802?parent=catalog">Lab</a> - Introduction to SQL for BigQuery and Cloud SQL</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1155?parent=catalog">Lab</a> - Ingesting Data Into The Cloud</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1157?parent=catalog">Lab</a> - Loading Data into Google Cloud SQL</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1158?parent=catalog">Lab</a> - Visualizing Data with Google Data Studio</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1159?parent=catalog">Lab</a> - Processing Data with Google Cloud Dataflow</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1160?parent=catalog">Lab</a> - Visualize Real Time Geospatial Data with Google Data Studio</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1162?parent=catalog">Lab</a> (Intermediate) - Interactive Data Exploration with Vertex AI Workbench</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1163?parent=catalog">Lab</a> - Evaluating a Data Model</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/quests/50">Quest</a> (Advanced) - <strong>Data Science on Google Cloud: Machine Learning</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/3392?parent=catalog">Lab</a> - Bayes Classifier on Dataproc</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/3390?parent=catalog">Lab</a> - Machine Learning with Spark on Google Cloud Dataproc</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1161?parent=catalog">Lab</a> - Machine Learning with BigQuery ML</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/3391?parent=catalog">Lab</a> (Advanced) - Machine Learning with TensorFlow in Vertex AI</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/3389?parent=catalog">Lab</a> (Advanced) - MLOps with Vertex AI</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/3393?parent=catalog">Lab</a> (Intermediate) - Real Time Machine Learning with Cloud Dataflow and Vertex AI</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/quests/136">Quest</a> (Advanced) - <strong>Integrate with Machine Learning APIs</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/3473?parent=catalog">Lab</a> - Introduction to APIs in Google</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1836?parent=catalog">Lab</a> - Extract, Analyze, and Translate Text from Images with the Cloud ML APIs</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1749?parent=catalog">Lab</a> - Classify Text into Categories with the Natural Language API</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1841?parent=catalog">Lab</a> - Detect Labels, Faces, and Landmarks in Images with the Cloud Vision API</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1843?parent=catalog">Lab</a> - Entity and Sentiment Analysis with the Natural Language API</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1241?parent=catalog">Lab</a> - Awwvision: Cloud Vision API from a Kubernetes Cluster</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/12704?parent=catalog">Lab</a> - Integrate with Machine Learning APIs: Challenge Lab</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/quests/38">Quest</a> (Advanced) - <strong>Google Cloud Solutions II: Data and Machine Learning</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/624?parent=catalog">Lab</a> (Introductory) - Exploring NCAA Data with BigQuery</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/21228?parent=catalog">Lab</a> (Introductory) - Classify Images of Cats and Dogs using Transfer Learning</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1823?parent=catalog">Lab</a> (Introductory) - Creating an Object Detection Application Using TensorFlow</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/629?parent=catalog">Lab</a> (Intermediate) - Using OpenTSDB to Monitor Time-Series Data on Cloud Platform</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/1831?parent=catalog">Lab</a> (Intermediate) - Scanning User-generated Content Using the Cloud Video Intelligence and Cloud Vision APIs</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/46225?parent=catalog">Lab</a> (Introductory) - Vertex AI: Predicting Loan Risk with AutoML</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/14080?parent=catalog">Lab</a> (Introductory) - Analyzing a Tennis Serve with the Video Intelligence API</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/21026?parent=catalog">Lab</a> (Introductory) - Process Documents with Python Using the Document AI API</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/49150?parent=catalog">Lab</a> (Introductory) - Text Classification using AutoML</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/5568?parent=catalog">Lab</a> (Introductory) - Visualize the 10,000 Bitcoin Pizza Transaction Using BigQuery and Vertex AI Workbench</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/43565?parent=catalog">Lab</a> (Intermediate) - Vertex AI Tabular Data: Qwik Start</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/604?parent=catalog">Lab</a> (Intermediate) - Analyzing Natality Data Using Vertex AI and BigQuery</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/25097?parent=catalog">Lab</a> (Intermediate) - Building a Fraud Detection Model with Vertex AI AutoML</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/13597?parent=catalog">Lab</a> (Intermediate) - Measuring and Improving Speech Accuracy</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/29775?parent=catalog">Lab</a> (Intermediate) - TFX on Google Cloud Vertex Pipelines</p></li>
+<li><p><a class="reference external" href="https://www.cloudskillsboost.google/focuses/49152?parent=catalog">Lab</a> (Advanced) - Keras for Text Classification using Vertex AI</p></li>
+</ul>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="gcp_skills_boost_updates.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">GCP Skills Boost Updates</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="ml_pages_posts.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Pages/Posts/Lectures</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Eduardo Avelar<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

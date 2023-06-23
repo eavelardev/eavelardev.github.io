@@ -1,0 +1,3159 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>C2W3: Transfer Learning &#8212; Eduardo Avelar</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/myscript.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <link rel="shortcut icon" href="../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="C2W4: Multi-class Classification" href="c2w4_multi_class_classification.html" />
+    <link rel="prev" title="C2W2: Tackle Overfitting with Data Augmentation" href="c2w2_overfitting_data_augmentation.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Eduardo Avelar</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="" aria-label="" autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../elearning_ml_data/index.html">
+   E-learning ML/Data resources
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/books.html">
+     ML/Data/Dev Books
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/coursera.html">
+     Coursera courses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/gcp_data_analysis.html">
+     GCP Courses/Videos Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/gcp_skills_boost_updates.html">
+     GCP Skills Boost Updates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/google_cloud_labs.html">
+     GCP ML/Data labs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/ml_pages_posts.html">
+     Pages/Posts/Lectures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/ml_platforms.html">
+     Platforms/Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../elearning_ml_data/ml_training.html">
+     Courses/Videos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../mldev_tools/index.html">
+   Dev-ML Tools
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mldev_tools/check_duplicated_questions.html">
+     Check for duplicated questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mldev_tools/create_questions_html.html">
+     Create html page with ML questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mldev_tools/paste_online_ext.html">
+     VS Code ext to paste one line
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mldev_tools/qwiklabs_quiz_to_json.html">
+     Qwiklabs Quizzes to JSON
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mldev_tools/site_builder.html">
+     GCP Courses Builder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mldev_tools/videoslides_to_images.html">
+     GCP Videos to Images
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../dev_notes/index.html">
+   My Dev notes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../dev_notes/dev-essentials.html">
+     apt install dev-essentials
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../dev_notes/dev_commands.html">
+     Dev commands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../dev_notes/dev_troubleshoot.html">
+     Dev Troubleshooting Notes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../dev_notes/install_kubeflow.html">
+     Install Kubeflow Pipelines for Local Deployment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../dev_notes/kfp_v1.html">
+     Kubeflow Pipelines v1 sdk v2 examples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../dev_notes/my_vscode_theme.html">
+     My VS Code theme
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ml_notes/index.html">
+   ML Notes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ml_notes/good_practice.html">
+     ML Good practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ml_notes/nvidia_tools.html">
+     Nvidia ML
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../gcp_courses/index.html">
+   Google Cloud Skills Boost Courses
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_courses/gcp_big_data_and_ml_fundamentals/index.html">
+     Google Cloud Big Data and Machine Learning Fundamentals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_courses/how_google_does_ml/index.html">
+     How Google Does Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_courses/launching_into_ml/index.html">
+     Launching into Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_courses/tf_on_gcp/index.html">
+     TensorFlow on Google Cloud
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_courses/feature_engineering/index.html">
+     Feature Engineering
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/index.html">
+     Machine Learning in the Enterprise
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/index.html">
+       Vertex Vizier Hyperparameter Tuning
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/vertex_ai_vizier_hyperparameter_tuning.html">
+         Vertex AI Vizier hyperparameter tuning
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_vizier_hyperparameter/lab_intro_vertex_vizier_hyperparameter_tuning.html">
+         Lab intro: Vertex Vizier Hyperparameter Tuning
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/index.html">
+       Prediction and Model Monitoring using Vertex AI
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/predictions_using_vertex_ai.html">
+         Predictions using Vertex AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/model_management_using_vertex_ai.html">
+         Model management using Vertex AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/prediction_and_model_monitor/lab_intro_vertex_ai_model_monitoring.html">
+         Lab intro: Vertex AI Model Monitoring
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/index.html">
+       Vertex AI Pipelines
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+      <label for="toctree-checkbox-9">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/prediction_using_vertex_ai_pipelines.html">
+         Prediction using Vertex AI pipelines
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/vertex_ai_pipelines/lab_intro_vertex_ai_pipelines.html">
+         Lab intro: Vertex AI Pipelines
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/index.html">
+       Best Practices for Machine Learning Development
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+      <label for="toctree-checkbox-10">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/best_practices_for_model_deployment_and_serving.html">
+         Best practices for model deployment and serving
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/best_practices_for_model_monitoring.html">
+         Best practices for model monitoring
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/vertex_ai_pipeline_best_practices.html">
+         Vertex AI pipeline best practices
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/best_practices_for_ml_develo/best_practices_for_artifact_organization.html">
+         Best practices for artifact organization
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/series_summary/index.html">
+       Series Summary
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/series_summary/series_summary.html">
+         Series summary
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/working_dir/index.html">
+       Working dir
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_in_the_enterprise/working_dir/my_intro_to_vertex_pipelines.html">
+         intro_to_vertex_pipelines.ipynb
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../gcp_courses/production_ml_systems/index.html">
+     Production Machine Learning Systems
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/production_ml_systems/intro_to_advanced_ml_on_gcp/index.html">
+       Introduction to Advanced Machine Learning on Google Cloud
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+      <label for="toctree-checkbox-14">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/intro_to_advanced_ml_on_gcp/advanced_ml_on_gcp.html">
+         Advanced Machine Learning on Google Cloud
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/intro_to_advanced_ml_on_gcp/welcome.html">
+         Welcome
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/index.html">
+       Architecting Production ML Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+      <label for="toctree-checkbox-15">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/architecting_ml_systems.html">
+         Architecting ML systems
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/data_extraction_analysis_and_preparation.html">
+         Data extraction, analysis, and preparation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/model_training_evaluation_and_validation.html">
+         Model training, evaluation, and validation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/trained_model_prediction_service_and_performance_mo.html">
+         Trained model, prediction service, and performance monitoring
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/training_design_decisions.html">
+         Training design decisions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/serving_design_decisions.html">
+         Serving design decisions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/using_vertex_ai.html">
+         Using Vertex AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/architecting_production_ml_s/lab_intro_structured_data_prediction.html">
+         Lab introduction: Structured data prediction
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/index.html">
+       Designing Adaptable ML Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+      <label for="toctree-checkbox-16">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/adapting_to_data.html">
+         Adapting to data
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/changing_distributions.html">
+         Changing distributions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_adapting_to_data.html">
+         Lab: Adapting to data
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/right_and_wrong_decisions.html">
+         Right and wrong decisions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/system_failure.html">
+         System failure
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/concept_drift.html">
+         Concept drift
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/actions_to_mitigate_concept_drift.html">
+         Actions to mitigate concept drift
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/tf_data_validation.html">
+         TensorFlow data validation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/components_of_tf_data_validation.html">
+         Components of TensorFlow data validation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_intro_intro_to_tf_data_validation.html">
+         Lab Introduction: Introduction to TensorFlow Data Validation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_intro_advanced_visualizations_with_tf_data_vali.html">
+         Lab Introduction: Advanced Visualizations with TensorFlow Data Validation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/mitigating_training_serving_skew_through_design.html">
+         Mitigating training-serving skew through design
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/lab_intro_serving_ml_predictions_in_batch_and_real.html">
+         Lab Introduction: Serving ML Predictions in Batch and Real Time
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_adaptable_ml_syste/diagnosing_a_production_model.html">
+         Diagnosing a production model
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/index.html">
+       Designing High-performance ML Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+      <label for="toctree-checkbox-17">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/training.html">
+         Training
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/why_distributed_training_is_needed.html">
+         Why distributed training is needed
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/distributed_training_architectures.html">
+         Distributed training architectures
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/tf_distributed_training_strategies.html">
+         TensorFlow distributed training strategies
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/mirrored_strategy.html">
+         Mirrored strategy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/multi_worker_mirrored_strategy.html">
+         Multi-worker mirrored strategy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/tpu_strategy.html">
+         TPU strategy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/parameter_server_strategy.html">
+         Parameter server strategy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/lab_intro_distributed_training_with_keras.html">
+         Lab Introduction: Distributed Training with Keras
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/lab_intro_distributed_training_using_gpus_on_cloud.html">
+         Lab Introduction: Distributed Training using GPUs on Cloud AI Platform
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/training_on_large_datasets_with_tf_data_api.html">
+         Training on large datasets with tf.data API
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/designing_high_performance_m/lab_intro_tpu_speed_data_pipelines.html">
+         Lab Introduction: TPU-speed Data Pipelines
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/production_ml_systems/building_hybrid_ml_systems/index.html">
+       Building Hybrid ML Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+      <label for="toctree-checkbox-18">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/building_hybrid_ml_systems/kubeflow.html">
+         Kubeflow
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/building_hybrid_ml_systems/optimizing_tf_for_mobile.html">
+         Optimizing TensorFlow for mobile
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/production_ml_systems/summary/index.html">
+       Summary
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+      <label for="toctree-checkbox-19">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/summary/course_summary.html">
+         Course summary
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/production_ml_systems/working_dir/index.html">
+       Working dir
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+      <label for="toctree-checkbox-20">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/working_dir/my_keras.html">
+         keras.ipynb
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/working_dir/my_serving_ml_prediction.html">
+         serving_ml_prediction.ipynb
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/working_dir/my_tfdv_basic_spending.html">
+         tfdv_basic_spending.ipynb
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/production_ml_systems/working_dir/my_train_deploy.html">
+         babyweight/train_deploy.ipynb
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/index.html">
+     Computer Vision Fundamentals with Google Cloud
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+    <label for="toctree-checkbox-21">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/index.html">
+       Introduction to Computer Vision and Pre-built ML Models for Image Classification
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+      <label for="toctree-checkbox-22">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/what_is_cv.html">
+         What Is Computer Vision
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/different_type_of_cv_problems.html">
+         Different Type of Computer Vision Problems
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/cv_use_cases.html">
+         Computer Vision Use Cases
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/intro_to_cv_and_pre_built_ml/vision_api_pre_built_ml_models.html">
+         Vision API - Pre-built ML Models
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/index.html">
+       Vertex AI and AutoML Vision on Vertex AI
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+      <label for="toctree-checkbox-23">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/what_is_vertex_ai_and_why_does_a_unified_platform_m.html">
+         What is Vertex AI and why does a unified platform matter?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/intro_to_automl_vision_on_vertex_ai.html">
+         Introduction to AutoML Vision on Vertex AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/how_does_vertex_ai_help_with_the_ml_workflow_part_1.html">
+         How does Vertex AI help with the ML workflow, part 1 ?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/how_does_vertex_ai_help_with_the_ml_workflow_part_2.html">
+         How does Vertex AI help with the ML workflow, part 2 ?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/which_vision_product_is_right_for_you.html">
+         Which vision product is right for you?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/vertex_ai_and_automl_vision/lab_intro_identifying_damaged_car_parts_with_vertex.html">
+         Lab Introduction - Identifying Damaged Car Parts with Vertex AI for AutoML Vision users
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/index.html">
+       Custom Training with Linear, Neural Network and Deep Neural Network models
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+      <label for="toctree-checkbox-24">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/intro_to_linear_models.html">
+         Introduction to Linear Models
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/reading_the_data.html">
+         Reading the Data
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/implementing_linear_models_for_image_classification.html">
+         Implementing Linear Models for Image Classification
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/nns_and_dnns_for_image_classification.html">
+         Neural Networks and Deep Neural Networks for Image Classification
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/custom_training_with_linear/dnns_with_dropout_and_batch_normalization.html">
+         Deep Neural Networks with Dropout and Batch Normalization
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/cnns/index.html">
+       Convolutional Neural Networks
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+      <label for="toctree-checkbox-25">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/cnns/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/cnns/cnns.html">
+         Convolutional Neural Networks
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/cnns/understanding_convolutions.html">
+         Understanding Convolutions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/cnns/cnn_model_parameters.html">
+         CNN Model Parameters
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/cnns/working_with_pooling_layers.html">
+         Working with Pooling Layers
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/cnns/implementing_cnns_on_vertex_ai_with_pre_built_tf_co.html">
+         Implementing CNNs on Vertex AI with pre-built TF container using Vertex Workbench
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/index.html">
+       Dealing with Image Data
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
+      <label for="toctree-checkbox-26">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/preprocessing_the_image_data.html">
+         Preprocessing the Image Data
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/model_parameters_and_the_data_scarcity_problem.html">
+         Model Parameters and the Data Scarcity Problem
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/data_augmentation.html">
+         Data Augmentation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/dealing_with_image_data/transfer_learning.html">
+         Transfer Learning
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/summary/index.html">
+       Summary
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/>
+      <label for="toctree-checkbox-27">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/cv_fundamentals_with_gcp/summary/summary.html">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/index.html">
+     Natural Language Processing on Google Cloud
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/>
+    <label for="toctree-checkbox-28">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/course_intro/index.html">
+       Course introduction
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/>
+      <label for="toctree-checkbox-29">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/course_intro/course_intro.html">
+         Course Introduction
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/index.html">
+       NLP on Google Cloud
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/>
+      <label for="toctree-checkbox-30">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/what_is_nlp.html">
+         What is NLP?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_history.html">
+         NLP history
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_architecture.html">
+         NLP architecture
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_apis.html">
+         NLP APIs
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/nlp_solutions.html">
+         NLP solutions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_on_gcp/summary.html">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/index.html">
+       NLP with Vertex AI
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/>
+      <label for="toctree-checkbox-31">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_options.html">
+         NLP options
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/vertex_ai.html">
+         Vertex AI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_with_automl.html">
+         NLP with AutoML
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_with_custom_training.html">
+         NLP with custom training
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/nlp_end_to_end_workflow.html">
+         NLP end-to-end workflow
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/nlp_with_vertex_ai/summary.html">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/index.html">
+       Text representation
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/>
+      <label for="toctree-checkbox-32">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/tokenization.html">
+         Tokenization
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/one_hot_encoding_and_bag_of_words.html">
+         One-hot encoding and bag-of-words
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/word_embeddings.html">
+         Word embeddings
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/word2vec.html">
+         Word2vec
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/transfer_learning_and_reusable_embeddings.html">
+         Transfer learning and reusable embeddings
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/text_representation/summary.html">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/index.html">
+       Advanced NLP models
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/>
+      <label for="toctree-checkbox-33">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/intro.html">
+         Introduction
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/encoder_decoder_architecture.html">
+         Encoder-decoder architecture
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/attention_mechanism.html">
+         Attention mechanism
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/transformer.html">
+         Transformer
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/bert.html">
+         BERT
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/large_language_models.html">
+         Large language models
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/lab_intro_text_translation_using_encoder_decoder_ar.html">
+         Lab introduction: Text Translation using Encoder-decoder Architecture
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/nlp_on_gcp/advanced_nlp_models/summary.html">
+         Summary
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/index.html">
+     Recommendation Systems on Google Cloud
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/>
+    <label for="toctree-checkbox-34">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/index.html">
+       Recommendation Systems Overview
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/>
+      <label for="toctree-checkbox-35">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/types_of_recommendation_systems.html">
+         Types of Recommendation Systems
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/content_based_or_collaborative.html">
+         Content-Based or Collaborative
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/recommendation_systems_overv/recommendation_system_pitfalls.html">
+         Recommendation System Pitfalls
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/index.html">
+       Content-Based Recommendation Systems
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/>
+      <label for="toctree-checkbox-36">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/content_based_recommendation_systems.html">
+         Content-Based Recommendation Systems
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/similarity_measures.html">
+         Similarity Measures
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/building_a_user_vector.html">
+         Building a User Vector
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/making_recommendations_using_a_user_vector.html">
+         Making Recommendations Using a User Vector
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/making_recommendations_for_many_users.html">
+         Making Recommendations for Many Users
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/recommendation_systems_on_gcp/content_based_recommendation/using_nns_for_content_based_recommendation_systems.html">
+         Using Neural Networks for Content-Based Recommendation Systems
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/index.html">
+     Machine Learning Operations (MLOps): Getting Started
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/>
+    <label for="toctree-checkbox-37">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/index.html">
+       Employing Machine Learning Operations
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/>
+      <label for="toctree-checkbox-38">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/ml_ml_practitioners_pain_points.html">
+         Machine learning (ML) practitioners’ pain points
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/the_concept_of_devops_in_ml.html">
+         The concept of devOps in ML
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/ml_lifecycle.html">
+         ML lifecycle
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/employing_ml_operations/automating_the_ml_process.html">
+         Automating the ML process
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/index.html">
+       Vertex AI and MLOps on Vertex AI
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/>
+      <label for="toctree-checkbox-39">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/what_is_vertex_ai_and_why_does_a_unified_platform_m.html">
+         What is vertex ai and why does a unified platform matter?
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/intro_to_mlops_on_vertex_ai.html">
+         Introduction to mlops on vertex ai
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../gcp_courses/ml_operations_mlops_getting_started/vertex_ai_and_mlops_on_verte/how_does_vertex_ai_help_with_the_mlops_workflow_par.html">
+         How does vertex ai help with the mlops workflow, part 2?
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../gcp_official/index.html">
+   Official GCP codes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/>
+  <label for="toctree-checkbox-40">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_official/Create%20machine%20learning%20models%20in%20BigQuery%20ML.html">
+     Create machine learning models in BigQuery ML
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../gcp_resources/index.html">
+   GCP notes/resources
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-41" name="toctree-checkbox-41" type="checkbox"/>
+  <label for="toctree-checkbox-41">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_resources/gcp_setup.html">
+     GCP notes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_resources/ml_cert_exam_guide.html">
+     Machine Learning Cert guide
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_resources/notebooks_to_do.html">
+     Notebooks To Do
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gcp_resources/vertex_ai_mlops.html">
+     Vertex AI MLOps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tf_official/index.html">
+   Official TF codes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-42" name="toctree-checkbox-42" type="checkbox"/>
+  <label for="toctree-checkbox-42">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../tf_official/structured_data/index.html">
+     Structured Data
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-43" name="toctree-checkbox-43" type="checkbox"/>
+    <label for="toctree-checkbox-43">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../tf_official/structured_data/time_series.html">
+       Time series forecasting
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../tf_official/distribute/index.html">
+     Distributed training
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-44" name="toctree-checkbox-44" type="checkbox"/>
+    <label for="toctree-checkbox-44">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../tf_official/distribute/multi_worker_with_keras.html">
+       Multi-worker training with Keras
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tf_resources/index.html">
+   Tensorflow Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-45" name="toctree-checkbox-45" type="checkbox"/>
+  <label for="toctree-checkbox-45">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tf_resources/libs.html">
+     TF Libraries &amp; extensions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tf_resources/my_tfdv_basic.html">
+     tfdv_basic.ipynb
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tf_resources/preprocessing.html">
+     Preprocessing Layers and tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tf_resources/sklearn.html">
+     Scikit Learn anf TF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tf_resources/tf_cert.html">
+     TensorFlow Developer Certificate
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../feature_eng/index.html">
+   Feature Engineering Tools
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   DeepLearning.AI Courses
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-46" name="toctree-checkbox-46" type="checkbox"/>
+  <label for="toctree-checkbox-46">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
+     TensorFlow Dev Cert - original version
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-47" name="toctree-checkbox-47" type="checkbox"/>
+    <label for="toctree-checkbox-47">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="c1w1_housing_prices.html">
+       C1W1 Assignment: Housing Prices
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c1w2_%20callbacks_mnist.html">
+       C1W2: Implementing Callbacks in TensorFlow using the MNIST Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c1w3_mnist_convolutions.html">
+       C1W3: Improve MNIST with Convolutions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c1w4_complex_images_happy_sad.html">
+       C1W4: Handling Complex Images - Happy or Sad Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c2w1_cnns_cats_vs_dogs.html">
+       C2W1: Using CNN’s with the Cats vs Dogs Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c2w2_overfitting_data_augmentation.html">
+       C2W2: Tackle Overfitting with Data Augmentation
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       C2W3: Transfer Learning
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c2w4_multi_class_classification.html">
+       C2W4: Multi-class Classification
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c3w1_bbc_news_archive.html">
+       C3W1: Explore the BBC News archive
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c3w2_deep_bbc_news_archive.html">
+       C3W2: Diving deeper into the BBC News archive
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c3w3_overfitting_nlp.html">
+       C3W3: Exploring Overfitting in NLP
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c3w4_predicting_next_word.html">
+       C3W4: Predicting the next word
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c4w1_working_with_time_series.html">
+       C4W1: Working with time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c4w2_predicting_time_series.html">
+       C4W2: Predicting time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c4w3_rnns_predict_time_series.html">
+       C4W3: Using RNNs to predict time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="c4w4_using_real_world_data.html">
+       C4W4: Using real world data
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../tf_dev_course_updated/index.html">
+     TensorFlow Dev Cert - updated
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-48" name="toctree-checkbox-48" type="checkbox"/>
+    <label for="toctree-checkbox-48">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c1w1_housing_prices.html">
+       C1W1 Assignment: Housing Prices
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c1w2_%20callbacks_mnist.html">
+       C1W2: Implementing Callbacks in TensorFlow using the MNIST Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c1w3_mnist_convolutions.html">
+       C1W3: Improve MNIST with Convolutions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c1w4_complex_images_happy_sad.html">
+       C1W4: Handling Complex Images - Happy or Sad Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c2w1_cnns_cats_vs_dogs.html">
+       C2W1: Using CNN’s with the Cats vs Dogs Dataset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c2w2_overfitting_data_augmentation.html">
+       C2W2: Tackle Overfitting with Data Augmentation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c2w3_transfer_learning.html">
+       C2W3: Transfer Learning
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c2w4_multi_class_classification.html">
+       C2W4: Multi-class Classification
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c3w1_bbc_news_archive.html">
+       C3W1: Explore the BBC News archive
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c3w2_deep_bbc_news_archive.html">
+       C3W2: Diving deeper into the BBC News archive
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c3w3_overfitting_nlp.html">
+       C3W3: Exploring Overfitting in NLP
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c3w4_predicting_next_word.html">
+       C3W4: Predicting the next word
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c4w1_working_with_time_series.html">
+       C4W1: Working with time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c4w2_predicting_time_series.html">
+       C4W2: Predicting time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c4w3_rnns_predict_time_series.html">
+       C4W3: Using RNNs to predict time series
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tf_dev_course_updated/c4w4_using_real_world_data.html">
+       C4W4: Using real world data
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/eavelardev/eavelardev.github.io/gh-pages?urlpath=tree/deeplearningai/tf_dev_course_original/c2w3_transfer_learning.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/deeplearningai/tf_dev_course_original/c2w3_transfer_learning.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataset">
+   Dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#training-and-validation-generators">
+   Training and Validation Generators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-callbacks-for-later">
+   Creating callbacks for later
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pipelining-the-pre-trained-model-with-your-own">
+   Pipelining the pre-trained model with your own
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>C2W3: Transfer Learning</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataset">
+   Dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#training-and-validation-generators">
+   Training and Validation Generators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-callbacks-for-later">
+   Creating callbacks for later
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pipelining-the-pre-trained-model-with-your-own">
+   Pipelining the pre-trained model with your own
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="c2w3-transfer-learning">
+<h1>C2W3: Transfer Learning<a class="headerlink" href="#c2w3-transfer-learning" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>https-deeplearning-ai/<strong>tensorflow-1-public</strong>/C2/W3/assignment/<a class="reference external" href="https://github.com/https-deeplearning-ai/tensorflow-1-public/blob/main/C2/W3/assignment/C2W3_Assignment.ipynb">C2W3_Assignment.ipynb</a></p></li>
+<li><p>Commit <code class="docutils literal notranslate"><span class="pre">d79901f</span></code> on Feb 23, 2023 - <a class="reference external" href="https://github.com/https-deeplearning-ai/tensorflow-1-public/compare/d79901f..">Compare</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">layers</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">Model</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.optimizers</span> <span class="kn">import</span> <span class="n">RMSprop</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.utils</span> <span class="kn">import</span> <span class="n">img_to_array</span><span class="p">,</span> <span class="n">load_img</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="dataset">
+<h2>Dataset<a class="headerlink" href="#dataset" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>wget<span class="w"> </span>-q<span class="w"> </span>https://storage.googleapis.com/tensorflow-1-public/course2/week3/horse-or-human.zip
+
+<span class="o">!</span>wget<span class="w"> </span>-q<span class="w"> </span>https://storage.googleapis.com/tensorflow-1-public/course2/week3/validation-horse-or-human.zip
+
+<span class="n">test_local_zip</span> <span class="o">=</span> <span class="s1">&#39;./horse-or-human.zip&#39;</span>
+<span class="n">zip_ref</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">test_local_zip</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="s1">&#39;/tmp/training&#39;</span><span class="p">)</span>
+
+<span class="n">val_local_zip</span> <span class="o">=</span> <span class="s1">&#39;./validation-horse-or-human.zip&#39;</span>
+<span class="n">zip_ref</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">val_local_zip</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="s1">&#39;/tmp/validation&#39;</span><span class="p">)</span>
+
+<span class="n">zip_ref</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_dir</span> <span class="o">=</span> <span class="s1">&#39;/tmp/training&#39;</span>
+<span class="n">validation_dir</span> <span class="o">=</span> <span class="s1">&#39;/tmp/validation&#39;</span>
+
+<span class="n">train_horses_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">train_dir</span><span class="p">,</span> <span class="s1">&#39;horses&#39;</span><span class="p">)</span>
+<span class="n">train_humans_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">train_dir</span><span class="p">,</span> <span class="s1">&#39;humans&#39;</span><span class="p">)</span>
+<span class="n">validation_horses_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">validation_dir</span><span class="p">,</span> <span class="s1">&#39;horses&#39;</span><span class="p">)</span>
+<span class="n">validation_humans_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">validation_dir</span><span class="p">,</span> <span class="s1">&#39;humans&#39;</span><span class="p">)</span>
+
+<span class="c1"># Check the number of images for each class and set</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">train_horses_dir</span><span class="p">))</span><span class="si">}</span><span class="s2"> images of horses for training.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">train_humans_dir</span><span class="p">))</span><span class="si">}</span><span class="s2"> images of humans for training.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">validation_horses_dir</span><span class="p">))</span><span class="si">}</span><span class="s2"> images of horses for validation.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">validation_humans_dir</span><span class="p">))</span><span class="si">}</span><span class="s2"> images of humans for validation.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There are 500 images of horses for training.
+
+There are 527 images of humans for training.
+
+There are 128 images of horses for validation.
+
+There are 128 images of humans for validation.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sample horse image:&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">load_img</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">train_horses_dir</span><span class="p">,</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">train_horses_dir</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Sample human image:&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">load_img</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">train_humans_dir</span><span class="p">,</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">train_humans_dir</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sample horse image:
+</pre></div>
+</div>
+<img alt="../../_images/c2w3_transfer_learning_6_1.png" src="../../_images/c2w3_transfer_learning_6_1.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sample human image:
+</pre></div>
+</div>
+<img alt="../../_images/c2w3_transfer_learning_6_3.png" src="../../_images/c2w3_transfer_learning_6_3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_image</span>  <span class="o">=</span> <span class="n">load_img</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">train_horses_dir</span><span class="p">,</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">train_horses_dir</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Convert the image into its numpy array representation</span>
+<span class="n">sample_array</span> <span class="o">=</span> <span class="n">img_to_array</span><span class="p">(</span><span class="n">sample_image</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Each image has shape: </span><span class="si">{</span><span class="n">sample_array</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Each image has shape: (300, 300, 3)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="training-and-validation-generators">
+<h2>Training and Validation Generators<a class="headerlink" href="#training-and-validation-generators" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">train_val_generators</span><span class="p">(</span><span class="n">TRAINING_DIR</span><span class="p">,</span> <span class="n">VALIDATION_DIR</span><span class="p">):</span>
+
+    <span class="n">train_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span>
+                                       <span class="n">rotation_range</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+                                       <span class="n">width_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+                                       <span class="n">height_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+                                       <span class="n">shear_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+                                       <span class="n">zoom_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+                                       <span class="n">horizontal_flip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                       <span class="n">fill_mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+
+    <span class="n">train_generator</span> <span class="o">=</span> <span class="n">train_datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="n">TRAINING_DIR</span><span class="p">,</span>
+                                                        <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> 
+                                                        <span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;binary&#39;</span><span class="p">,</span>
+                                                        <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">150</span><span class="p">))</span>
+
+
+    <span class="n">validation_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">255</span><span class="p">)</span>
+
+    <span class="n">validation_generator</span> <span class="o">=</span> <span class="n">validation_datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="n">VALIDATION_DIR</span><span class="p">,</span>
+                                                                  <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> 
+                                                                  <span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;binary&#39;</span><span class="p">,</span>
+                                                                  <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">150</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">train_generator</span><span class="p">,</span> <span class="n">validation_generator</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_generator</span><span class="p">,</span> <span class="n">validation_generator</span> <span class="o">=</span> <span class="n">train_val_generators</span><span class="p">(</span><span class="n">train_dir</span><span class="p">,</span> <span class="n">validation_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 1027 images belonging to 2 classes.
+Found 256 images belonging to 2 classes.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!wget --no-check-certificate \
+    https://storage.googleapis.com/mledu-datasets/inception_v3_weights_tf_dim_ordering_tf_kernels_notop.h5 \
+    -O /tmp/inception_v3_weights_tf_dim_ordering_tf_kernels_notop.h5
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2023-04-12 15:46:54--  https://storage.googleapis.com/mledu-datasets/inception_v3_weights_tf_dim_ordering_tf_kernels_notop.h5
+Resolving storage.googleapis.com (storage.googleapis.com)... 172.217.14.112, 172.217.14.80, 142.250.68.16, ...
+Connecting to storage.googleapis.com (storage.googleapis.com)|172.217.14.112|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 87910968 (84M) [application/x-hdf]
+Saving to: ‘/tmp/inception_v3_weights_tf_dim_ordering_tf_kernels_notop.h5’
+
+/tmp/inception_v3_w 100%[===================&gt;]  83.84M  5.92MB/s    in 14s     
+
+2023-04-12 15:47:08 (5.98 MB/s) - ‘/tmp/inception_v3_weights_tf_dim_ordering_tf_kernels_notop.h5’ saved [87910968/87910968]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow.keras.applications.inception_v3</span> <span class="kn">import</span> <span class="n">InceptionV3</span>
+
+<span class="n">local_weights_file</span> <span class="o">=</span> <span class="s1">&#39;/tmp/inception_v3_weights_tf_dim_ordering_tf_kernels_notop.h5&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_pre_trained_model</span><span class="p">(</span><span class="n">local_weights_file</span><span class="p">):</span>
+
+    <span class="n">pre_trained_model</span> <span class="o">=</span> <span class="n">InceptionV3</span><span class="p">(</span><span class="n">input_shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+                                    <span class="n">include_top</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> 
+                                    <span class="n">weights</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> 
+
+    <span class="n">pre_trained_model</span><span class="o">.</span><span class="n">load_weights</span><span class="p">(</span><span class="n">local_weights_file</span><span class="p">)</span>
+
+
+    <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">pre_trained_model</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span>
+        <span class="n">layer</span><span class="o">.</span><span class="n">trainable</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">return</span> <span class="n">pre_trained_model</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pre_trained_model</span> <span class="o">=</span> <span class="n">create_pre_trained_model</span><span class="p">(</span><span class="n">local_weights_file</span><span class="p">)</span>
+
+<span class="n">pre_trained_model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model: &quot;inception_v3&quot;
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ input_1 (InputLayer)           [(None, 150, 150, 3  0           []                               
+                                )]                                                                
+                                                                                                  
+ conv2d (Conv2D)                (None, 74, 74, 32)   864         [&#39;input_1[0][0]&#39;]                
+                                                                                                  
+ batch_normalization (BatchNorm  (None, 74, 74, 32)  96          [&#39;conv2d[0][0]&#39;]                 
+ alization)                                                                                       
+                                                                                                  
+ activation (Activation)        (None, 74, 74, 32)   0           [&#39;batch_normalization[0][0]&#39;]    
+                                                                                                  
+ conv2d_1 (Conv2D)              (None, 72, 72, 32)   9216        [&#39;activation[0][0]&#39;]             
+                                                                                                  
+ batch_normalization_1 (BatchNo  (None, 72, 72, 32)  96          [&#39;conv2d_1[0][0]&#39;]               
+ rmalization)                                                                                     
+                                                                                                  
+ activation_1 (Activation)      (None, 72, 72, 32)   0           [&#39;batch_normalization_1[0][0]&#39;]  
+                                                                                                  
+ conv2d_2 (Conv2D)              (None, 72, 72, 64)   18432       [&#39;activation_1[0][0]&#39;]           
+                                                                                                  
+ batch_normalization_2 (BatchNo  (None, 72, 72, 64)  192         [&#39;conv2d_2[0][0]&#39;]               
+ rmalization)                                                                                     
+                                                                                                  
+ activation_2 (Activation)      (None, 72, 72, 64)   0           [&#39;batch_normalization_2[0][0]&#39;]  
+                                                                                                  
+ max_pooling2d (MaxPooling2D)   (None, 35, 35, 64)   0           [&#39;activation_2[0][0]&#39;]           
+                                                                                                  
+ conv2d_3 (Conv2D)              (None, 35, 35, 80)   5120        [&#39;max_pooling2d[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_3 (BatchNo  (None, 35, 35, 80)  240         [&#39;conv2d_3[0][0]&#39;]               
+ rmalization)                                                                                     
+                                                                                                  
+ activation_3 (Activation)      (None, 35, 35, 80)   0           [&#39;batch_normalization_3[0][0]&#39;]  
+                                                                                                  
+ conv2d_4 (Conv2D)              (None, 33, 33, 192)  138240      [&#39;activation_3[0][0]&#39;]           
+                                                                                                  
+ batch_normalization_4 (BatchNo  (None, 33, 33, 192)  576        [&#39;conv2d_4[0][0]&#39;]               
+ rmalization)                                                                                     
+                                                                                                  
+ activation_4 (Activation)      (None, 33, 33, 192)  0           [&#39;batch_normalization_4[0][0]&#39;]  
+                                                                                                  
+ max_pooling2d_1 (MaxPooling2D)  (None, 16, 16, 192)  0          [&#39;activation_4[0][0]&#39;]           
+                                                                                                  
+ conv2d_8 (Conv2D)              (None, 16, 16, 64)   12288       [&#39;max_pooling2d_1[0][0]&#39;]        
+                                                                                                  
+ batch_normalization_8 (BatchNo  (None, 16, 16, 64)  192         [&#39;conv2d_8[0][0]&#39;]               
+ rmalization)                                                                                     
+                                                                                                  
+ activation_8 (Activation)      (None, 16, 16, 64)   0           [&#39;batch_normalization_8[0][0]&#39;]  
+                                                                                                  
+ conv2d_6 (Conv2D)              (None, 16, 16, 48)   9216        [&#39;max_pooling2d_1[0][0]&#39;]        
+                                                                                                  
+ conv2d_9 (Conv2D)              (None, 16, 16, 96)   55296       [&#39;activation_8[0][0]&#39;]           
+                                                                                                  
+ batch_normalization_6 (BatchNo  (None, 16, 16, 48)  144         [&#39;conv2d_6[0][0]&#39;]               
+ rmalization)                                                                                     
+                                                                                                  
+ batch_normalization_9 (BatchNo  (None, 16, 16, 96)  288         [&#39;conv2d_9[0][0]&#39;]               
+ rmalization)                                                                                     
+                                                                                                  
+ activation_6 (Activation)      (None, 16, 16, 48)   0           [&#39;batch_normalization_6[0][0]&#39;]  
+                                                                                                  
+ activation_9 (Activation)      (None, 16, 16, 96)   0           [&#39;batch_normalization_9[0][0]&#39;]  
+                                                                                                  
+ average_pooling2d (AveragePool  (None, 16, 16, 192)  0          [&#39;max_pooling2d_1[0][0]&#39;]        
+ ing2D)                                                                                           
+                                                                                                  
+ conv2d_5 (Conv2D)              (None, 16, 16, 64)   12288       [&#39;max_pooling2d_1[0][0]&#39;]        
+                                                                                                  
+ conv2d_7 (Conv2D)              (None, 16, 16, 64)   76800       [&#39;activation_6[0][0]&#39;]           
+                                                                                                  
+ conv2d_10 (Conv2D)             (None, 16, 16, 96)   82944       [&#39;activation_9[0][0]&#39;]           
+                                                                                                  
+ conv2d_11 (Conv2D)             (None, 16, 16, 32)   6144        [&#39;average_pooling2d[0][0]&#39;]      
+                                                                                                  
+ batch_normalization_5 (BatchNo  (None, 16, 16, 64)  192         [&#39;conv2d_5[0][0]&#39;]               
+ rmalization)                                                                                     
+                                                                                                  
+ batch_normalization_7 (BatchNo  (None, 16, 16, 64)  192         [&#39;conv2d_7[0][0]&#39;]               
+ rmalization)                                                                                     
+                                                                                                  
+ batch_normalization_10 (BatchN  (None, 16, 16, 96)  288         [&#39;conv2d_10[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_11 (BatchN  (None, 16, 16, 32)  96          [&#39;conv2d_11[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_5 (Activation)      (None, 16, 16, 64)   0           [&#39;batch_normalization_5[0][0]&#39;]  
+                                                                                                  
+ activation_7 (Activation)      (None, 16, 16, 64)   0           [&#39;batch_normalization_7[0][0]&#39;]  
+                                                                                                  
+ activation_10 (Activation)     (None, 16, 16, 96)   0           [&#39;batch_normalization_10[0][0]&#39;] 
+                                                                                                  
+ activation_11 (Activation)     (None, 16, 16, 32)   0           [&#39;batch_normalization_11[0][0]&#39;] 
+                                                                                                  
+ mixed0 (Concatenate)           (None, 16, 16, 256)  0           [&#39;activation_5[0][0]&#39;,           
+                                                                  &#39;activation_7[0][0]&#39;,           
+                                                                  &#39;activation_10[0][0]&#39;,          
+                                                                  &#39;activation_11[0][0]&#39;]          
+                                                                                                  
+ conv2d_15 (Conv2D)             (None, 16, 16, 64)   16384       [&#39;mixed0[0][0]&#39;]                 
+                                                                                                  
+ batch_normalization_15 (BatchN  (None, 16, 16, 64)  192         [&#39;conv2d_15[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_15 (Activation)     (None, 16, 16, 64)   0           [&#39;batch_normalization_15[0][0]&#39;] 
+                                                                                                  
+ conv2d_13 (Conv2D)             (None, 16, 16, 48)   12288       [&#39;mixed0[0][0]&#39;]                 
+                                                                                                  
+ conv2d_16 (Conv2D)             (None, 16, 16, 96)   55296       [&#39;activation_15[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_13 (BatchN  (None, 16, 16, 48)  144         [&#39;conv2d_13[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_16 (BatchN  (None, 16, 16, 96)  288         [&#39;conv2d_16[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_13 (Activation)     (None, 16, 16, 48)   0           [&#39;batch_normalization_13[0][0]&#39;] 
+                                                                                                  
+ activation_16 (Activation)     (None, 16, 16, 96)   0           [&#39;batch_normalization_16[0][0]&#39;] 
+                                                                                                  
+ average_pooling2d_1 (AveragePo  (None, 16, 16, 256)  0          [&#39;mixed0[0][0]&#39;]                 
+ oling2D)                                                                                         
+                                                                                                  
+ conv2d_12 (Conv2D)             (None, 16, 16, 64)   16384       [&#39;mixed0[0][0]&#39;]                 
+                                                                                                  
+ conv2d_14 (Conv2D)             (None, 16, 16, 64)   76800       [&#39;activation_13[0][0]&#39;]          
+                                                                                                  
+ conv2d_17 (Conv2D)             (None, 16, 16, 96)   82944       [&#39;activation_16[0][0]&#39;]          
+                                                                                                  
+ conv2d_18 (Conv2D)             (None, 16, 16, 64)   16384       [&#39;average_pooling2d_1[0][0]&#39;]    
+                                                                                                  
+ batch_normalization_12 (BatchN  (None, 16, 16, 64)  192         [&#39;conv2d_12[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_14 (BatchN  (None, 16, 16, 64)  192         [&#39;conv2d_14[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_17 (BatchN  (None, 16, 16, 96)  288         [&#39;conv2d_17[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_18 (BatchN  (None, 16, 16, 64)  192         [&#39;conv2d_18[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_12 (Activation)     (None, 16, 16, 64)   0           [&#39;batch_normalization_12[0][0]&#39;] 
+                                                                                                  
+ activation_14 (Activation)     (None, 16, 16, 64)   0           [&#39;batch_normalization_14[0][0]&#39;] 
+                                                                                                  
+ activation_17 (Activation)     (None, 16, 16, 96)   0           [&#39;batch_normalization_17[0][0]&#39;] 
+                                                                                                  
+ activation_18 (Activation)     (None, 16, 16, 64)   0           [&#39;batch_normalization_18[0][0]&#39;] 
+                                                                                                  
+ mixed1 (Concatenate)           (None, 16, 16, 288)  0           [&#39;activation_12[0][0]&#39;,          
+                                                                  &#39;activation_14[0][0]&#39;,          
+                                                                  &#39;activation_17[0][0]&#39;,          
+                                                                  &#39;activation_18[0][0]&#39;]          
+                                                                                                  
+ conv2d_22 (Conv2D)             (None, 16, 16, 64)   18432       [&#39;mixed1[0][0]&#39;]                 
+                                                                                                  
+ batch_normalization_22 (BatchN  (None, 16, 16, 64)  192         [&#39;conv2d_22[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_22 (Activation)     (None, 16, 16, 64)   0           [&#39;batch_normalization_22[0][0]&#39;] 
+                                                                                                  
+ conv2d_20 (Conv2D)             (None, 16, 16, 48)   13824       [&#39;mixed1[0][0]&#39;]                 
+                                                                                                  
+ conv2d_23 (Conv2D)             (None, 16, 16, 96)   55296       [&#39;activation_22[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_20 (BatchN  (None, 16, 16, 48)  144         [&#39;conv2d_20[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_23 (BatchN  (None, 16, 16, 96)  288         [&#39;conv2d_23[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_20 (Activation)     (None, 16, 16, 48)   0           [&#39;batch_normalization_20[0][0]&#39;] 
+                                                                                                  
+ activation_23 (Activation)     (None, 16, 16, 96)   0           [&#39;batch_normalization_23[0][0]&#39;] 
+                                                                                                  
+ average_pooling2d_2 (AveragePo  (None, 16, 16, 288)  0          [&#39;mixed1[0][0]&#39;]                 
+ oling2D)                                                                                         
+                                                                                                  
+ conv2d_19 (Conv2D)             (None, 16, 16, 64)   18432       [&#39;mixed1[0][0]&#39;]                 
+                                                                                                  
+ conv2d_21 (Conv2D)             (None, 16, 16, 64)   76800       [&#39;activation_20[0][0]&#39;]          
+                                                                                                  
+ conv2d_24 (Conv2D)             (None, 16, 16, 96)   82944       [&#39;activation_23[0][0]&#39;]          
+                                                                                                  
+ conv2d_25 (Conv2D)             (None, 16, 16, 64)   18432       [&#39;average_pooling2d_2[0][0]&#39;]    
+                                                                                                  
+ batch_normalization_19 (BatchN  (None, 16, 16, 64)  192         [&#39;conv2d_19[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_21 (BatchN  (None, 16, 16, 64)  192         [&#39;conv2d_21[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_24 (BatchN  (None, 16, 16, 96)  288         [&#39;conv2d_24[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_25 (BatchN  (None, 16, 16, 64)  192         [&#39;conv2d_25[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_19 (Activation)     (None, 16, 16, 64)   0           [&#39;batch_normalization_19[0][0]&#39;] 
+                                                                                                  
+ activation_21 (Activation)     (None, 16, 16, 64)   0           [&#39;batch_normalization_21[0][0]&#39;] 
+                                                                                                  
+ activation_24 (Activation)     (None, 16, 16, 96)   0           [&#39;batch_normalization_24[0][0]&#39;] 
+                                                                                                  
+ activation_25 (Activation)     (None, 16, 16, 64)   0           [&#39;batch_normalization_25[0][0]&#39;] 
+                                                                                                  
+ mixed2 (Concatenate)           (None, 16, 16, 288)  0           [&#39;activation_19[0][0]&#39;,          
+                                                                  &#39;activation_21[0][0]&#39;,          
+                                                                  &#39;activation_24[0][0]&#39;,          
+                                                                  &#39;activation_25[0][0]&#39;]          
+                                                                                                  
+ conv2d_27 (Conv2D)             (None, 16, 16, 64)   18432       [&#39;mixed2[0][0]&#39;]                 
+                                                                                                  
+ batch_normalization_27 (BatchN  (None, 16, 16, 64)  192         [&#39;conv2d_27[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_27 (Activation)     (None, 16, 16, 64)   0           [&#39;batch_normalization_27[0][0]&#39;] 
+                                                                                                  
+ conv2d_28 (Conv2D)             (None, 16, 16, 96)   55296       [&#39;activation_27[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_28 (BatchN  (None, 16, 16, 96)  288         [&#39;conv2d_28[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_28 (Activation)     (None, 16, 16, 96)   0           [&#39;batch_normalization_28[0][0]&#39;] 
+                                                                                                  
+ conv2d_26 (Conv2D)             (None, 7, 7, 384)    995328      [&#39;mixed2[0][0]&#39;]                 
+                                                                                                  
+ conv2d_29 (Conv2D)             (None, 7, 7, 96)     82944       [&#39;activation_28[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_26 (BatchN  (None, 7, 7, 384)   1152        [&#39;conv2d_26[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_29 (BatchN  (None, 7, 7, 96)    288         [&#39;conv2d_29[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_26 (Activation)     (None, 7, 7, 384)    0           [&#39;batch_normalization_26[0][0]&#39;] 
+                                                                                                  
+ activation_29 (Activation)     (None, 7, 7, 96)     0           [&#39;batch_normalization_29[0][0]&#39;] 
+                                                                                                  
+ max_pooling2d_2 (MaxPooling2D)  (None, 7, 7, 288)   0           [&#39;mixed2[0][0]&#39;]                 
+                                                                                                  
+ mixed3 (Concatenate)           (None, 7, 7, 768)    0           [&#39;activation_26[0][0]&#39;,          
+                                                                  &#39;activation_29[0][0]&#39;,          
+                                                                  &#39;max_pooling2d_2[0][0]&#39;]        
+                                                                                                  
+ conv2d_34 (Conv2D)             (None, 7, 7, 128)    98304       [&#39;mixed3[0][0]&#39;]                 
+                                                                                                  
+ batch_normalization_34 (BatchN  (None, 7, 7, 128)   384         [&#39;conv2d_34[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_34 (Activation)     (None, 7, 7, 128)    0           [&#39;batch_normalization_34[0][0]&#39;] 
+                                                                                                  
+ conv2d_35 (Conv2D)             (None, 7, 7, 128)    114688      [&#39;activation_34[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_35 (BatchN  (None, 7, 7, 128)   384         [&#39;conv2d_35[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_35 (Activation)     (None, 7, 7, 128)    0           [&#39;batch_normalization_35[0][0]&#39;] 
+                                                                                                  
+ conv2d_31 (Conv2D)             (None, 7, 7, 128)    98304       [&#39;mixed3[0][0]&#39;]                 
+                                                                                                  
+ conv2d_36 (Conv2D)             (None, 7, 7, 128)    114688      [&#39;activation_35[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_31 (BatchN  (None, 7, 7, 128)   384         [&#39;conv2d_31[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_36 (BatchN  (None, 7, 7, 128)   384         [&#39;conv2d_36[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_31 (Activation)     (None, 7, 7, 128)    0           [&#39;batch_normalization_31[0][0]&#39;] 
+                                                                                                  
+ activation_36 (Activation)     (None, 7, 7, 128)    0           [&#39;batch_normalization_36[0][0]&#39;] 
+                                                                                                  
+ conv2d_32 (Conv2D)             (None, 7, 7, 128)    114688      [&#39;activation_31[0][0]&#39;]          
+                                                                                                  
+ conv2d_37 (Conv2D)             (None, 7, 7, 128)    114688      [&#39;activation_36[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_32 (BatchN  (None, 7, 7, 128)   384         [&#39;conv2d_32[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_37 (BatchN  (None, 7, 7, 128)   384         [&#39;conv2d_37[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_32 (Activation)     (None, 7, 7, 128)    0           [&#39;batch_normalization_32[0][0]&#39;] 
+                                                                                                  
+ activation_37 (Activation)     (None, 7, 7, 128)    0           [&#39;batch_normalization_37[0][0]&#39;] 
+                                                                                                  
+ average_pooling2d_3 (AveragePo  (None, 7, 7, 768)   0           [&#39;mixed3[0][0]&#39;]                 
+ oling2D)                                                                                         
+                                                                                                  
+ conv2d_30 (Conv2D)             (None, 7, 7, 192)    147456      [&#39;mixed3[0][0]&#39;]                 
+                                                                                                  
+ conv2d_33 (Conv2D)             (None, 7, 7, 192)    172032      [&#39;activation_32[0][0]&#39;]          
+                                                                                                  
+ conv2d_38 (Conv2D)             (None, 7, 7, 192)    172032      [&#39;activation_37[0][0]&#39;]          
+                                                                                                  
+ conv2d_39 (Conv2D)             (None, 7, 7, 192)    147456      [&#39;average_pooling2d_3[0][0]&#39;]    
+                                                                                                  
+ batch_normalization_30 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_30[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_33 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_33[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_38 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_38[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_39 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_39[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_30 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_30[0][0]&#39;] 
+                                                                                                  
+ activation_33 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_33[0][0]&#39;] 
+                                                                                                  
+ activation_38 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_38[0][0]&#39;] 
+                                                                                                  
+ activation_39 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_39[0][0]&#39;] 
+                                                                                                  
+ mixed4 (Concatenate)           (None, 7, 7, 768)    0           [&#39;activation_30[0][0]&#39;,          
+                                                                  &#39;activation_33[0][0]&#39;,          
+                                                                  &#39;activation_38[0][0]&#39;,          
+                                                                  &#39;activation_39[0][0]&#39;]          
+                                                                                                  
+ conv2d_44 (Conv2D)             (None, 7, 7, 160)    122880      [&#39;mixed4[0][0]&#39;]                 
+                                                                                                  
+ batch_normalization_44 (BatchN  (None, 7, 7, 160)   480         [&#39;conv2d_44[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_44 (Activation)     (None, 7, 7, 160)    0           [&#39;batch_normalization_44[0][0]&#39;] 
+                                                                                                  
+ conv2d_45 (Conv2D)             (None, 7, 7, 160)    179200      [&#39;activation_44[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_45 (BatchN  (None, 7, 7, 160)   480         [&#39;conv2d_45[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_45 (Activation)     (None, 7, 7, 160)    0           [&#39;batch_normalization_45[0][0]&#39;] 
+                                                                                                  
+ conv2d_41 (Conv2D)             (None, 7, 7, 160)    122880      [&#39;mixed4[0][0]&#39;]                 
+                                                                                                  
+ conv2d_46 (Conv2D)             (None, 7, 7, 160)    179200      [&#39;activation_45[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_41 (BatchN  (None, 7, 7, 160)   480         [&#39;conv2d_41[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_46 (BatchN  (None, 7, 7, 160)   480         [&#39;conv2d_46[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_41 (Activation)     (None, 7, 7, 160)    0           [&#39;batch_normalization_41[0][0]&#39;] 
+                                                                                                  
+ activation_46 (Activation)     (None, 7, 7, 160)    0           [&#39;batch_normalization_46[0][0]&#39;] 
+                                                                                                  
+ conv2d_42 (Conv2D)             (None, 7, 7, 160)    179200      [&#39;activation_41[0][0]&#39;]          
+                                                                                                  
+ conv2d_47 (Conv2D)             (None, 7, 7, 160)    179200      [&#39;activation_46[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_42 (BatchN  (None, 7, 7, 160)   480         [&#39;conv2d_42[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_47 (BatchN  (None, 7, 7, 160)   480         [&#39;conv2d_47[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_42 (Activation)     (None, 7, 7, 160)    0           [&#39;batch_normalization_42[0][0]&#39;] 
+                                                                                                  
+ activation_47 (Activation)     (None, 7, 7, 160)    0           [&#39;batch_normalization_47[0][0]&#39;] 
+                                                                                                  
+ average_pooling2d_4 (AveragePo  (None, 7, 7, 768)   0           [&#39;mixed4[0][0]&#39;]                 
+ oling2D)                                                                                         
+                                                                                                  
+ conv2d_40 (Conv2D)             (None, 7, 7, 192)    147456      [&#39;mixed4[0][0]&#39;]                 
+                                                                                                  
+ conv2d_43 (Conv2D)             (None, 7, 7, 192)    215040      [&#39;activation_42[0][0]&#39;]          
+                                                                                                  
+ conv2d_48 (Conv2D)             (None, 7, 7, 192)    215040      [&#39;activation_47[0][0]&#39;]          
+                                                                                                  
+ conv2d_49 (Conv2D)             (None, 7, 7, 192)    147456      [&#39;average_pooling2d_4[0][0]&#39;]    
+                                                                                                  
+ batch_normalization_40 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_40[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_43 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_43[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_48 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_48[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_49 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_49[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_40 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_40[0][0]&#39;] 
+                                                                                                  
+ activation_43 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_43[0][0]&#39;] 
+                                                                                                  
+ activation_48 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_48[0][0]&#39;] 
+                                                                                                  
+ activation_49 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_49[0][0]&#39;] 
+                                                                                                  
+ mixed5 (Concatenate)           (None, 7, 7, 768)    0           [&#39;activation_40[0][0]&#39;,          
+                                                                  &#39;activation_43[0][0]&#39;,          
+                                                                  &#39;activation_48[0][0]&#39;,          
+                                                                  &#39;activation_49[0][0]&#39;]          
+                                                                                                  
+ conv2d_54 (Conv2D)             (None, 7, 7, 160)    122880      [&#39;mixed5[0][0]&#39;]                 
+                                                                                                  
+ batch_normalization_54 (BatchN  (None, 7, 7, 160)   480         [&#39;conv2d_54[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_54 (Activation)     (None, 7, 7, 160)    0           [&#39;batch_normalization_54[0][0]&#39;] 
+                                                                                                  
+ conv2d_55 (Conv2D)             (None, 7, 7, 160)    179200      [&#39;activation_54[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_55 (BatchN  (None, 7, 7, 160)   480         [&#39;conv2d_55[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_55 (Activation)     (None, 7, 7, 160)    0           [&#39;batch_normalization_55[0][0]&#39;] 
+                                                                                                  
+ conv2d_51 (Conv2D)             (None, 7, 7, 160)    122880      [&#39;mixed5[0][0]&#39;]                 
+                                                                                                  
+ conv2d_56 (Conv2D)             (None, 7, 7, 160)    179200      [&#39;activation_55[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_51 (BatchN  (None, 7, 7, 160)   480         [&#39;conv2d_51[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_56 (BatchN  (None, 7, 7, 160)   480         [&#39;conv2d_56[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_51 (Activation)     (None, 7, 7, 160)    0           [&#39;batch_normalization_51[0][0]&#39;] 
+                                                                                                  
+ activation_56 (Activation)     (None, 7, 7, 160)    0           [&#39;batch_normalization_56[0][0]&#39;] 
+                                                                                                  
+ conv2d_52 (Conv2D)             (None, 7, 7, 160)    179200      [&#39;activation_51[0][0]&#39;]          
+                                                                                                  
+ conv2d_57 (Conv2D)             (None, 7, 7, 160)    179200      [&#39;activation_56[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_52 (BatchN  (None, 7, 7, 160)   480         [&#39;conv2d_52[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_57 (BatchN  (None, 7, 7, 160)   480         [&#39;conv2d_57[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_52 (Activation)     (None, 7, 7, 160)    0           [&#39;batch_normalization_52[0][0]&#39;] 
+                                                                                                  
+ activation_57 (Activation)     (None, 7, 7, 160)    0           [&#39;batch_normalization_57[0][0]&#39;] 
+                                                                                                  
+ average_pooling2d_5 (AveragePo  (None, 7, 7, 768)   0           [&#39;mixed5[0][0]&#39;]                 
+ oling2D)                                                                                         
+                                                                                                  
+ conv2d_50 (Conv2D)             (None, 7, 7, 192)    147456      [&#39;mixed5[0][0]&#39;]                 
+                                                                                                  
+ conv2d_53 (Conv2D)             (None, 7, 7, 192)    215040      [&#39;activation_52[0][0]&#39;]          
+                                                                                                  
+ conv2d_58 (Conv2D)             (None, 7, 7, 192)    215040      [&#39;activation_57[0][0]&#39;]          
+                                                                                                  
+ conv2d_59 (Conv2D)             (None, 7, 7, 192)    147456      [&#39;average_pooling2d_5[0][0]&#39;]    
+                                                                                                  
+ batch_normalization_50 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_50[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_53 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_53[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_58 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_58[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_59 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_59[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_50 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_50[0][0]&#39;] 
+                                                                                                  
+ activation_53 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_53[0][0]&#39;] 
+                                                                                                  
+ activation_58 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_58[0][0]&#39;] 
+                                                                                                  
+ activation_59 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_59[0][0]&#39;] 
+                                                                                                  
+ mixed6 (Concatenate)           (None, 7, 7, 768)    0           [&#39;activation_50[0][0]&#39;,          
+                                                                  &#39;activation_53[0][0]&#39;,          
+                                                                  &#39;activation_58[0][0]&#39;,          
+                                                                  &#39;activation_59[0][0]&#39;]          
+                                                                                                  
+ conv2d_64 (Conv2D)             (None, 7, 7, 192)    147456      [&#39;mixed6[0][0]&#39;]                 
+                                                                                                  
+ batch_normalization_64 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_64[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_64 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_64[0][0]&#39;] 
+                                                                                                  
+ conv2d_65 (Conv2D)             (None, 7, 7, 192)    258048      [&#39;activation_64[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_65 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_65[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_65 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_65[0][0]&#39;] 
+                                                                                                  
+ conv2d_61 (Conv2D)             (None, 7, 7, 192)    147456      [&#39;mixed6[0][0]&#39;]                 
+                                                                                                  
+ conv2d_66 (Conv2D)             (None, 7, 7, 192)    258048      [&#39;activation_65[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_61 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_61[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_66 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_66[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_61 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_61[0][0]&#39;] 
+                                                                                                  
+ activation_66 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_66[0][0]&#39;] 
+                                                                                                  
+ conv2d_62 (Conv2D)             (None, 7, 7, 192)    258048      [&#39;activation_61[0][0]&#39;]          
+                                                                                                  
+ conv2d_67 (Conv2D)             (None, 7, 7, 192)    258048      [&#39;activation_66[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_62 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_62[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_67 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_67[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_62 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_62[0][0]&#39;] 
+                                                                                                  
+ activation_67 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_67[0][0]&#39;] 
+                                                                                                  
+ average_pooling2d_6 (AveragePo  (None, 7, 7, 768)   0           [&#39;mixed6[0][0]&#39;]                 
+ oling2D)                                                                                         
+                                                                                                  
+ conv2d_60 (Conv2D)             (None, 7, 7, 192)    147456      [&#39;mixed6[0][0]&#39;]                 
+                                                                                                  
+ conv2d_63 (Conv2D)             (None, 7, 7, 192)    258048      [&#39;activation_62[0][0]&#39;]          
+                                                                                                  
+ conv2d_68 (Conv2D)             (None, 7, 7, 192)    258048      [&#39;activation_67[0][0]&#39;]          
+                                                                                                  
+ conv2d_69 (Conv2D)             (None, 7, 7, 192)    147456      [&#39;average_pooling2d_6[0][0]&#39;]    
+                                                                                                  
+ batch_normalization_60 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_60[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_63 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_63[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_68 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_68[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_69 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_69[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_60 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_60[0][0]&#39;] 
+                                                                                                  
+ activation_63 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_63[0][0]&#39;] 
+                                                                                                  
+ activation_68 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_68[0][0]&#39;] 
+                                                                                                  
+ activation_69 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_69[0][0]&#39;] 
+                                                                                                  
+ mixed7 (Concatenate)           (None, 7, 7, 768)    0           [&#39;activation_60[0][0]&#39;,          
+                                                                  &#39;activation_63[0][0]&#39;,          
+                                                                  &#39;activation_68[0][0]&#39;,          
+                                                                  &#39;activation_69[0][0]&#39;]          
+                                                                                                  
+ conv2d_72 (Conv2D)             (None, 7, 7, 192)    147456      [&#39;mixed7[0][0]&#39;]                 
+                                                                                                  
+ batch_normalization_72 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_72[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_72 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_72[0][0]&#39;] 
+                                                                                                  
+ conv2d_73 (Conv2D)             (None, 7, 7, 192)    258048      [&#39;activation_72[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_73 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_73[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_73 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_73[0][0]&#39;] 
+                                                                                                  
+ conv2d_70 (Conv2D)             (None, 7, 7, 192)    147456      [&#39;mixed7[0][0]&#39;]                 
+                                                                                                  
+ conv2d_74 (Conv2D)             (None, 7, 7, 192)    258048      [&#39;activation_73[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_70 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_70[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_74 (BatchN  (None, 7, 7, 192)   576         [&#39;conv2d_74[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_70 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_70[0][0]&#39;] 
+                                                                                                  
+ activation_74 (Activation)     (None, 7, 7, 192)    0           [&#39;batch_normalization_74[0][0]&#39;] 
+                                                                                                  
+ conv2d_71 (Conv2D)             (None, 3, 3, 320)    552960      [&#39;activation_70[0][0]&#39;]          
+                                                                                                  
+ conv2d_75 (Conv2D)             (None, 3, 3, 192)    331776      [&#39;activation_74[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_71 (BatchN  (None, 3, 3, 320)   960         [&#39;conv2d_71[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_75 (BatchN  (None, 3, 3, 192)   576         [&#39;conv2d_75[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_71 (Activation)     (None, 3, 3, 320)    0           [&#39;batch_normalization_71[0][0]&#39;] 
+                                                                                                  
+ activation_75 (Activation)     (None, 3, 3, 192)    0           [&#39;batch_normalization_75[0][0]&#39;] 
+                                                                                                  
+ max_pooling2d_3 (MaxPooling2D)  (None, 3, 3, 768)   0           [&#39;mixed7[0][0]&#39;]                 
+                                                                                                  
+ mixed8 (Concatenate)           (None, 3, 3, 1280)   0           [&#39;activation_71[0][0]&#39;,          
+                                                                  &#39;activation_75[0][0]&#39;,          
+                                                                  &#39;max_pooling2d_3[0][0]&#39;]        
+                                                                                                  
+ conv2d_80 (Conv2D)             (None, 3, 3, 448)    573440      [&#39;mixed8[0][0]&#39;]                 
+                                                                                                  
+ batch_normalization_80 (BatchN  (None, 3, 3, 448)   1344        [&#39;conv2d_80[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_80 (Activation)     (None, 3, 3, 448)    0           [&#39;batch_normalization_80[0][0]&#39;] 
+                                                                                                  
+ conv2d_77 (Conv2D)             (None, 3, 3, 384)    491520      [&#39;mixed8[0][0]&#39;]                 
+                                                                                                  
+ conv2d_81 (Conv2D)             (None, 3, 3, 384)    1548288     [&#39;activation_80[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_77 (BatchN  (None, 3, 3, 384)   1152        [&#39;conv2d_77[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_81 (BatchN  (None, 3, 3, 384)   1152        [&#39;conv2d_81[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_77 (Activation)     (None, 3, 3, 384)    0           [&#39;batch_normalization_77[0][0]&#39;] 
+                                                                                                  
+ activation_81 (Activation)     (None, 3, 3, 384)    0           [&#39;batch_normalization_81[0][0]&#39;] 
+                                                                                                  
+ conv2d_78 (Conv2D)             (None, 3, 3, 384)    442368      [&#39;activation_77[0][0]&#39;]          
+                                                                                                  
+ conv2d_79 (Conv2D)             (None, 3, 3, 384)    442368      [&#39;activation_77[0][0]&#39;]          
+                                                                                                  
+ conv2d_82 (Conv2D)             (None, 3, 3, 384)    442368      [&#39;activation_81[0][0]&#39;]          
+                                                                                                  
+ conv2d_83 (Conv2D)             (None, 3, 3, 384)    442368      [&#39;activation_81[0][0]&#39;]          
+                                                                                                  
+ average_pooling2d_7 (AveragePo  (None, 3, 3, 1280)  0           [&#39;mixed8[0][0]&#39;]                 
+ oling2D)                                                                                         
+                                                                                                  
+ conv2d_76 (Conv2D)             (None, 3, 3, 320)    409600      [&#39;mixed8[0][0]&#39;]                 
+                                                                                                  
+ batch_normalization_78 (BatchN  (None, 3, 3, 384)   1152        [&#39;conv2d_78[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_79 (BatchN  (None, 3, 3, 384)   1152        [&#39;conv2d_79[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_82 (BatchN  (None, 3, 3, 384)   1152        [&#39;conv2d_82[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_83 (BatchN  (None, 3, 3, 384)   1152        [&#39;conv2d_83[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ conv2d_84 (Conv2D)             (None, 3, 3, 192)    245760      [&#39;average_pooling2d_7[0][0]&#39;]    
+                                                                                                  
+ batch_normalization_76 (BatchN  (None, 3, 3, 320)   960         [&#39;conv2d_76[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_78 (Activation)     (None, 3, 3, 384)    0           [&#39;batch_normalization_78[0][0]&#39;] 
+                                                                                                  
+ activation_79 (Activation)     (None, 3, 3, 384)    0           [&#39;batch_normalization_79[0][0]&#39;] 
+                                                                                                  
+ activation_82 (Activation)     (None, 3, 3, 384)    0           [&#39;batch_normalization_82[0][0]&#39;] 
+                                                                                                  
+ activation_83 (Activation)     (None, 3, 3, 384)    0           [&#39;batch_normalization_83[0][0]&#39;] 
+                                                                                                  
+ batch_normalization_84 (BatchN  (None, 3, 3, 192)   576         [&#39;conv2d_84[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_76 (Activation)     (None, 3, 3, 320)    0           [&#39;batch_normalization_76[0][0]&#39;] 
+                                                                                                  
+ mixed9_0 (Concatenate)         (None, 3, 3, 768)    0           [&#39;activation_78[0][0]&#39;,          
+                                                                  &#39;activation_79[0][0]&#39;]          
+                                                                                                  
+ concatenate (Concatenate)      (None, 3, 3, 768)    0           [&#39;activation_82[0][0]&#39;,          
+                                                                  &#39;activation_83[0][0]&#39;]          
+                                                                                                  
+ activation_84 (Activation)     (None, 3, 3, 192)    0           [&#39;batch_normalization_84[0][0]&#39;] 
+                                                                                                  
+ mixed9 (Concatenate)           (None, 3, 3, 2048)   0           [&#39;activation_76[0][0]&#39;,          
+                                                                  &#39;mixed9_0[0][0]&#39;,               
+                                                                  &#39;concatenate[0][0]&#39;,            
+                                                                  &#39;activation_84[0][0]&#39;]          
+                                                                                                  
+ conv2d_89 (Conv2D)             (None, 3, 3, 448)    917504      [&#39;mixed9[0][0]&#39;]                 
+                                                                                                  
+ batch_normalization_89 (BatchN  (None, 3, 3, 448)   1344        [&#39;conv2d_89[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_89 (Activation)     (None, 3, 3, 448)    0           [&#39;batch_normalization_89[0][0]&#39;] 
+                                                                                                  
+ conv2d_86 (Conv2D)             (None, 3, 3, 384)    786432      [&#39;mixed9[0][0]&#39;]                 
+                                                                                                  
+ conv2d_90 (Conv2D)             (None, 3, 3, 384)    1548288     [&#39;activation_89[0][0]&#39;]          
+                                                                                                  
+ batch_normalization_86 (BatchN  (None, 3, 3, 384)   1152        [&#39;conv2d_86[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_90 (BatchN  (None, 3, 3, 384)   1152        [&#39;conv2d_90[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_86 (Activation)     (None, 3, 3, 384)    0           [&#39;batch_normalization_86[0][0]&#39;] 
+                                                                                                  
+ activation_90 (Activation)     (None, 3, 3, 384)    0           [&#39;batch_normalization_90[0][0]&#39;] 
+                                                                                                  
+ conv2d_87 (Conv2D)             (None, 3, 3, 384)    442368      [&#39;activation_86[0][0]&#39;]          
+                                                                                                  
+ conv2d_88 (Conv2D)             (None, 3, 3, 384)    442368      [&#39;activation_86[0][0]&#39;]          
+                                                                                                  
+ conv2d_91 (Conv2D)             (None, 3, 3, 384)    442368      [&#39;activation_90[0][0]&#39;]          
+                                                                                                  
+ conv2d_92 (Conv2D)             (None, 3, 3, 384)    442368      [&#39;activation_90[0][0]&#39;]          
+                                                                                                  
+ average_pooling2d_8 (AveragePo  (None, 3, 3, 2048)  0           [&#39;mixed9[0][0]&#39;]                 
+ oling2D)                                                                                         
+                                                                                                  
+ conv2d_85 (Conv2D)             (None, 3, 3, 320)    655360      [&#39;mixed9[0][0]&#39;]                 
+                                                                                                  
+ batch_normalization_87 (BatchN  (None, 3, 3, 384)   1152        [&#39;conv2d_87[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_88 (BatchN  (None, 3, 3, 384)   1152        [&#39;conv2d_88[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_91 (BatchN  (None, 3, 3, 384)   1152        [&#39;conv2d_91[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ batch_normalization_92 (BatchN  (None, 3, 3, 384)   1152        [&#39;conv2d_92[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ conv2d_93 (Conv2D)             (None, 3, 3, 192)    393216      [&#39;average_pooling2d_8[0][0]&#39;]    
+                                                                                                  
+ batch_normalization_85 (BatchN  (None, 3, 3, 320)   960         [&#39;conv2d_85[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_87 (Activation)     (None, 3, 3, 384)    0           [&#39;batch_normalization_87[0][0]&#39;] 
+                                                                                                  
+ activation_88 (Activation)     (None, 3, 3, 384)    0           [&#39;batch_normalization_88[0][0]&#39;] 
+                                                                                                  
+ activation_91 (Activation)     (None, 3, 3, 384)    0           [&#39;batch_normalization_91[0][0]&#39;] 
+                                                                                                  
+ activation_92 (Activation)     (None, 3, 3, 384)    0           [&#39;batch_normalization_92[0][0]&#39;] 
+                                                                                                  
+ batch_normalization_93 (BatchN  (None, 3, 3, 192)   576         [&#39;conv2d_93[0][0]&#39;]              
+ ormalization)                                                                                    
+                                                                                                  
+ activation_85 (Activation)     (None, 3, 3, 320)    0           [&#39;batch_normalization_85[0][0]&#39;] 
+                                                                                                  
+ mixed9_1 (Concatenate)         (None, 3, 3, 768)    0           [&#39;activation_87[0][0]&#39;,          
+                                                                  &#39;activation_88[0][0]&#39;]          
+                                                                                                  
+ concatenate_1 (Concatenate)    (None, 3, 3, 768)    0           [&#39;activation_91[0][0]&#39;,          
+                                                                  &#39;activation_92[0][0]&#39;]          
+                                                                                                  
+ activation_93 (Activation)     (None, 3, 3, 192)    0           [&#39;batch_normalization_93[0][0]&#39;] 
+                                                                                                  
+ mixed10 (Concatenate)          (None, 3, 3, 2048)   0           [&#39;activation_85[0][0]&#39;,          
+                                                                  &#39;mixed9_1[0][0]&#39;,               
+                                                                  &#39;concatenate_1[0][0]&#39;,          
+                                                                  &#39;activation_93[0][0]&#39;]          
+                                                                                                  
+==================================================================================================
+Total params: 21,802,784
+Trainable params: 0
+Non-trainable params: 21,802,784
+__________________________________________________________________________________________________
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_params</span> <span class="o">=</span> <span class="n">pre_trained_model</span><span class="o">.</span><span class="n">count_params</span><span class="p">()</span>
+<span class="n">num_trainable_params</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">w</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">num_elements</span><span class="p">()</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">pre_trained_model</span><span class="o">.</span><span class="n">trainable_weights</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="n">total_params</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> total parameters in this model.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="n">num_trainable_params</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> trainable parameters in this model.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There are 21,802,784 total parameters in this model.
+There are 0 trainable parameters in this model.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="creating-callbacks-for-later">
+<h2>Creating callbacks for later<a class="headerlink" href="#creating-callbacks-for-later" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">myCallback</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">Callback</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">on_epoch_end</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">epoch</span><span class="p">,</span> <span class="n">logs</span><span class="o">=</span><span class="p">{}):</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">logs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;accuracy&#39;</span><span class="p">)</span><span class="o">&gt;</span><span class="mf">0.999</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Reached 99.9</span><span class="si">% a</span><span class="s2">ccuracy so cancelling training!&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">stop_training</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pipelining-the-pre-trained-model-with-your-own">
+<h2>Pipelining the pre-trained model with your own<a class="headerlink" href="#pipelining-the-pre-trained-model-with-your-own" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">output_of_last_layer</span><span class="p">(</span><span class="n">pre_trained_model</span><span class="p">):</span>
+
+    <span class="n">last_desired_layer</span> <span class="o">=</span> <span class="n">pre_trained_model</span><span class="o">.</span><span class="n">get_layer</span><span class="p">(</span><span class="s1">&#39;mixed7&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;last layer output shape: &#39;</span><span class="p">,</span> <span class="n">last_desired_layer</span><span class="o">.</span><span class="n">output_shape</span><span class="p">)</span>
+    <span class="n">last_output</span> <span class="o">=</span> <span class="n">last_desired_layer</span><span class="o">.</span><span class="n">output</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;last layer output: &#39;</span><span class="p">,</span> <span class="n">last_output</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">last_output</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">last_output</span> <span class="o">=</span> <span class="n">output_of_last_layer</span><span class="p">(</span><span class="n">pre_trained_model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>last layer output shape:  (None, 7, 7, 768)
+last layer output:  KerasTensor(type_spec=TensorSpec(shape=(None, 7, 7, 768), dtype=tf.float32, name=None), name=&#39;mixed7/concat:0&#39;, description=&quot;created by layer &#39;mixed7&#39;&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The pretrained model has type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">pre_trained_model</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The pretrained model has type: &lt;class &#39;keras.engine.functional.Functional&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_final_model</span><span class="p">(</span><span class="n">pre_trained_model</span><span class="p">,</span> <span class="n">last_output</span><span class="p">):</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Flatten</span><span class="p">()(</span><span class="n">last_output</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;sigmoid&#39;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>     
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">pre_trained_model</span><span class="o">.</span><span class="n">input</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span> <span class="o">=</span> <span class="n">RMSprop</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">),</span> 
+                  <span class="n">loss</span> <span class="o">=</span> <span class="s1">&#39;binary_crossentropy&#39;</span><span class="p">,</span>
+                  <span class="n">metrics</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+    
+    <span class="k">return</span> <span class="n">model</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">create_final_model</span><span class="p">(</span><span class="n">pre_trained_model</span><span class="p">,</span> <span class="n">last_output</span><span class="p">)</span>
+
+<span class="n">total_params</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">count_params</span><span class="p">()</span>
+<span class="n">num_trainable_params</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">w</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">num_elements</span><span class="p">()</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">trainable_weights</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="n">total_params</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> total parameters in this model.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="n">num_trainable_params</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> trainable parameters in this model.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There are 47,512,481 total parameters in this model.
+There are 38,537,217 trainable parameters in this model.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">callbacks</span> <span class="o">=</span> <span class="n">myCallback</span><span class="p">()</span>
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_generator</span><span class="p">,</span>
+                    <span class="n">validation_data</span> <span class="o">=</span> <span class="n">validation_generator</span><span class="p">,</span>
+                    <span class="n">epochs</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+                    <span class="n">verbose</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="n">callbacks</span><span class="o">=</span><span class="n">callbacks</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/100
+33/33 - 17s - loss: 0.2717 - accuracy: 0.9260 - val_loss: 0.0190 - val_accuracy: 0.9922 - 17s/epoch - 513ms/step
+Epoch 2/100
+33/33 - 10s - loss: 0.0181 - accuracy: 0.9951 - val_loss: 0.0091 - val_accuracy: 1.0000 - 10s/epoch - 303ms/step
+Epoch 3/100
+33/33 - 10s - loss: 0.0731 - accuracy: 0.9805 - val_loss: 0.0017 - val_accuracy: 1.0000 - 10s/epoch - 298ms/step
+Epoch 4/100
+33/33 - 10s - loss: 0.0292 - accuracy: 0.9854 - val_loss: 6.7724e-04 - val_accuracy: 1.0000 - 10s/epoch - 298ms/step
+Epoch 5/100
+33/33 - 10s - loss: 0.0153 - accuracy: 0.9942 - val_loss: 3.0984e-04 - val_accuracy: 1.0000 - 10s/epoch - 296ms/step
+Epoch 6/100
+33/33 - 10s - loss: 0.0066 - accuracy: 0.9981 - val_loss: 0.0128 - val_accuracy: 0.9922 - 10s/epoch - 298ms/step
+Epoch 7/100
+
+Reached 99.9% accuracy so cancelling training!
+33/33 - 10s - loss: 0.0034 - accuracy: 1.0000 - val_loss: 0.0704 - val_accuracy: 0.9844 - 10s/epoch - 294ms/step
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">acc</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">]</span>
+<span class="n">val_acc</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_accuracy&#39;</span><span class="p">]</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;loss&#39;</span><span class="p">]</span>
+<span class="n">val_loss</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_loss&#39;</span><span class="p">]</span>
+
+<span class="n">epochs</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">acc</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">acc</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Training accuracy&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">val_acc</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Validation accuracy&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Training and validation accuracy&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/c2w3_transfer_learning_25_0.png" src="../../_images/c2w3_transfer_learning_25_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="c2w2_overfitting_data_augmentation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">C2W2: Tackle Overfitting with Data Augmentation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="c2w4_multi_class_classification.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">C2W4: Multi-class Classification</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Eduardo Avelar<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
