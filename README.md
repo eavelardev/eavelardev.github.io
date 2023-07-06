@@ -4,7 +4,7 @@
 
 In this place I concentrate resources related to my continuous learning journey related to AI/Data fields.
 
-My ultimate goal is to be a Master in Machine Learning, so that I can build and implement intelligent systems that can solve real world problems.
+As a Machine Learning practitioner, I'm Interested in building intelligent systems to solve real-world problems.
 
 I learned the importance of taking notes and organizing the knowledge that you are acquiring. Learning is not an single view of information, sometimes you have to go back en refresh your knowledge to be able to connect the dots with the wide fields of AI space.
 

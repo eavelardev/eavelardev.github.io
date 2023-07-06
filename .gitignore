@@ -137,3 +137,5 @@ _build
 *_repo
 *.html
 index.md
+*pipeline.json
+*pipeline.yaml

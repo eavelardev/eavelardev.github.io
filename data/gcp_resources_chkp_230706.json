@@ -74,6 +74,14 @@
         ],
         [
             "Course",
+            "AppSheet Team Hierarchy",
+            "https:\/\/www.cloudskillsboost.google\/course_templates\/565",
+            "A short course on defining and managing teams and organizations in Google AppSheet.",
+            0,
+            "Advanced"
+        ],
+        [
+            "Course",
             "Application Development with Cloud Run",
             "https:\/\/www.cloudskillsboost.google\/course_templates\/371",
             "This course introduces you to fundamentals, practices, capabilities and tools applicable to modern cloud-native application development using Google Cloud Run. Through a combination of lectures, hands-on labs, and supplemental materials, you will learn how to on Google Cloud using Cloud Run.design, implement, depl\u2026",
@@ -388,7 +396,7 @@
             "Course",
             "Developing Applications with Cloud Run on Google Cloud: Fundamentals",
             "https:\/\/www.cloudskillsboost.google\/course_templates\/559",
-            "This course introduces the Cloud Run serverless platform for running applications.  In this course, you learn about the fundamentals of Cloud Run, its resource model and the container lifecycle. You learn about service identities, how to control access to services, and how to develop and test your application loc\u2026",
+            "This course introduces the Cloud Run serverless platform for running applications. \n\nIn this course, you learn about the fundamentals of Cloud Run, its resource model and the container lifecycle. \n\nYou learn about service identities, how to control access to services, and how to develop and test your \n\napplication\u2026",
             10,
             "Introductory"
         ],
@@ -845,7 +853,7 @@
             "Introduction to Generative AI Studio",
             "https:\/\/www.cloudskillsboost.google\/course_templates\/552",
             "This course introduces Generative AI Studio, a product on Vertex AI, that helps you prototype and customize generative AI models so you can use their capabilities in your applications. In this course, you learn what Generative AI Studio is, its features and options, and how to use it by walking through demos of th\u2026",
-            1,
+            0,
             "Introductory"
         ],
         [
@@ -879,6 +887,14 @@
             "This is an introductory-level microlearning course aimed at explaining what responsible AI is, why it's important, and how Google implements responsible AI in their products. It also introduces Google's 7 AI principles.",
             0,
             "Introductory"
+        ],
+        [
+            "Course",
+            "Introduction to Vertex Forecasting and Time Series in Practice",
+            "https:\/\/www.cloudskillsboost.google\/course_templates\/511",
+            "This course is an introduction to building forecasting solutions with Google Cloud. You start with sequence models and time series foundations. You then walk through an end-to-end workflow: from data preparation to model development and deployment with Vertex AI. Finally, you learn the lessons and tips from a reta\u2026",
+            11,
+            "Intermediate"
         ],
         [
             "Course",
@@ -1189,7 +1205,7 @@
             "Security Best Practices in Google Cloud",
             "https:\/\/www.cloudskillsboost.google\/course_templates\/87",
             "This self-paced training course gives participants broad study of security controls and techniques on Google Cloud. Through recorded lectures, demonstrations, and hands-on labs, participants explore and deploy the components of a secure Google Cloud solution, including Cloud Storage access control technologies, Se\u2026",
-            30,
+            35,
             "Introductory"
         ],
         [
@@ -1295,14 +1311,6 @@
             "This course discusses the upgrade process for Apigee hybrid, and teaches you how to monitor and troubleshoot the hybrid runtime plane components.",
             10,
             "Introductory"
-        ],
-        [
-            "Course",
-            "Vertex Forecasting and Time Series in Practice",
-            "https:\/\/www.cloudskillsboost.google\/course_templates\/511",
-            "This course is an introduction to building forecasting solutions with Google Cloud. You start with sequence models and time series foundations. You then walk through an end-to-end workflow: from data preparation to model development and deployment with Vertex AI. Finally, you learn the lessons and tips from a reta\u2026",
-            10,
-            "Intermediate"
         ],
         [
             "Course",
@@ -1420,7 +1428,7 @@
             "Lab",
             "APIs Explorer: Qwik Start",
             "https:\/\/www.cloudskillsboost.google\/focuses\/2457?parent=catalog",
-            "In this lab you'll upload an image to Cloud Storage then make a request to the Vision API with APIs Explorer.",
+            "Upload an image to Cloud Storage then make a request to the Vision API with APIs Explorer.",
             1,
             "Introductory"
         ],
@@ -1493,6 +1501,14 @@
             "Analyze Images with the Cloud Vision API: Challenge Lab",
             "https:\/\/www.cloudskillsboost.google\/focuses\/64748?parent=catalog",
             "This challenge lab tests your skills and knowledge from the labs in the Analyze Images with the Cloud Vision API quest. You should be familiar with the content of labs before attempting this lab.",
+            1,
+            "Introductory"
+        ],
+        [
+            "Lab",
+            "Analyze Sentiment with Natural Language API: Challenge Lab",
+            "https:\/\/www.cloudskillsboost.google\/focuses\/66586?parent=catalog",
+            "This challenge lab tests your skills and knowledge from the labs in the Analyze Sentiment with Natural Language API quest. You should be familiar with the content of labs before attempting this lab.",
             1,
             "Introductory"
         ],
@@ -1645,6 +1661,14 @@
             "Apps Scripts to Google Chat spaces using Webhooks",
             "https:\/\/www.cloudskillsboost.google\/focuses\/55525?parent=catalog",
             "In this lab, you develop an Apps Script app to automate what will happen for some common chat space exchanges.",
+            1,
+            "Introductory"
+        ],
+        [
+            "Lab",
+            "Assessing Data Quality with Dataplex",
+            "https:\/\/www.cloudskillsboost.google\/focuses\/67211?parent=catalog",
+            "This lab shows you how to assess data quality using Dataplex.",
             1,
             "Introductory"
         ],
@@ -1834,14 +1858,6 @@
         ],
         [
             "Lab",
-            "Block.one: Getting Started with The EOSIO Blockchain",
-            "https:\/\/www.cloudskillsboost.google\/focuses\/18269?parent=catalog",
-            "In this lab, you create a virtual machine (VM) to host an EOSIO blockchain.",
-            1,
-            "Introductory"
-        ],
-        [
-            "Lab",
             "BlockApps STRATO: Spin Up A Blockchain Node in 3 minutes",
             "https:\/\/www.cloudskillsboost.google\/focuses\/22037?parent=catalog",
             "Discover how easy it is to spin up a private blockchain network and create user accounts within the network using BlockApps' STRATO platform on Google Cloud.",
@@ -1871,6 +1887,14 @@
             "In this lab, you will test your skills in building LookML objects in Looker. You will be expected to create and use dimensions, measures, views, derived tables, filters, and datagroups.",
             0,
             "Intermediate"
+        ],
+        [
+            "Lab",
+            "Build a Data Mesh with Dataplex: Challenge Lab",
+            "https:\/\/www.cloudskillsboost.google\/focuses\/67212?parent=catalog",
+            "This challenge lab tests your skills and knowledge from the labs in the Build a Data Mesh with Dataplex quest. You should be familiar with the content of labs before attempting this lab.",
+            1,
+            "Introductory"
         ],
         [
             "Lab",
@@ -1943,6 +1967,14 @@
             "In this lab you will create a survey bot on Google Chat using Node.js",
             1,
             "Introductory"
+        ],
+        [
+            "Lab",
+            "Build and Deploy Machine Learning Solutions with Vertex AI: Challenge Lab",
+            "https:\/\/www.cloudskillsboost.google\/focuses\/22019?parent=catalog",
+            "In this challenge lab you will train, deploy, and create a model pipeline using Vertex AI.",
+            5,
+            "Intermediate"
         ],
         [
             "Lab",
@@ -2031,14 +2063,6 @@
             "In this lab you will learn how to create secure, high-throughput VPN and test the speed.",
             7,
             "Advanced"
-        ],
-        [
-            "Lab",
-            "Building an Application with MongoDB Atlas and Natural Language API hosted on Cloud Run",
-            "https:\/\/www.cloudskillsboost.google\/focuses\/50354?parent=catalog",
-            "In this lab you will authenticate to App services, query Atlas data with GraphQL, deploy an Angular application to Google Cloud Run and integrate the Google Cloud Natural Langauge API.",
-            5,
-            "Intermediate"
         ],
         [
             "Lab",
@@ -2434,6 +2458,14 @@
         ],
         [
             "Lab",
+            "Cloud Speech API 3 Ways: Challenge Lab",
+            "https:\/\/www.cloudskillsboost.google\/focuses\/67215?parent=catalog",
+            "This challenge lab tests your skills and knowledge of the labs in the Cloud Speech API 3 Ways quest. You should be familiar with the content of labs before attempting this lab.",
+            1,
+            "Introductory"
+        ],
+        [
+            "Lab",
             "Cloud Storage: Qwik Start - CLI\/SDK ",
             "https:\/\/www.cloudskillsboost.google\/focuses\/569?parent=catalog",
             "This hands-on lab shows you how to perform basic tasks in Cloud Storage using the gsutil command-line tool. Watch the short video Google Cloud Storage: Massive Scalability Plus More.",
@@ -2479,6 +2511,14 @@
             "This is a Challenge Lab where you must complete a series of tasks within a limited time period. Instead of following step-by-step instructions, you will be presented with a general objective, and will be scored automatically based on your activity.",
             5,
             "Intermediate"
+        ],
+        [
+            "Lab",
+            "Configure Service Accounts and IAM for Google Cloud: Challenge Lab",
+            "https:\/\/www.cloudskillsboost.google\/focuses\/67219?parent=catalog",
+            "This challenge lab tests your skills and knowledge from the labs in the Configure Service Accounts and IAM for Google Cloud quest. You should be familiar with the content of labs before attempting this lab.",
+            1,
+            "Introductory"
         ],
         [
             "Lab",
@@ -2565,14 +2605,6 @@
             "Confluent: Clickstream Data Analysis Pipeline Using ksqlDB",
             "https:\/\/www.cloudskillsboost.google\/focuses\/12964?parent=catalog",
             "This lab will cover how to create a clickstream data analysis pipeline using ksqlDB.",
-            5,
-            "Intermediate"
-        ],
-        [
-            "Lab",
-            "Confluent: Developing a Streaming Microservices Application",
-            "https:\/\/www.cloudskillsboost.google\/focuses\/13517?parent=catalog",
-            "This hands-on lab provides step-by-step instructions for developers to apply the basic principles of streaming applications using the Confluent Platform.",
             5,
             "Intermediate"
         ],
@@ -3370,6 +3402,14 @@
         ],
         [
             "Lab",
+            "Develop with Apps Script and AppSheet: Challenge Lab",
+            "https:\/\/www.cloudskillsboost.google\/focuses\/66584?parent=catalog",
+            "This challenge lab tests your skills and knowledge from the labs in the Develop with Apps Script and AppSheet quest. You should be familiar with the content of those labs before attempting this lab.",
+            1,
+            "Introductory"
+        ],
+        [
+            "Lab",
             "Developing a REST API with Go and Cloud Run",
             "https:\/\/www.cloudskillsboost.google\/focuses\/14662?parent=catalog",
             "Demonstrate how to build a REST API with Go and Cloud Run",
@@ -4114,6 +4154,14 @@
         ],
         [
             "Lab",
+            "Google Workspace Admin: Managing Google Meet",
+            "https:\/\/www.cloudskillsboost.google\/focuses\/18361?parent=catalog",
+            "In this lab, you will learn how to create a meeting and live stream, how to configure different features in Google Meet, as well as how to configure access to Google Meet.",
+            1,
+            "Introductory"
+        ],
+        [
+            "Lab",
             "Google Workspace Admin: Provisioning",
             "https:\/\/www.cloudskillsboost.google\/focuses\/18119?parent=catalog",
             "In this lab, you will learn how to provision groups and calendar resources in Google Workspace.",
@@ -4183,6 +4231,14 @@
             "Configure an HTTP Load Balancer with global backends, stress test the Load Balancer, and denylist the stress test IP with Cloud Armor.",
             1,
             "Introductory"
+        ],
+        [
+            "Lab",
+            "HTTPS Content-Based Load Balancer with Terraform",
+            "https:\/\/www.cloudskillsboost.google\/focuses\/1206?parent=catalog",
+            "This lab shows you how to create a HTTPS load balancer to forward traffic to a custom URL map, which then sends traffic to the region closest to you with static assets being served from a Cloud Storage bucket.",
+            5,
+            "Intermediate"
         ],
         [
             "Lab",
@@ -4298,6 +4354,14 @@
         ],
         [
             "Lab",
+            "Implementing Security in Dataplex",
+            "https:\/\/www.cloudskillsboost.google\/focuses\/67213?parent=catalog",
+            "This lab shows you how to implement security in Dataplex.",
+            1,
+            "Introductory"
+        ],
+        [
+            "Lab",
             "Implementing an AI Chatbot with Dialogflow ES",
             "https:\/\/www.cloudskillsboost.google\/focuses\/634?parent=catalog",
             "In this lab you will be introduced to the basics of Dialogflow by building a responsive chat bot, such as those handling support requests on websites, to experience interactive AI in application development.",
@@ -4383,6 +4447,14 @@
             "In this lab you will install the Anthos Service Mesh, and use it with the Bookinfo microservices application, all on a GKE cluster.",
             5,
             "Intermediate"
+        ],
+        [
+            "Lab",
+            "Integrate BigQuery Data and Google Workspace using Apps Script: Challenge Lab",
+            "https:\/\/www.cloudskillsboost.google\/focuses\/67217?parent=catalog",
+            "This challenge lab tests your skills and knowledge from the labs in the Integrate BigQuery Data and Google Workspace using Apps Script quests. You should be familiar with the content of labs before attempting this lab.",
+            0,
+            "Introductory"
         ],
         [
             "Lab",
@@ -4516,7 +4588,7 @@
             "Lab",
             "It Speaks! Create Synthetic Speech Using Text-to-Speech",
             "https:\/\/www.cloudskillsboost.google\/focuses\/1290?parent=catalog",
-            "In this lab you will create a series of audio files using the Text-to-Speech API, then listen to them to compare the differences.",
+            "In this lab, you create a series of audio files using the Text-to-Speech API, then listen to them to compare the differences.",
             1,
             "Introductory"
         ],
@@ -5314,32 +5386,8 @@
         ],
         [
             "Lab",
-            "Qwiklabs Trivia June Week 1",
-            "https:\/\/www.cloudskillsboost.google\/focuses\/64757?parent=catalog",
-            "Trivia Tuesday and Trivia Thursday",
-            0,
-            "Introductory"
-        ],
-        [
-            "Lab",
-            "Qwiklabs Trivia June Week 2",
-            "https:\/\/www.cloudskillsboost.google\/focuses\/64798?parent=catalog",
-            "Trivia Tuesday and Trivia Thursday",
-            0,
-            "Introductory"
-        ],
-        [
-            "Lab",
-            "Qwiklabs Trivia June Week 3",
-            "https:\/\/www.cloudskillsboost.google\/focuses\/65472?parent=catalog",
-            "Trivia Tuesday and Trivia Thursday",
-            0,
-            "Introductory"
-        ],
-        [
-            "Lab",
-            "Qwiklabs Trivia June Week 4",
-            "https:\/\/www.cloudskillsboost.google\/focuses\/66143?parent=catalog",
+            "Qwiklabs Trivia July Week 1",
+            "https:\/\/www.cloudskillsboost.google\/focuses\/67307?parent=catalog",
             "Trivia Tuesday and Trivia Thursday",
             0,
             "Introductory"
@@ -5668,7 +5716,7 @@
             "Lab",
             "Service Accounts and Roles: Fundamentals",
             "https:\/\/www.cloudskillsboost.google\/focuses\/1038?parent=catalog",
-            "In this hands-on lab, you will learn how to create and manage Service Accounts",
+            "In this hands-on lab, you learn how to create and manage Service Accounts",
             1,
             "Introductory"
         ],
@@ -5908,7 +5956,7 @@
             "Lab",
             "Translate Text with the Cloud Translation API",
             "https:\/\/www.cloudskillsboost.google\/focuses\/697?parent=catalog",
-            "The Cloud Translation allows you to translate an arbitrary string into any supported language.  In this hands-on lab you\u2019ll learn how to use the Cloud Translation API to translate text and detect the language of text if the language is unknown.",
+            "Cloud Translation translates an arbitrary string into any supported language. In this hands-on lab, you use the Cloud Translation API to detect the language of a text, and then translate the text.",
             1,
             "Introductory"
         ],
@@ -6322,6 +6370,14 @@
         ],
         [
             "Quest",
+            "Analyze Sentiment with Natural Language API",
+            "https:\/\/www.cloudskillsboost.google\/quests\/323",
+            "Earn a skill badge by completing the Analyze Sentiment with Natural Language API quest, where you will learn how the API derrives sentiment from text.   A skill badge is an exclusive digital badge issued by Google Cloud in recognition of your proficiency with Google Cloud products and services and tests your abili\u2026",
+            8,
+            "Introductory"
+        ],
+        [
+            "Quest",
             "Analyze Speech and Language with Google APIs",
             "https:\/\/www.cloudskillsboost.google\/quests\/302",
             "Earn a skill badge by completing the Analyze Speech & Language with Google APIs quest, where you learn how to use the Natural Language and Speech APIs in real-world settings.   A skill badge is an exclusive digital badge issued by Google Cloud in recognition of your proficiency with Google Cloud products and s\u2026",
@@ -6490,6 +6546,14 @@
         ],
         [
             "Quest",
+            "Build a Data Mesh with Dataplex",
+            "https:\/\/www.cloudskillsboost.google\/quests\/325",
+            "Earn a skill badge by completing the Build a Data Mesh with Dataplex quest, where you learn how to build a data mesh with Dataplex to facilitate data security, governance, and discovery on Google Cloud. You also complete exercises related to tagging assets, assigning IAM roles, and assessing data quality in Datapl\u2026",
+            5,
+            "Introductory"
+        ],
+        [
+            "Quest",
             "Build a Website on Google Cloud",
             "https:\/\/www.cloudskillsboost.google\/quests\/115",
             "Earn a skill badge by completing the Build a Website on Google Cloud skill badge quest. This quest is based on the series  Get Cooking in Cloud, where you will learn how to: Deploy a website on Cloud Run, Host a web app on Compute Engine, Create, deploy, and scale your website on Google Kubernetes Engine, Migrate \u2026",
@@ -6622,6 +6686,22 @@
             "https:\/\/www.cloudskillsboost.google\/quests\/52",
             "Cloud SQL is a fully managed database service that stands out from its peers due to high performance, seamless integration, and impressive scalability. In this quest you will receive hands-on practice with the basics of Cloud SQL and quickly progress to advanced features, which you will apply to production framewo\u2026",
             24,
+            "Introductory"
+        ],
+        [
+            "Quest",
+            "Cloud Speech API: 3 Ways",
+            "https:\/\/www.cloudskillsboost.google\/quests\/326",
+            "Earn a skill badge by completing the Cloud Functions: 3 Ways quest, where you learn how to use speech related API tools to synthesise speech, and transcribe speech.   A skill badge is an exclusive digital badge issued by Google Cloud in recognition of your proficiency with Google Cloud products and services and te\u2026",
+            2,
+            "Introductory"
+        ],
+        [
+            "Quest",
+            "Configure Service Accounts and IAM Roles for Google Cloud",
+            "https:\/\/www.cloudskillsboost.google\/quests\/328",
+            "Earn a skill badge by completing the Configure Service Accounts and IAM Roles for Google Cloud quest, where you learn about service accounts, custom roles, and how to set permissions using gcloud .\n  A skill badge is an exclusive digital badge issued by Google Cloud in recognition of your proficiency with Google C\u2026",
+            4,
             "Introductory"
         ],
         [
@@ -6802,6 +6882,14 @@
         ],
         [
             "Quest",
+            "Develop with Apps Script and AppSheet",
+            "https:\/\/www.cloudskillsboost.google\/quests\/324",
+            "Earn a skill badge by completing the Develop with Apps Script and AppSheet quest, where you will learn how to build chat bots and how to use the script editor in any document.   A skill badge is an exclusive digital badge issued by Google Cloud in recognition of your proficiency with Google Cloud products and serv\u2026",
+            7,
+            "Introductory"
+        ],
+        [
+            "Quest",
             "Engineer Data in Google Cloud",
             "https:\/\/www.cloudskillsboost.google\/quests\/132",
             "Earn a skill badge by completing the Engineer Data in Google Cloud quest, where you will learn how to: Build data pipelines using Cloud Dataprep by Trifacta, Pub\/Sub, and Dataflow; Use Cloud Storage, Dataflow, and BigQuery to perform ETL; Build a machine learning model using BigQuery ML; Use Cloud Composer to copy\u2026",
@@ -6837,7 +6925,7 @@
             "Flutter Development",
             "https:\/\/www.cloudskillsboost.google\/quests\/167",
             "Explore the fundamentals of Flutter application development in this hands-on quest! Within this quest, you will build a \"Hello World\" Flutter application, design a frontend for a shopping application, and learn how to connect your Flutter applications to backend services. Each lab in this quest utilizes a pre-prov\u2026",
-            5,
+            4,
             "Introductory"
         ],
         [
@@ -7034,6 +7122,14 @@
         ],
         [
             "Quest",
+            "Integrate BigQuery Data and Google Workspace using Apps Script",
+            "https:\/\/www.cloudskillsboost.google\/quests\/327",
+            "Earn a skill badge by completing the Integrate BigQuery Data and Google Workspace using Apps Script quest, where you learn ways to connect Workspace products with BigQuery by using App Sheet.   A skill badge is an exclusive digital badge issued by Google Cloud in recognition of your proficiency with Google Cloud p\u2026",
+            1,
+            "Introductory"
+        ],
+        [
+            "Quest",
             "Integrate with Machine Learning APIs",
             "https:\/\/www.cloudskillsboost.google\/quests\/136",
             "Earn a skill badge by completing the Integrate with Machine Learning APIs quest, where you learn the basic features for the following machine learning and AI technologies: Cloud Vision API, Cloud Cloud Translation API, and Cloud Natural Language API.   A skill badge is an exclusive digital badge issued by Google C\u2026",
@@ -7127,6 +7223,14 @@
             "In this Quest, the experienced user of Google Cloud will learn how to describe and launch cloud resources with Terraform, an open source tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.  In these nine hands-on la\u2026",
             32,
             "Intermediate"
+        ],
+        [
+            "Quest",
+            "Measure Site Reliability using Cloud Operations Suite",
+            "https:\/\/www.cloudskillsboost.google\/quests\/189",
+            "Earn a skill badge by completing the Measure Site Reliability using Cloud Operations Suite quest, where you will learn how to set Service Level Indicators (SLIs), Service Level Objectives (SLOs), and Service Level Agreements (SLAs); create logs-based metrics to capture to capture specific issues and address them; \u2026",
+            8,
+            "Introductory"
         ],
         [
             "Quest",
@@ -7262,7 +7366,7 @@
             "https:\/\/www.cloudskillsboost.google\/quests\/207",
             "Earn a skill badge by completing the Protect Cloud Traffic with BeyondCorp Enterprise (BCE) Security quest, where you learn how to leverage BeyondCorp Enterprise (BCE) to Provide secure access to critical apps and services, Improve your security posture with a modern Zero Trust platform, Securely provide access to\u2026",
             8,
-            "Introductory"
+            "Intermediate"
         ],
         [
             "Quest",
@@ -7274,10 +7378,10 @@
         ],
         [
             "Quest",
-            "Qwiklabs Trivia June 2023",
-            "https:\/\/www.cloudskillsboost.google\/quests\/309",
-            "Welcome to Qwiklabs Trivia for June! Each week, we will release a new set of questions to test your knowledge. You will have opportunities to play throughout the month. Give your career a boost with hands on experience on GCP and partner services and earn the May badge.",
-            11,
+            "Qwiklabs Trivia July 2023",
+            "https:\/\/www.cloudskillsboost.google\/quests\/329",
+            "Welcome to Qwiklabs Trivia for July! Each week, we will release a new set of questions to test your knowledge. You will have opportunities to play throughout the month. Give your career a boost with hands-on experience on GCP and partner services and earn the July badge.",
+            20,
             "Introductory"
         ],
         [
@@ -7301,7 +7405,7 @@
             "Securing Cloud with Palo Alto Networks",
             "https:\/\/www.cloudskillsboost.google\/quests\/160",
             "Prisma\u2122 Cloud by Palo Alto Networks is a cloud native security platform that enables cloud security posture management (CSPM) and cloud workload protection platform (CWPP) for comprehensive visibility and threat detection across your organization\u2019s hybrid, multi-cloud infrastructure. Prisma Cloud is driven by APIs\u2026",
-            27,
+            21,
             "Intermediate"
         ],
         [

@@ -1,5 +1,53 @@
 [
     {
+        "title": "Developing IoT Projects with ESP32",
+        "sub_title": "Discover the IoT development ecosystem with ESP32 to create production-grade smart devices",
+        "ed.": 2,
+        "series": "Expert Insight",
+        "authors": [
+            "Vedat Ozan Oner"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2023,
+        "pub_date": "25 August 2023",
+        "site": "https://www.packtpub.com/product/developing-iot-projects-with-esp32-second-edition/9781803237688",
+        "amazon": "https://www.amazon.com/dp/1803237686",
+        "repo": ""
+    },
+    {
+        "title": "IoT and Edge Computing for Architects",
+        "sub_title": "Implementing edge and IoT systems from sensors to clouds with communication systems, analytics, and security",
+        "ed.": 2,
+        "series": "Expert Insight",
+        "authors": [
+            "Perry Lea"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2020,
+        "pub_date": "March 2020",
+        "site": "https://www.packtpub.com/product/iot-and-edge-computing-for-architects-second-edition/9781839214806",
+        "amazon": "https://www.amazon.com/dp/1839214805",
+        "repo": ""
+    },
+    {
+        "title": "Making Embedded Systems",
+        "sub_title": "Design Patterns for Great Software",
+        "ed.": 2,
+        "series": "",
+        "authors": [
+            "Elecia White"
+        ],
+        "foreword": "",
+        "publisher": "O'Reilly",
+        "copyright": 2024,
+        "pub_date": "March 2024",
+        "site": "https://www.oreilly.com/library/view/making-embedded-systems/9781098151539/",
+        "amazon": "",
+        "repo": ""
+    },
+    {
         "title": "Machine Learning for Time Series",
         "sub_title": "Use Python to forecast, predict, and detect anomalies with state-of-the-art machine learning methods",
         "ed.": 2,
