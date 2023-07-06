@@ -1,0 +1,10 @@
+cellular/*
+drivers/*
+FEATURE_BLE/*
+libraries/*
+lorawan/*
+lwipstack/*
+mbedtls/*
+nanostack/*
+netsocket/*
+nfc/*

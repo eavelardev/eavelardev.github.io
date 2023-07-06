@@ -1,0 +1,8 @@
+{
+    "BLACKPILL_F411CE_MBED": {
+        "inherits": [
+            "MCU_STM32F411xE"
+        ],
+        "device_name": "STM32F411CE"
+    }    
+}
