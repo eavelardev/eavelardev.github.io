@@ -1,5 +1,37 @@
 [
     {
+        "title": "Machine Learning Engineering with Python",
+        "sub_title": "Manage the lifecycle of machine learning models using MLOps with practical examples",
+        "ed.": 2,
+        "series": "Expert Insight",
+        "authors": [
+            "Andrew McMahon "
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2023,
+        "pub_date": "23 August 2023",
+        "site": "https://www.packtpub.com/product/machine-learning-engineering-with-python-second-edition/9781837631964",
+        "amazon": "https://www.amazon.com/dp/1837631964",
+        "repo": ""
+    },
+    {
+        "title": "Generative AI with LangChain",
+        "sub_title": "Build large language model (LLM) apps with Python, ChatGPT and other models",
+        "ed.": 1,
+        "series": "Expert Insight",
+        "authors": [
+            "Ben Auffarth"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2023,
+        "pub_date": "28 September 2023",
+        "site": "https://www.packtpub.com/product/generative-ai-with-langchain/9781835083468",
+        "amazon": "https://www.amazon.com/dp/1835083463",
+        "repo": ""
+    },
+    {
         "title": "Acing the System Design Interview",
         "sub_title": "",
         "ed.": 1,
