@@ -109,6 +109,8 @@
     2. AI for Medical Prognosis [[link](https://www.coursera.org/learn/ai-for-medical-prognosis)]
     3. AI For Medical Treatment [[link](https://www.coursera.org/learn/ai-for-medical-treatment)]
 * **Practical Data Science on the AWS Cloud Specialization** [[link](https://www.coursera.org/specializations/practical-data-science)] 
+* **Generative AI with Large Language Models** [[link](https://www.coursera.org/learn/generative-ai-with-llms)] 
+* **AI for Good Specialization** [[link](https://www.coursera.org/specializations/ai-for-good)] 
 
 ## IBM [[link](https://www.coursera.org/ibm-skills-network)]
 * **IBM Introduction to Machine Learning Specialization** [[link](https://www.coursera.org/specializations/ibm-intro-machine-learning)]

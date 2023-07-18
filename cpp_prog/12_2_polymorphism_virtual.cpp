@@ -6,7 +6,8 @@ using namespace std;
 class Base
 {
 public:
-    virtual void print() const { cout << "In the Base" << endl; }
+    // Object instantiation doesn't need virtual keyword.
+    void print() const { cout << "In the Base" << endl; }
 };
 
 // Definition of Derived class and in-line print function
@@ -19,23 +20,23 @@ public:
 int main()
 {
     // Creation of a pointer to the Base class (simulating socket)
-    Base *ptr;
+    // Base *ptr;
     
-    // Let ptr point to an object of the Base class
-    ptr = new Base();
-    ptr -> print();
-    delete ptr;
+    // // Let ptr point to an object of the Base class
+    // ptr = new Base();
+    // ptr -> print();
+    // delete ptr;
     
-    // Let ptr point to an object of the Derived class
-    ptr = new Derived();
-    ptr -> print();
-    delete ptr;
+    // // Let ptr point to an object of the Derived class
+    // ptr = new Derived();
+    // ptr -> print();
+    // delete ptr;
 
-    // Base base;
-    // base.print();
+    Base base;
+    base.print();
 
-    // Derived derived;
-    // derived.print();
+    Derived derived;
+    derived.print();
 
     return 0;
 }

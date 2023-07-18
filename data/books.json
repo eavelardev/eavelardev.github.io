@@ -1,5 +1,55 @@
 [
     {
+        "title": "Acing the System Design Interview",
+        "sub_title": "",
+        "ed.": 1,
+        "series": "",
+        "authors": [
+            "Zhiyong Tan"
+        ],
+        "foreword": "",
+        "publisher": "Manning",
+        "copyright": 2023,
+        "pub_date": "October 2023",
+        "site": "https://www.manning.com/books/acing-the-system-design-interview",
+        "amazon": "https://www.amazon.com/dp/1633439100",
+        "repo": ""
+    },
+    {
+        "title": "Hands-On RTOS with Microcontrollers",
+        "sub_title": "Create high-performance, real-time embedded systems using FreeRTOS, STM32 MCUs and SEGGER debug tools",
+        "ed.": 2,
+        "series": "Expert Insight",
+        "authors": [
+            "Brian Amos",
+            "Jim Yuill",
+            "Penn Linder"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2023,
+        "pub_date": "21 August 2023",
+        "site": "https://www.packtpub.com/product/hands-on-rtos-with-microcontrollers-second-edition/9781803237725",
+        "amazon": "https://www.amazon.com/dp/1803237724",
+        "repo": ""
+    },
+    {
+        "title": "Mastering PyTorch",
+        "sub_title": "",
+        "ed.": 2,
+        "series": "Expert Insight",
+        "authors": [
+            "Ashish Ranjan Jha"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2023,
+        "pub_date": "June 2023",
+        "site": "https://www.packtpub.com/product/mastering-pytorch-second-edition/9781801074308",
+        "amazon": "https://www.amazon.com/dp/1801074305",
+        "repo": ""
+    },
+    {
         "title": "Developing IoT Projects with ESP32",
         "sub_title": "Discover the IoT development ecosystem with ESP32 to create production-grade smart devices",
         "ed.": 2,
@@ -750,8 +800,8 @@
         "foreword": "",
         "publisher": "Packt",
         "copyright": 2023,
-        "pub_date": "27 September 2023",
-        "site": "https://www.packtpub.com/product/50-algorithms-every-programmer-should-know-second-edition/9781803247762",
+        "pub_date": "16 October 2023",
+        "site": "https://www.packtpub.com/product/50-algorithms-every-programmer-should-know-ndash-second-edition-second-edition/9781803247762",
         "amazon": "https://www.amazon.com/dp/1803247762",
         "repo": ""
     },

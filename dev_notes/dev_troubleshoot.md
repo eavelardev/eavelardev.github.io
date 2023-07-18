@@ -47,3 +47,7 @@ from site-packages/jupyter_book/config.py
 
 add "jobs=8" to site-packages/jupyter_book/sphinx.py
 ```
+Visual code c++ output
+```
+"miDebuggerArgs": "-q -ex quit; wait() { fg >/dev/null; }; /bin/gdb -q --interpreter=mi"
+```
