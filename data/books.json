@@ -1,5 +1,54 @@
 [
     {
+        "title": "Modern Computer Vision with PyTorch",
+        "sub_title": "",
+        "ed.": 2,
+        "series": "Expert Insight",
+        "authors": [
+            "V Kishore Ayyadevara",
+            "Yeshwanth Reddy"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2023,
+        "pub_date": "27 November 2023",
+        "site": "https://www.packtpub.com/product/modern-computer-vision-with-pytorch-second-edition/9781803231334",
+        "amazon": "https://www.amazon.com/dp/",
+        "repo": ""
+    },
+    {
+        "title": "The Machine Learning Solutions Architect Handbook",
+        "sub_title": "",
+        "ed.": 2,
+        "series": "Expert Insight",
+        "authors": [
+            "David Ping"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2023,
+        "pub_date": "30 November 2023",
+        "site": "https://www.packtpub.com/product/the-machine-learning-solutions-architect-handbook-second-edition/9781805122500",
+        "amazon": "",
+        "repo": ""
+    },
+    {
+        "title": "Time Series Analysis with Python Cookbook",
+        "sub_title": "",
+        "ed.": 2,
+        "series": "Expert Insight",
+        "authors": [
+            "Tarek A. Atwan"
+        ],
+        "foreword": "",
+        "publisher": "Packt",
+        "copyright": 2024,
+        "pub_date": "21 March 2024",
+        "site": "https://www.packtpub.com/product/time-series-analysis-with-python-cookbook-second-edition/9781805124283",
+        "amazon": "",
+        "repo": ""
+    },
+    {
         "title": "Grokking Algorithms",
         "sub_title": "",
         "ed.": 2,
@@ -123,7 +172,7 @@
         "foreword": "",
         "publisher": "Packt",
         "copyright": 2023,
-        "pub_date": "30 October 2023",
+        "pub_date": "23 November 2023",
         "site": "https://www.packtpub.com/product/becoming-a-data-analyst/9781805126416",
         "amazon": "",
         "repo": ""
@@ -171,7 +220,7 @@
         "foreword": "",
         "publisher": "Packt",
         "copyright": 2023,
-        "pub_date": "15 September 2023",
+        "pub_date": "26 October 2023",
         "site": "https://www.packtpub.com/product/data-engineering-with-aws-second-edition/9781804614426",
         "amazon": "",
         "repo": ""
@@ -235,7 +284,7 @@
         "foreword": "",
         "publisher": "Packt",
         "copyright": 2023,
-        "pub_date": "21 September 2023",
+        "pub_date": "16 October 2023",
         "site": "https://www.packtpub.com/product/tinyml-cookbook-second-edition/9781837637362",
         "amazon": "",
         "repo": ""
@@ -267,7 +316,7 @@
         "foreword": "",
         "publisher": "Packt",
         "copyright": 2023,
-        "pub_date": "24 August 2023",
+        "pub_date": "29 September 2023",
         "site": "https://www.packtpub.com/product/streamlit-for-data-science-second-edition/9781803248226",
         "amazon": "https://www.amazon.com/dp/",
         "repo": ""
@@ -285,7 +334,7 @@
         "foreword": "",
         "publisher": "O'Reilly",
         "copyright": 2024,
-        "pub_date": "December 2023",
+        "pub_date": "February 2024",
         "site": "https://www.oreilly.com/library/view/head-first-software/9781098134341/",
         "amazon": "https://www.amazon.com/dp/1098134354",
         "repo": ""
@@ -367,7 +416,7 @@
         "foreword": "",
         "publisher": "Packt",
         "copyright": 2023,
-        "pub_date": "June 2023",
+        "pub_date": "24 November 2023",
         "site": "https://www.packtpub.com/product/mastering-pytorch-second-edition/9781801074308",
         "amazon": "https://www.amazon.com/dp/1801074305",
         "repo": ""
@@ -383,7 +432,7 @@
         "foreword": "",
         "publisher": "Packt",
         "copyright": 2023,
-        "pub_date": "25 August 2023",
+        "pub_date": "26 October 2023",
         "site": "https://www.packtpub.com/product/developing-iot-projects-with-esp32-second-edition/9781803237688",
         "amazon": "https://www.amazon.com/dp/1803237686",
         "repo": ""
@@ -430,8 +479,8 @@
         ],
         "foreword": "",
         "publisher": "Packt",
-        "copyright": 2023,
-        "pub_date": "22 August 2023",
+        "copyright": 2024,
+        "pub_date": "27 February 2024",
         "site": "https://www.packtpub.com/product/machine-learning-for-time-series-second-edition/9781837631339",
         "amazon": "https://www.amazon.com/dp/1837631336",
         "repo": ""
