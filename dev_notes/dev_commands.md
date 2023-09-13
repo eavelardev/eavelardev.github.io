@@ -15,6 +15,11 @@ Delete cache like Python packages
 rm -r ~/.cache/*
 ```
 
+Delete .deb cache files
+```
+sudo rm -r /var/cache/apt/archives/*
+```
+
 Delete conda packages
 ```
 rm -r ~/miniconda3/pkgs/*
