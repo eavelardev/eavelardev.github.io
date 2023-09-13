@@ -2,7 +2,7 @@
 
 remove temporal files
 ```
-rm -r /tmp/*
+sudo rm -r /tmp/*
 ```
 
 Disable Tensorflow output messages
