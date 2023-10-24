@@ -1,5 +1,22 @@
 [
     {
+        "title": "Official Google Cloud Certified Professional Machine Learning Engineer Study Guide",
+        "sub_title": "",
+        "ed.": 1,
+        "series": "",
+        "authors": [
+            "Mona Mona",
+            "Pratap Ramamurthy"
+        ],
+        "foreword": "",
+        "publisher": "Sybex",
+        "copyright": 2024,
+        "pub_date": "December 2023",
+        "site": "https://www.wiley.com/Google+Cloud+Certified+Professional+Machine+Learning+Engineer+Study+Guide-p-9781119944461",
+        "amazon": "https://www.amazon.com/dp/1119944465",
+        "repo": ""
+    },
+    {
         "title": "Modern Computer Vision with PyTorch",
         "sub_title": "",
         "ed.": 2,
@@ -10,8 +27,8 @@
         ],
         "foreword": "",
         "publisher": "Packt",
-        "copyright": 2023,
-        "pub_date": "27 November 2023",
+        "copyright": 2024,
+        "pub_date": "28 March 2024",
         "site": "https://www.packtpub.com/product/modern-computer-vision-with-pytorch-second-edition/9781803231334",
         "amazon": "https://www.amazon.com/dp/",
         "repo": ""
@@ -27,7 +44,7 @@
         "foreword": "",
         "publisher": "Packt",
         "copyright": 2023,
-        "pub_date": "30 November 2023",
+        "pub_date": "22 December 2023",
         "site": "https://www.packtpub.com/product/the-machine-learning-solutions-architect-handbook-second-edition/9781805122500",
         "amazon": "",
         "repo": ""
@@ -43,7 +60,7 @@
         "foreword": "",
         "publisher": "Packt",
         "copyright": 2024,
-        "pub_date": "21 March 2024",
+        "pub_date": "23 May 2024",
         "site": "https://www.packtpub.com/product/time-series-analysis-with-python-cookbook-second-edition/9781805124283",
         "amazon": "",
         "repo": ""
@@ -58,8 +75,8 @@
         ],
         "foreword": "",
         "publisher": "Manning",
-        "copyright": 2023,
-        "pub_date": "October 2023",
+        "copyright": 2024,
+        "pub_date": "December 2023",
         "site": "https://www.manning.com/books/grokking-algorithms-second-edition",
         "amazon": "",
         "repo": ""
@@ -139,7 +156,7 @@
         "foreword": "",
         "publisher": "Packt",
         "copyright": 2023,
-        "pub_date": "10 November 2023",
+        "pub_date": "22 December 2023",
         "site": "https://www.packtpub.com/product/developing-kaggle-notebooks/9781805128519",
         "amazon": "",
         "repo": ""
@@ -172,7 +189,7 @@
         "foreword": "",
         "publisher": "Packt",
         "copyright": 2023,
-        "pub_date": "23 November 2023",
+        "pub_date": "21 December 2023",
         "site": "https://www.packtpub.com/product/becoming-a-data-analyst/9781805126416",
         "amazon": "",
         "repo": ""
@@ -188,7 +205,7 @@
         "foreword": "",
         "publisher": "Packt",
         "copyright": 2023,
-        "pub_date": "26 September 2023",
+        "pub_date": "31 October 2023",
         "site": "https://www.packtpub.com/product/interpretable-machine-learning-with-python-second-edition/9781803235424",
         "amazon": "",
         "repo": ""
@@ -251,8 +268,8 @@
         ],
         "foreword": "",
         "publisher": "Packt",
-        "copyright": 2023,
-        "pub_date": "22 December 2023",
+        "copyright": 2024,
+        "pub_date": "25 January 2024",
         "site": "https://www.packtpub.com/product/linux-kernel-programming-second-edition/9781803232225",
         "amazon": "",
         "repo": ""
@@ -283,8 +300,8 @@
         ],
         "foreword": "",
         "publisher": "Packt",
-        "copyright": 2023,
-        "pub_date": "16 October 2023",
+        "copyright": 2024,
+        "pub_date": "28 November 2023",
         "site": "https://www.packtpub.com/product/tinyml-cookbook-second-edition/9781837637362",
         "amazon": "",
         "repo": ""
@@ -365,8 +382,8 @@
         ],
         "foreword": "",
         "publisher": "Packt",
-        "copyright": 2023,
-        "pub_date": "28 September 2023",
+        "copyright": 2024,
+        "pub_date": "27 November 2023",
         "site": "https://www.packtpub.com/product/generative-ai-with-langchain/9781835083468",
         "amazon": "https://www.amazon.com/dp/1835083463",
         "repo": ""
@@ -381,8 +398,8 @@
         ],
         "foreword": "",
         "publisher": "Manning",
-        "copyright": 2023,
-        "pub_date": "October 2023",
+        "copyright": 2024,
+        "pub_date": "December 2023",
         "site": "https://www.manning.com/books/acing-the-system-design-interview",
         "amazon": "https://www.amazon.com/dp/1633439100",
         "repo": ""
@@ -399,8 +416,8 @@
         ],
         "foreword": "",
         "publisher": "Packt",
-        "copyright": 2023,
-        "pub_date": "21 August 2023",
+        "copyright": 2024,
+        "pub_date": "28 February 2024",
         "site": "https://www.packtpub.com/product/hands-on-rtos-with-microcontrollers-second-edition/9781803237725",
         "amazon": "https://www.amazon.com/dp/1803237724",
         "repo": ""
@@ -415,8 +432,8 @@
         ],
         "foreword": "",
         "publisher": "Packt",
-        "copyright": 2023,
-        "pub_date": "24 November 2023",
+        "copyright": 2024,
+        "pub_date": "26 January 2024",
         "site": "https://www.packtpub.com/product/mastering-pytorch-second-edition/9781801074308",
         "amazon": "https://www.amazon.com/dp/1801074305",
         "repo": ""
@@ -699,7 +716,7 @@
         "foreword": "",
         "publisher": "O'Reilly",
         "copyright": 2024,
-        "pub_date": "December 2023",
+        "pub_date": "October 2023",
         "site": "https://www.oreilly.com/library/view/architecting-data-and/9781098151607/",
         "amazon": "https://www.amazon.com/dp/1098151615",
         "repo": ""
@@ -1172,7 +1189,7 @@
         "foreword": "",
         "publisher": "Packt",
         "copyright": 2023,
-        "pub_date": "16 October 2023",
+        "pub_date": "September 2023",
         "site": "https://www.packtpub.com/product/50-algorithms-every-programmer-should-know-ndash-second-edition-second-edition/9781803247762",
         "amazon": "https://www.amazon.com/dp/1803247762",
         "repo": ""
