@@ -14,6 +14,7 @@
 * Building Systems with the **ChatGPT API** [[course](https://www.deeplearning.ai/short-courses/building-systems-with-chatgpt/)]
 * **ChatGPT Prompt Engineering** for Developers [[course](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/)]
 * **LangChain** for **LLM** Application Development [[course](https://www.deeplearning.ai/short-courses/langchain-for-llm-application-development/)]
+* **LangChain**: Chat with Your Data [[course](https://www.deeplearning.ai/short-courses/langchain-chat-with-your-data/)]
 * How **Diffusion Models** Work [[course](https://www.deeplearning.ai/short-courses/how-diffusion-models-work/)]
 
 **lightning.ai**
