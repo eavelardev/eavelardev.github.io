@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Eduardo Avelar",
+    "section": "",
+    "text": "Hi, I’m Eduardo Avelar, a Software Engineer at Trimble focused on backend systems, data integrity, and AI agents.\nCurrently, I work on the team behind Trimble’s Entitlement Management System (EMS), the backbone for software licensing across our product ecosystem. My core focus is tackling escalated L3 support issues, conducting deep root cause analysis (RCA) to resolve customer licensing problems. Rather than just applying one-off fixes, I build internal tools, data analysis pipelines, and automated workflows to verify and reconcile provisioning data between Salesforce and EMS, keeping critical systems in sync.\nOutside of my day-to-day backend work, my biggest technical passion is building and integrating AI agents. I love exploring how agentic workflows can automate complex troubleshooting, streamline data analysis, and make software systems more adaptive.\nI hold a Master’s degree in Computer Science from the Tijuana Institute of Technology and a Bachelor’s degree in Computer Systems from the University of Colima."
+  }
+]
